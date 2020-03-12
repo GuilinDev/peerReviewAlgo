@@ -1,4 +1,5 @@
-1:Two sum
+```java
+//1:Two sum
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         if (nums == null || nums.length < 2) return new int[0];
@@ -11,10 +12,8 @@ class Solution {
         }
         return new int[0];        
     }
-}
 
-2:Merge Two Sorted Lists   
-class Solution {
+//2:Merge Two Sorted Lists  
    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null || l2 == null) {
             return l1 == null ? l2 : l1;
@@ -27,10 +26,11 @@ class Solution {
             head = l2;
             head.next = mergeTwoLists(l1,l2.next);
         }  
-} }
+  } 
 
-3:Remove Duplicates from Sorted Array    
-class Solution {
+
+//3:Remove Duplicates from Sorted Array    
+
     public int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int total = 1;
@@ -40,10 +40,9 @@ class Solution {
                 total ++;
             }    }
         return total;    
-    }  }
+    }  
 
-4:Plus One  
-class Solution {
+//4:Plus One  
     public int[] plusOne(int[] digits) {
         if (digits == null || digits.length == 0) return new int[0];
         for (int i = digits.length - 1; i >= 0; i --) { // i -- not i ++ starting from digits.length - 1;
@@ -57,10 +56,10 @@ class Solution {
             result[0] = 1;
          return result;
     }
-}
 
- 5 Merge Sorted Array
-class Solution {
+
+// 5 Merge Sorted Array
+
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         if (nums1 == null || nums2 == null ) return;
         int lastIndex = m + n - 1;
@@ -77,9 +76,9 @@ class Solution {
             nums1[lastIndex --] = nums2[index2--];
         }
     }
-}
 
-6: Rotate Array
+
+//6: Rotate Array
   public void rotate(int[] nums, int k) { // 三次倒转
        k  %= nums.length;
        if (k == 0) return ;
@@ -96,3 +95,5 @@ class Solution {
            end --;
          }
     }
+}
+```
