@@ -67,11 +67,34 @@
     queue.peek();
 ```
 
+#### Lamda的comparator
+```java
+    //List.sort() since Java 8，无需再用Collections.sort()
+	listDevs.sort(new Comparator<Developer>() {
+		@Override
+		public int compare(Developer o1, Developer o2) {
+			return o2.getAge() - o1.getAge();
+		}
+	});	
+
+    //lambda
+	listDevs.sort((Developer o1, Developer o2)->o1.getSalary().compareTo(o2.getSalary()));
+	
+	//lambda
+	listDevs.sort((o1, o2)->o1.getSalary().compareTo(o2.getSalary()));
+```
+
 #### 范型
 > E - Element (在集合中使用，因为集合中存放的是元素)
+> 
 > T - Type（Java 类）
+> 
 > K - Key（键）
+> 
 > V - Value（值）
+> 
 > N - Number（数值类型）
+> 
 > ？ -  表示不确定的java类型
+> 
 > S、U、V  - 2nd、3rd、4th types
