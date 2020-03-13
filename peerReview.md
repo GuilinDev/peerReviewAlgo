@@ -17,3 +17,4 @@
 | 169 Majority Element                              | 03/12/2020    |               |             |                 |                 | 
 | 226 Invert Binary Tree                            | 03/12/2020    |               |             |                 |                 | 
 | 224 Basic Calculator                              | 03/13/2020    |               |             |                 |                 |
+| 300 Longest Increasing Subsequence                | 03/10/2020    | 03/13/2020    |             |                 |                 |
