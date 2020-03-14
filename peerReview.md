@@ -21,3 +21,4 @@
 | 224 Basic Calculator                              | 03/13/2020    |               |             |                 |                 |
 | 300 Longest Increasing Subsequence                | 03/10/2020    | 03/13/2020    |             |                 |                 |
 | 223 Rectangle Area                                | 03/13/2020    |               |             |                 |                 |
+| 236 Lowest Common Ancestor of a Binary Tree       | 03/10/2020    | 03/13/2020    |             |                 |                 |
