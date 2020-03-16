@@ -23,3 +23,4 @@
 | 223 Rectangle Area                                | 03/13/2020    |               |             |                 |                 |
 | 236 Lowest Common Ancestor of a Binary Tree       | 03/10/2020    | 03/13/2020    |             |                 |                 |
 | 695 Max Area of Island                            | 03/14/2020    |               |             |                 |                 |
+| 230 Kth Smallest Element in a BST                 | 03/15/2020    |               |             |                 |                 |
