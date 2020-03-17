@@ -25,3 +25,4 @@
 | 695 Max Area of Island                            | 03/14/2020    |               |             |                 |                 |
 | 230 Kth Smallest Element in a BST                 | 03/15/2020    |               |             |                 |                 |
 | 1160 Find Words That Can Be Formed by Characters  | 03/16/2020    |               |             |                 |                 |
+| 222 Count Complete Tree Nodes                     | 03/17/2020    |               |             |                 |                 |
