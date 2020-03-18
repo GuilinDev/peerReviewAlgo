@@ -12,17 +12,18 @@
 > 1st - Day1; 2nd - Day3; 3rd - Day 7; 4th - Day 14; 5th - Day 30
 
 
-| #                                                 |       1st     |     2nd       |     3rd     |      4th        |      5th        |
-| ------------------------------------------------- |:-------------:| -------------:| ----------: |  -------------: |  -------------: | 
-| 1071 Greatest Common Divisor of Strings           | 03/11/2020    | 03/12/2020    |             |                 |                 | 
-| 227 Basic Calculator II                           | 03/12/2020    |               |             |                 |                 | 
-| 169 Majority Element                              | 03/12/2020    |               |             |                 |                 | 
-| 226 Invert Binary Tree                            | 03/12/2020    |               |             |                 |                 | 
-| 224 Basic Calculator                              | 03/13/2020    |               |             |                 |                 |
-| 300 Longest Increasing Subsequence                | 03/10/2020    | 03/13/2020    |             |                 |                 |
-| 223 Rectangle Area                                | 03/13/2020    |               |             |                 |                 |
-| 236 Lowest Common Ancestor of a Binary Tree       | 03/10/2020    | 03/13/2020    |             |                 |                 |
-| 695 Max Area of Island                            | 03/14/2020    |               |             |                 |                 |
-| 230 Kth Smallest Element in a BST                 | 03/15/2020    |               |             |                 |                 |
-| 1160 Find Words That Can Be Formed by Characters  | 03/16/2020    |               |             |                 |                 |
-| 222 Count Complete Tree Nodes                     | 03/17/2020    |               |             |                 |                 |
+| #                                                  |       1st     |     2nd       |     3rd     |      4th        |      5th        |
+| -------------------------------------------------- |:-------------:| -------------:| ----------: |  -------------: |  -------------: | 
+| 1071 Greatest Common Divisor of Strings            | 03/11/2020    | 03/12/2020    |             |                 |                 | 
+| 0227 Basic Calculator II                           | 03/12/2020    |               |             |                 |                 | 
+| 0169 Majority Element                              | 03/12/2020    |               |             |                 |                 | 
+| 0226 Invert Binary Tree                            | 03/12/2020    |               |             |                 |                 | 
+| 0224 Basic Calculator                              | 03/13/2020    |               |             |                 |                 |
+| 0300 Longest Increasing Subsequence                | 03/10/2020    | 03/13/2020    |             |                 |                 |
+| 0223 Rectangle Area                                | 03/13/2020    |               |             |                 |                 |
+| 0836 Rectangle Overlap                             | 03/17/2020    |               |             |                 |                 |
+| 0236 Lowest Common Ancestor of a Binary Tree       | 03/10/2020    | 03/13/2020    |             |                 |                 |
+| 0695 Max Area of Island                            | 03/14/2020    |               |             |                 |                 |
+| 0230 Kth Smallest Element in a BST                 | 03/15/2020    |               |             |                 |                 |
+| 01160 Find Words That Can Be Formed by Characters  | 03/16/2020    |               |             |                 |                 |
+| 0222 Count Complete Tree Nodes                     | 03/17/2020    |               |             |                 |                 |
