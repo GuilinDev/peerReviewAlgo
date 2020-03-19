@@ -31,26 +31,26 @@ Note:
 
 ```java
     class Solution {
-    public String compressString(String S) {
-        if (S.isEmpty()) {
-            return S;
-        }
-        char[] arrS = S.toCharArray();
-        int len = arrS.length;
-        StringBuilder str = new StringBuilder();
-        int index = 1;
-        int count = 1;
-        for (int i = 1; i < len; i++) {
-            if (arrS[i] == arrS[i - 1]) {
-                count++;
-            } else {
-                str.append(arrS[i - 1] + "" + count);
-                count = 1;
+        public String compressString(String S) {
+            if (S.isEmpty()) {
+                return S;
             }
+            char[] arrS = S.toCharArray();
+            int len = arrS.length;
+            StringBuilder str = new StringBuilder();
+            int index = 1;
+            int count = 1;
+            for (int i = 1; i < len; i++) {
+                if (arrS[i] == arrS[i - 1]) {
+                    count++;
+                } else {
+                    str.append(arrS[i - 1] + "" + count);
+                    count = 1;
+                }
+            }
+            //for循环在最后一个字符处只增加count而不会append，所以这里要加上（i=len的时候跳出循环，但arrS[len - 1]这时候还没加上）
+            str.append(arrS[len - 1] + "" + count);
+            return str.length() < S.length() ? str.toString() : S;
         }
-        //for循环在最后一个字符处只增加count而不会append，所以这里要加上（i=len的时候跳出循环，但arrS[len - 1]这时候还没加上）
-        str.append(arrS[len - 1] + "" + count);
-        return str.length() < S.length() ? str.toString() : S;
     }
-}
 ```
