@@ -45,7 +45,7 @@ class Solution {
 //4:Plus One  
     public int[] plusOne(int[] digits) {
         if (digits == null || digits.length == 0) return new int[0];
-        for (int i = digits.length - 1; i >= 0; i --) { // i -- not i ++ starting from digits.length - 1;
+        for (int i = digits.length - 1; i >= 0; i --) { // i -- not i ++ starting from digits.length - 1; // 倒序
             if (digits[i] < 9) {
                 digits[i] = digits[i] + 1;
                 return digits;
@@ -80,7 +80,7 @@ class Solution {
 
 //6: Rotate Array
   public void rotate(int[] nums, int k) { // 三次倒转
-       k  %= nums.length;
+       k  %= nums.length; // need k %
        if (k == 0) return ;
        revertArray(nums, 0 , nums.length - 1);
        revertArray(nums,0, k- 1);
