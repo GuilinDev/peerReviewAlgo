@@ -1,4 +1,5 @@
 # 找到数组中最小的k个数
+[K Smallest](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
 > 1）全排序然后取前k个数字；2）利用插入排序只排序k个数字；这两个方法不说了
 
 ## Solution 1
