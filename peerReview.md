@@ -30,3 +30,4 @@
 | 0409 Longest Palindrome                            | 03/18/2020    |               |             |                 |                 |
 | 0365 Water and Jug Problem                         | 03/20/2020    |               |             |                 |                 |
 | 0945 Minimum Increment to Make Array Unique        | 03/21/2020    |               |             |                 |                 |
+| 0876 Middle of the Linked List                     | 03/22/2020    |               |             |                 |                 |
