@@ -54,6 +54,7 @@ class Solution { // use mid inorder traversal
      return true;
   }
 }
+
 //230. Kth Smallest Element in a BST
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
@@ -73,11 +74,11 @@ class Solution {
                 steps ++;
             }
             cur = node.right;
-        }
-        
+        }    
         return Integer.MIN_VALUE;
     }
 }
+
 //111. Minimum Depth of Binary Tree
 public class Solution {
     public int minDepth(TreeNode root) {
@@ -87,6 +88,25 @@ public class Solution {
         return (left == 0 || right == 0) ? left + right + 1: Math.min(left,right) + 1;
        
     }
+}
+class Solution {
+  public int minDepth(TreeNode root) {
+    if (root == null) {
+      return 0;
+    }
+    if ((root.left == null) && (root.right == null)) {
+      return 1;
+    }
+    int min_depth = Integer.MAX_VALUE;
+    if (root.left != null) {
+      min_depth = Math.min(minDepth(root.left), min_depth);
+    }
+    if (root.right != null) {
+      min_depth = Math.min(minDepth(root.right), min_depth);
+    }
+
+    return min_depth + 1;
+  }
 }
 
 
