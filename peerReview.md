@@ -32,3 +32,4 @@
 | 0945 Minimum Increment to Make Array Unique        | 03/21/2020    |               |             |                 |                 |
 | 0876 Middle of the Linked List                     | 03/22/2020    |               |             |                 |                 |
 | 0892 Surface Area of 3D Shapes                     | 03/24/2020    |               |             |                 |                 |
+| 0999 Available Captures for Rook                   | 03/25/2020    |               |             |                 |                 |
