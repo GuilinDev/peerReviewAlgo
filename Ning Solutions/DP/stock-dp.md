@@ -85,8 +85,7 @@ public int maxProfit(int k, int[] prices) {
             T_ik0[j] = Math.max(T_ik0[j], T_ik1[j] + price);
             T_ik1[j] = Math.max(T_ik1[j], T_ik0[j - 1] - price);
         }
-    }
-        
+    }  
     return T_ik0[k];
 }
 
@@ -110,29 +109,24 @@ public int maxProfit(int[] prices) {
 //Solution I -- pay the fee when buying the stock:
 public int maxProfit(int[] prices, int fee) {
     int T_ik0 = 0, T_ik1 = Integer.MIN_VALUE;
-    
     for (int price : prices) {
         int T_ik0_old = T_ik0;
         T_ik0 = Math.max(T_ik0, T_ik1 + price);
         T_ik1 = Math.max(T_ik1, T_ik0_old - price - fee);
-    }
-        
+    }    
     return T_ik0;
 }
 
 //Solution II -- pay the fee when selling the stock:
 public int maxProfit(int[] prices, int fee) {
     long T_ik0 = 0, T_ik1 = Integer.MIN_VALUE;
-    
     for (int price : prices) {
         long T_ik0_old = T_ik0;
         T_ik0 = Math.max(T_ik0, T_ik1 + price - fee);
         T_ik1 = Math.max(T_ik1, T_ik0_old - price);
-    }
-        
+    }  
     return (int)T_ik0;
 }
-
 
 }
 
