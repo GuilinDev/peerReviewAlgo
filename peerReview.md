@@ -23,7 +23,7 @@
 | 0223 Rectangle Area                                | 03/13/2020    |               |             |                 |                 |
 | 0836 Rectangle Overlap                             | 03/17/2020    |               |             |                 |                 |
 | 0236 Lowest Common Ancestor of a Binary Tree       | 03/10/2020    | 03/13/2020    |             |                 |                 |
-| 0695 Max Area of Island                            | 03/14/2020    |               |             |                 |                 |
+| 0695 Max Area of Island                            | 03/14/2020    | 03/22/2020    |             |                 |                 |
 | 0230 Kth Smallest Element in a BST                 | 03/15/2020    |               |             |                 |                 |
 | 1160 Find Words That Can Be Formed by Characters   | 03/16/2020    |               |             |                 |                 |
 | 0222 Count Complete Tree Nodes                     | 03/17/2020    |               |             |                 |                 |
