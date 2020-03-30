@@ -20,20 +20,24 @@
 – 博弈型动态规划 (5%)
 – 综合性动态规划 (5%)
 */
-
-//256. Paint House
+// 1143. Longest Common Subsequence
 class Solution {
-    public int minCost(int[][] costs) {
-         if(costs==null||costs.length==0){
-        return 0;
-    }
-    for(int i=1; i<costs.length; i++){
-        costs[i][0] += Math.min(costs[i-1][1],costs[i-1][2]); // need add last costs it self
-        costs[i][1] += Math.min(costs[i-1][0],costs[i-1][2]);
-        costs[i][2] += Math.min(costs[i-1][1],costs[i-1][0]);
-    }
-    int n = costs.length-1;
-    return Math.min(Math.min(costs[n][0], costs[n][1]), costs[n][2]);
+    public int longestCommonSubsequence(String text1, String text2) {
+        int[][] dp = new int[text1.length() + 1][text2.length() + 1];
+        for(int i = 0; i < text1.length(); i ++) {
+            for (int j = 0; j < text2.length(); j ++) {
+                if (i == 0 || j == 0) {
+                    dp[i][j] = 0;  // 两个中有一个空字符串情况
+                }
+                if (text1.charAt(i) == text2.charAt(j)) {
+                    dp[i + 1][j + 1] = dp[i][j] + 1;
+                } else { // if else 
+                    dp[i + 1][j + 1] = Math.max(dp[i][j + 1], dp[i + 1][j]); // 这里不能加一 
+                }
+            }
+        }
+        return dp[text1.length()][text2.length()];
+        
     }
 }
 
@@ -118,6 +122,90 @@ class Solution {
         
     }
 }
+// 265 paint house II
+class Solution {
+  public int minCostII(int[][] costs) {
+    if (costs == null || costs.length == 0) return 0;
+        
+    int n = costs.length, k = costs[0].length;
+    // min1 is the index of the 1st-smallest cost till previous house
+    // min2 is the index of the 2nd-smallest cost till previous house
+    int min1 = -1, min2 = -1;
+    
+    for (int i = 0; i < n; i++) {
+        int last1 = min1, last2 = min2;
+        min1 = -1; min2 = -1;
+        
+        for (int j = 0; j < k; j++) {
+            if (j != last1) {
+                // current color j is different to last min1
+                costs[i][j] += last1 < 0 ? 0 : costs[i - 1][last1];
+            } else {
+                costs[i][j] += last2 < 0 ? 0 : costs[i - 1][last2];
+            }       
+            // find the indices of 1st and 2nd smallest cost of painting current house i
+            if (min1 < 0 || costs[i][j] < costs[i][min1]) {
+                min2 = min1; min1 = j;
+            } else if (min2 < 0 || costs[i][j] < costs[i][min2]) {
+                min2 = j;
+            }
+        }
+    }
+    
+    return costs[n - 1][min1];
+}
+}
+// 198. House Robber
+class Solution {
+  int rob(int[] nums) {
+    int n = nums.length;
+    // dp[i] = x 表示：
+    // 从第 i 间房子开始抢劫，最多能抢到的钱为 x
+    // base case: dp[n] = 0
+    int[] dp = new int[n + 2];
+    for (int i = n - 1; i >= 0; i--) {
+        dp[i] = Math.max(dp[i + 1], nums[i] + dp[i + 2]);
+    }
+    return dp[0];
+}
+//save space
+int rob2(int[] nums) {
+    int n = nums.length;
+   //记录 dp[i+1] 和 dp[i+2]
+    int dp_i_1 = 0, dp_i_2 = 0;
+    // 记录 dp[i]
+    int dp_i = 0; 
+    for (int i = n - 1; i >= 0; i--) {
+        dp_i = Math.max(dp_i_1, nums[i] + dp_i_2);
+        dp_i_2 = dp_i_1;
+       dp_i_1 = dp_i;
+    }
+    return dp_i;
+}
+}
+
+//213. House Robber II
+class Solution {
+    public int rob(int[] nums) {
+    int n = nums.length;
+    if (n == 1) return nums[0];
+    return Math.max(robRange(nums, 0, n - 2), 
+                    robRange(nums, 1, n - 1));
+}
+
+// 仅计算闭区间 [start,end] 的最优结果
+int robRange(int[] nums, int start, int end) {
+    int n = nums.length;
+    int dp_i_1 = 0, dp_i_2 = 0;
+    int dp_i = 0;
+    for (int i = end; i >= start; i--) {
+        dp_i = Math.max(dp_i_1, nums[i] + dp_i_2);
+        dp_i_2 = dp_i_1;
+        dp_i_1 = dp_i;
+    }
+    return dp_i;
+}
+}
 
 // 62. Unique Paths
 class Solution {
@@ -174,26 +262,7 @@ class Solution {
         return dp[row - 1][col - 1];
     }
 }
-// 1143. Longest Common Subsequence
-class Solution {
-    public int longestCommonSubsequence(String text1, String text2) {
-        int[][] dp = new int[text1.length() + 1][text2.length() + 1];
-        for(int i = 0; i < text1.length(); i ++) {
-            for (int j = 0; j < text2.length(); j ++) {
-                if (i == 0 || j == 0) {
-                    dp[i][j] = 0;  // 两个中有一个空字符串情况
-                }
-                if (text1.charAt(i) == text2.charAt(j)) {
-                    dp[i + 1][j + 1] = dp[i][j] + 1;
-                } else { // if else 
-                    dp[i + 1][j + 1] = Math.max(dp[i][j + 1], dp[i + 1][j]); // 这里不能加一 
-                }
-            }
-        }
-        return dp[text1.length()][text2.length()];
-        
-    }
-}
+
 //64. Minimum Path Sum
 class Solution {
     public int minPathSum(int[][] grid) {
@@ -218,13 +287,60 @@ class Solution {
     }
 }
 
+/*划分性
+• 要求将一个序列或字符串划分成若干满足要求的的片段
+• 解决方法：最后一步--》最后一段
+• 枚举最后一段起点
+• f[i]表示前i个元素分段后的可行性/最值，可行性，方式数： Perfect Squares, Palindrome Partition II*/
 
+//279. Perfect Squares
+class Solution {
+public int numSquares(int n) {
+ 	int[] dp = new int[n + 1];
+ 	Arrays.fill(dp, Integer.MAX_VALUE);
+ 	dp[0] = 0;
+ 	for(int i = 1; i <= n; ++i) {
+ 		int min = Integer.MAX_VALUE;
+ 		int j = 1;
+ 		while(i - j*j >= 0) {
+ 			min = Math.min(min, dp[i - j*j] + 1);
+ 			++j;
+ 		}
+ 		dp[i] = min;
+ 	}		
+ 	return dp[n];
+ }
+}
 
-
-
-
-
-
+//416. Partition Equal Subset Sum (0 -1 背包)
+class Solution {
+    public boolean canPartition(int[] nums) {
+    int sum = 0;
+    
+    for (int num : nums) {
+        sum += num;
+    }
+    
+    if ((sum & 1) == 1) {
+        return false;
+    }
+    sum /= 2;
+    
+    int n = nums.length;
+    boolean[] dp = new boolean[sum+1];
+    Arrays.fill(dp, false);
+    dp[0] = true;
+    
+    for (int num : nums) {
+        for (int i = sum; i > 0; i--) {
+            if (i >= num) {
+                dp[i] = dp[i] || dp[i-num];
+            }
+        }
+    } 
+    return dp[sum];
+}
+}
 
 
 

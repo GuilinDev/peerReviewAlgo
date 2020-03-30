@@ -34,6 +34,15 @@ class Solution {
         return root;
     }
 }
+public class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null) return null;
+        TreeNode tmp = root.left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(tmp);
+        return root;
+    }
+}
 
 //98. Validate Binary Search Tree
 class Solution { // use mid inorder traversal
@@ -107,6 +116,91 @@ class Solution {
 
     return min_depth + 1;
   }
+}
+
+// 112. Path Sum
+public class Solution {
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if(root == null) return false; // root to leaf
+    
+        if(root.left == null && root.right == null && sum - root.val == 0) return true;
+    
+        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+    }
+}
+
+// 113 path sum II
+public class Solution {
+public List<List<Integer>> pathSum(TreeNode root, int sum){
+	List<List<Integer>> result  = new LinkedList<List<Integer>>();
+	List<Integer> currentResult  = new LinkedList<Integer>();
+	pathSum(root,sum,currentResult,result);
+	return result;
+}
+
+public void pathSum(TreeNode root, int sum, List<Integer> currentResult,
+		List<List<Integer>> result) {
+
+	if (root == null)
+		return;
+	currentResult.add(new Integer(root.val));
+	if (root.left == null && root.right == null && sum == root.val) {
+		result.add(new LinkedList(currentResult));
+		currentResult.remove(currentResult.size() - 1);//don't forget to remove the last integer
+		return;
+	} else {
+		pathSum(root.left, sum - root.val, currentResult, result);
+		pathSum(root.right, sum - root.val, currentResult, result);
+	}
+	currentResult.remove(currentResult.size() - 1);
+}
+}
+
+// 257. Binary Tree Paths
+public class Solution {
+//Recursion
+public List<String> binaryTreePaths(TreeNode root) {
+    List<String> sList=new LinkedList<String>();
+    //String s=new String();
+    if (root==null) return sList;
+    if (root.left==null && root.right==null) {
+        sList.add(Integer.toString(root.val));
+        return sList;
+    }
+    for (String s: binaryTreePaths(root.left)) {
+        sList.add(Integer.toString(root.val)+"->"+s);
+    }
+    for (String s: binaryTreePaths(root.right)) {
+        sList.add(Integer.toString(root.val)+"->"+s);
+    }
+    return sList;
+}
+}
+
+public class Solution {
+//DFS - Stack
+public List<String> binaryTreePaths(TreeNode root) {
+    List<String> list=new ArrayList<String>();
+    Stack<TreeNode> sNode=new Stack<TreeNode>();
+    Stack<String> sStr=new Stack<String>();
+    if(root==null) return list;
+    sNode.push(root);
+    sStr.push("");
+    while(!sNode.isEmpty()) {
+        TreeNode curNode=sNode.pop();
+        String curStr=sStr.pop();      
+        if(curNode.left==null && curNode.right==null) list.add(curStr+curNode.val);
+        if(curNode.left!=null) {
+            sNode.push(curNode.left);
+            sStr.push(curStr+curNode.val+"->");
+        }
+        if(curNode.right!=null) {
+            sNode.push(curNode.right);
+            sStr.push(curStr+curNode.val+"->");
+        }
+    }
+    return list;
+}
 }
 
 
