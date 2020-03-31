@@ -36,3 +36,4 @@
 | 0914 AX of Kind in a Deck of Cards                 | 03/26/2020    |               |             |                 |                 |
 | 0820 Short Encoding of Words                       | 03/27/2020    |               |             |                 |                 |
 | 1162 As Far from Land as Possible                  | 03/28/2020    |               |             |                 |                 |
+| 0912 Sort an Array                                 | 03/30/2020    |               |             |                 |                 |
