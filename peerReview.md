@@ -38,3 +38,4 @@
 | 1162 As Far from Land as Possible                            | 03/28/2020    |               |             |                 |                 |
 | 0912 Sort an Array                                           | 03/30/2020    |               |             |                 |                 |
 | 1111 Maximum Nesting Depth of Two Valid Parenthesis Strings  | 03/31/2020    |               |             |                 |                 |
+| 0289 Game of Life                                            | 03/01/2020    | 04/01/2020    |             |                 |                 |
