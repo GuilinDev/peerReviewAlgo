@@ -11,16 +11,40 @@ class Solution {
        if (n == 0) return;
         if(left + right == 2*n){
             res.add(s);
-            return;
+            return; // 推荐写上 养成习惯
         }
         if(left < n){
         generateParenthesisHelper(left + 1, right, n, res, s + "("); // current logic is s1 = s+ "("; and pass s1 to next level
         }
         if(right < left){
         generateParenthesisHelper(left, right + 1, n, res, s + ")");// current logic is s2 = s + ")"; and pass s2 to next level
-            };
+        };
     }
 }
+//17. Letter Combinations of a Phone Number
+class Solution {
+     String[] phone = new String[]{" ","","abc","def","ghi", "jkl","mno","pqrs","tuv","wxyz"};
+      public List<String> letterCombinations(String digits) {
+      List<String> res = new ArrayList<>();
+      if (digits.length() != 0) { // not equal 0
+          LetterHelper(res,"",digits);
+      }  
+      return res;    
+    } 
+    public void LetterHelper(List<String> res, String combine, String digits){
+        if (digits.length() == 0){
+            res.add(combine);
+        } else {
+            String letters = phone[Integer.valueOf(digits.substring(0,1))];
+            for (int i = 0; i < letters.length(); i ++) {
+                String letter = letters.substring(i, i + 1);
+                LetterHelper(res, combine + letter, digits.substring(1));
+            }
+        }
+    }
+}
+
+
 
 //226. Invert Binary Tree
 class Solution {
