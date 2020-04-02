@@ -39,3 +39,4 @@
 | 0912 Sort an Array                                           | 03/30/2020    |               |             |                 |                 |
 | 1111 Maximum Nesting Depth of Two Valid Parenthesis Strings  | 03/31/2020    |               |             |                 |                 |
 | 0289 Game of Life                                            | 03/01/2020    | 04/01/2020    |             |                 |                 |
+| 0008 String to Integer (atoi)                                | 04/02/2020    |               |             |                 |                 |
