@@ -20,7 +20,7 @@ class Solution {
             if (used[i]) continue; //【used[i]】更快速的查找到. 也可以temp.contains(nums[i])
             temp.add(nums[i]);
             used[i] = true;
-            backTracking(res, temp,nums,used); // 每次要重新用到之前分支的数字
+            backTracking(res, temp,nums,used); // 每次要重新用到之前分支的数字,不要用到level
             temp.remove(temp.size() - 1);
             used[i] = false;
         }
@@ -89,11 +89,11 @@ class Solution {
         return res;
     }
     
-    public void backTracking(List<List<Integer>> res, int[] nums, List<Integer> temp, int size) {
+    public void backTracking(List<List<Integer>> res, int[] nums, List<Integer> temp, int level) {
         if (temp.size() <= nums.length) {
             res.add(new ArrayList<>(temp));
         }
-        for (int i = size; i < nums.length; i ++) {
+        for (int i = level; i < nums.length; i ++) {
             temp.add(nums[i]);
             backTracking(res,nums,temp,i + 1);
             temp.remove(temp.size() - 1);
@@ -140,7 +140,8 @@ class Solution {
         if(target > 0){
              for (int i = level; i < candidates.length;  i ++){
                   temp.add(candidates[i]);
-                  backTracking(res,temp,candidates, target - candidates[i], i); // 注意必须是I 因为元素可以再利用
+                  backTracking(res,temp,candidates, target - candidates[i], i); // 注意必须是I 因为元素可以再利用，
+                  // 如果变成 i+ 1 则没有重复元素
                   temp.remove(temp.size() - 1); 
             }   
         }

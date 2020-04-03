@@ -1,50 +1,4 @@
 ```java
-//22. Generate Parentheses
-class Solution {
-    public List<String> generateParenthesis(int n) {
-        List<String> res = new ArrayList<String>();
-         generateParenthesisHelper(0, 0, n, res,"");
-        return res;
-        
-    }
-   public static void generateParenthesisHelper(int left, int right, int n, List<String> res, String s) {
-       if (n == 0) return;
-        if(left + right == 2*n){
-            res.add(s);
-            return; // 推荐写上 养成习惯
-        }
-        if(left < n){
-        generateParenthesisHelper(left + 1, right, n, res, s + "("); // current logic is s1 = s+ "("; and pass s1 to next level
-        }
-        if(right < left){
-        generateParenthesisHelper(left, right + 1, n, res, s + ")");// current logic is s2 = s + ")"; and pass s2 to next level
-        };
-    }
-}
-//17. Letter Combinations of a Phone Number
-class Solution {
-     String[] phone = new String[]{" ","","abc","def","ghi", "jkl","mno","pqrs","tuv","wxyz"};
-      public List<String> letterCombinations(String digits) {
-      List<String> res = new ArrayList<>();
-      if (digits.length() != 0) { // not equal 0
-          LetterHelper(res,"",digits);
-      }  
-      return res;    
-    } 
-    public void LetterHelper(List<String> res, String combine, String digits){
-        if (digits.length() == 0){
-            res.add(combine);
-        } else {
-            String letters = phone[Integer.valueOf(digits.substring(0,1))];
-            for (int i = 0; i < letters.length(); i ++) {
-                String letter = letters.substring(i, i + 1);
-                LetterHelper(res, combine + letter, digits.substring(1));
-            }
-        }
-    }
-}
-
-
 
 //226. Invert Binary Tree
 class Solution {
@@ -68,49 +22,26 @@ public class Solution {
     }
 }
 
-//98. Validate Binary Search Tree
-class Solution { // use mid inorder traversal
- public boolean isValidBST(TreeNode root) {
-   if (root == null) return true;
-   Stack<TreeNode> stack = new Stack<>();
-   TreeNode pre = null; // USE PRE NODE 
-   while (root != null || !stack.isEmpty()) {
-      while (root != null) {
-         stack.push(root);
-         root = root.left;
-      }
-      root = stack.pop();
-      if(pre != null && root.val <= pre.val) return false;
-      pre = root;
-      root = root.right;
-     }
-     return true;
-  }
-}
-
-//230. Kth Smallest Element in a BST
+// 104. Maximum Depth of Binary Tree
 class Solution {
-    public int kthSmallest(TreeNode root, int k) {
-        int steps = 1;
-        if (root == null) return Integer.MIN_VALUE;
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        TreeNode cur = root;
-        while (!stack.isEmpty() || cur != null) {
-            while (cur != null) {
-                stack.push(cur);
-                cur = cur.left;
-            }
-            TreeNode node = stack.pop();
-            if(steps == k){
-                return node.val;
-            } else {
-                steps ++;
-            }
-            cur = node.right;
-        }    
-        return Integer.MIN_VALUE;
+    public int maxDepth(TreeNode root) {
+       if (root == null) return 0;
+       return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));   
     }
 }
+// 617. Merge Two Binary Trees
+class Solution {
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+        if (t1 == null || t2 == null) {
+            return (t1 == null) ? t2 : t1;
+        }
+        TreeNode root = new TreeNode(t1.val + t2.val);
+        root.left = mergeTrees(t1.left, t2.left);
+        root.right = mergeTrees(t1.right, t2.right);
+        return root;      
+    }
+}
+
 
 //111. Minimum Depth of Binary Tree
 public class Solution {
@@ -146,9 +77,7 @@ class Solution {
 public class Solution {
     public boolean hasPathSum(TreeNode root, int sum) {
         if(root == null) return false; // root to leaf
-    
         if(root.left == null && root.right == null && sum - root.val == 0) return true;
-    
         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 }
@@ -164,7 +93,6 @@ public List<List<Integer>> pathSum(TreeNode root, int sum){
 
 public void pathSum(TreeNode root, int sum, List<Integer> currentResult,
 		List<List<Integer>> result) {
-
 	if (root == null)
 		return;
 	currentResult.add(new Integer(root.val));
@@ -226,6 +154,104 @@ public List<String> binaryTreePaths(TreeNode root) {
     return list;
 }
 }
+
+// 108. Convert Sorted Array to Binary Search Tree
+class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        return BSTHelper(nums, 0, nums.length - 1);
+    }
+    
+    public TreeNode BSTHelper(int[] nums, int left, int right) {
+        if (left > right) return null;
+        int mid = left + (right - left) / 2;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = BSTHelper(nums, left, mid - 1);
+        root.right = BSTHelper(nums, mid + 1, right);
+        return root;
+        
+    } 
+    
+}
+
+//297. Serialize and Deserialize Binary Tree
+public class Codec {
+
+    // Encodes a tree to a single string.
+    public static final String spliter = ",";
+    public static final String nullval = "X";
+    public String serialize(TreeNode root) {
+        StringBuilder sb = new StringBuilder();
+        if (root == null) return sb.append(nullval).toString();
+        serializeHelper(root,sb);
+        return sb.toString();
+    }
+    
+    public void serializeHelper(TreeNode root, StringBuilder sb){
+        if (root == null){
+            sb.append(nullval).append(spliter);
+            return;
+        } 
+        sb.append(root.val).append(spliter); // put val infront of spliter
+        serializeHelper(root.left, sb); 
+        serializeHelper(root.right, sb);
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        Queue<String> queue = new LinkedList<>(); 
+        queue.addAll(Arrays.asList(data.split(spliter))); // remember how to convert array to list
+        return deserializeHelper(queue);
+        
+    }
+    
+    public TreeNode deserializeHelper(Queue<String> queue){
+        String rootVal = queue.poll();
+        if (rootVal.equals(nullval)){ //don't forget this way to return null
+            return null;
+        } else {
+            TreeNode root = new TreeNode(Integer.valueOf(rootVal));
+            root.left = deserializeHelper(queue);
+            root.right = deserializeHelper(queue);                               
+            return root;
+        }  
+    }
+}
+
+// 100. Same Tree
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p == null && q == null) return true;
+        if (p == null || q == null) return false;
+        if (p.val != q.val) return false;
+        return isSameTree(p.left,q.left) && isSameTree(p.right,q.right);
+    }
+}
+
+// 654. Maximum Binary Tree
+class Solution {
+    public TreeNode constructMaximumBinaryTree(int[] nums) {
+        if (nums == null || nums.length == 0) return null;
+        return constructHelper(nums, 0 , nums.length - 1);
+    }
+    
+    public TreeNode constructHelper(int[] nums, int left, int right) {
+        if (left > right) {
+            return null;
+        }
+        int indexMax = left; // not 0; 
+        for (int i = left + 1; i <= right; i ++) { // i start with left + 1
+            if (nums[indexMax] < nums[i]){
+                indexMax = i;
+            }
+        }
+        TreeNode root = new TreeNode(nums[indexMax]);
+        root.left = constructHelper(nums, left, indexMax - 1);
+        root.right = constructHelper(nums, indexMax + 1, right);
+        return root;
+    }
+}
+
 
 
 

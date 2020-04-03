@@ -83,6 +83,49 @@ class Solution {
          return root;    
      }
     }
+//98. Validate Binary Search Tree
+class Solution { // use mid inorder traversal
+ public boolean isValidBST(TreeNode root) {
+   if (root == null) return true;
+   Stack<TreeNode> stack = new Stack<>();
+   TreeNode pre = null; // USE PRE NODE 
+   while (root != null || !stack.isEmpty()) {
+      while (root != null) {
+         stack.push(root);
+         root = root.left;
+      }
+      root = stack.pop();
+      if(pre != null && root.val <= pre.val) return false;
+      pre = root;
+      root = root.right;
+     }
+     return true;
+  }
+}
+
+//230. Kth Smallest Element in a BST
+class Solution {
+    public int kthSmallest(TreeNode root, int k) {
+        int steps = 1;
+        if (root == null) return Integer.MIN_VALUE;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode cur = root;
+        while (!stack.isEmpty() || cur != null) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            TreeNode node = stack.pop();
+            if(steps == k){
+                return node.val;
+            } else {
+                steps ++;
+            }
+            cur = node.right;
+        }    
+        return Integer.MIN_VALUE;
+    }
+}
 
 
 
