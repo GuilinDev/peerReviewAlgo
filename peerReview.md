@@ -40,3 +40,4 @@
 | 1111 Maximum Nesting Depth of Two Valid Parenthesis Strings  | 03/31/2020    |               |             |                 |                 |
 | 0289 Game of Life                                            | 03/01/2020    | 04/01/2020    |             |                 |                 |
 | 0008 String to Integer (atoi)                                | 04/02/2020    |               |             |                 |                 |
+| 0042 Trapping Rain Water                                     | 04/03/2020    |               |             |                 |                 |

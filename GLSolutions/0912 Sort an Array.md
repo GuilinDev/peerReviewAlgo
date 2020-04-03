@@ -1,6 +1,6 @@
 ![12种排序方法](./imgs/0912.png)
 [各种排序Java实现](https://leetcode-cn.com/problems/sort-an-array/solution/shi-er-chong-pai-xu-suan-fa-bao-ni-man-yi-dai-gift/)
-## 考察排序的老生常谈的问题，下面给出最应该掌握的几种
+## 考察排序的老生常谈的问题，下面给出最应该掌握的3种
 
 ### 快速排序
 ```java
@@ -12,7 +12,7 @@
 
 ```
 
-### 
+### 堆排序
 > 调用PriorityQueue进行堆排序
 ```java
     class Solution {
