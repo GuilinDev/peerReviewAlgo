@@ -41,3 +41,4 @@
 | 0289 Game of Life                                            | 03/01/2020    | 04/01/2020    |             |                 |                 |
 | 0008 String to Integer (atoi)                                | 04/02/2020    |               |             |                 |                 |
 | 0042 Trapping Rain Water                                     | 04/03/2020    |               |             |                 |                 |
+| 0460 LFU Cache                                               | 04/04/2020    |               |             |                 |                 |
