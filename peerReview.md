@@ -42,3 +42,4 @@
 | 0008 String to Integer (atoi)                                | 04/02/2020    |               |             |                 |                 |
 | 0042 Trapping Rain Water                                     | 04/03/2020    |               |             |                 |                 |
 | 0460 LFU Cache                                               | 04/04/2020    |               |             |                 |                 |
+| 0072 Edit Distance                                           | 04/05/2020    |               |             |                 |                 |
