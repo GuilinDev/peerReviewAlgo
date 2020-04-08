@@ -43,3 +43,4 @@
 | 0042 Trapping Rain Water                                     | 04/03/2020    |               |             |                 |                 |
 | 0460 LFU Cache                                               | 04/04/2020    |               |             |                 |                 |
 | 0072 Edit Distance                                           | 04/05/2020    |               |             |                 |                 |
+| 0022 Generate Parenthesis                                    | 04/08/2020    |               |             |                 |                 |
