@@ -45,3 +45,4 @@
 | 0072 Edit Distance                                           | 04/05/2020    |               |             |                 |                 |
 | 0022 Generate Parenthesis                                    | 04/08/2020    |               |             |                 |                 |
 | 0151 Reverse Words in a String                               | 04/09/2020    |               |             |                 |                 |
+| 0887 Super Egg Drop                                          | 04/10/2020    |               |             |                 |                 |
