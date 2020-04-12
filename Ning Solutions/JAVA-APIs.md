@@ -28,6 +28,10 @@ peek()	peekFirst()	获取但不删除栈顶元素，失败则抛出异常
     ArrayList和Array相互转换
     E[] arr = new E[]{};
     List list = Arrays.asList(arr)
+// 排序字符串
+char[] chars = str.toCharArray();
+              Arrays.sort(chars);
+              String key = String.valueOf(chars);
 */
 
 /*
@@ -40,6 +44,10 @@ boolean isLowerCase(char ch) ...
 char toUpperCase(char ch) ...
 char toLowerCase(char ch) ...
 toString(char ch)
+ int[] table = new int[26];
+  for (char c : str.toCharArray()){
+  table[c - 'a']++;     // c - 'a' and i - 'a';
+  }
 */
 
 

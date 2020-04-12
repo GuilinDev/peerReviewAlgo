@@ -80,13 +80,13 @@ class Solution {
 class Solution {
     public String toLowerCase(String str) {
         if(str == null || str.length() == 0) return "";
-        char[] charStr = str.toCharArray();
-        for(int i = 0; i < charStr.length; i ++){
-             if(charStr[i] >= 'A' && charStr[i] <= 'Z'){ // need to check valid
-            charStr[i] += 'a' - 'A'; // remember this.
+        char[] chars = str.toCharArray();
+        for(int i = 0; i < chars.length; i ++){
+             if(chars[i] >= 'A' && chars[i] <= 'Z'){ // need to check valid
+            chars[i] += 'a' - 'A'; // remember this.
            }
         }
-        return new String(charStr);  
+        return new String(chars);  
     }
 }
 
@@ -123,10 +123,10 @@ class Solution {
     public int firstUniqChar(String s) {
         if (s == null || s.length() == 0) return -1;
         int[] table = new int[26];
-        for (int i = 0; i < s.length(); i ++) {
-            table[s.charAt(i) - 'a']++;
-        }
-        for (int i = 0; i < s.length(); i ++) {
+       for (char c : s.toCharArray()){
+            table[c - 'a']++; // c - 'a' and i - 'a';
+          }
+        for (int i = 0; i < s.length(); i ++) { // 第二次是用字符窜扫描表
             if(table[s.charAt(i) - 'a'] == 1){ // table[s.charAt(i) - 'a'] not table[i] or table[s.charAt[i] - 'a']
                return i;
             }
@@ -287,7 +287,7 @@ class Solution {
 // 680. Valid Palindrome II
 class Solution {
    public boolean validPalindrome(String s) {
-    for(int i = 0, j = s.length()-1; i < j ; i++, j--){
+    for(int i = 0, j = s.length()-1; i < j ; i++, j--){ // the way to write i and j
         if(s.charAt(i) != s.charAt(j)){
             //分两种情况，一是右边减一，二是左边加一
             return isPalindrome(s,i,j-1) || isPalindrome(s, i+1, j);
