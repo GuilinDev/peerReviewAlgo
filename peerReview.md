@@ -11,7 +11,6 @@
 ### Guilin
 > 1st - Day1; 2nd - Day3; 3rd - Day 7; 4th - Day 14; 5th - Day 30
 
-
 | #                                                            |       1st     |     2nd       |     3rd     |      4th        |      5th        |
 | ------------------------------------------------------------ |:-------------:| -------------:| ----------: |  -------------: |  -------------: | 
 | 1071 Greatest Common Divisor of Strings                      | 03/11/2020    | 03/12/2020    |             |                 |                 | 
@@ -49,3 +48,5 @@
 | 0225 Implement Stack using Queues                            | 04/11/2020    |               |             |                 |                 |
 | 0322 Coin Change                                             | 04/11/2020    |               |             |                 |                 |
 | 1103 Distribute Candies to People                            | 04/11/2020    |               |             |                 |                 |
+| 0121 Best Time to Buy and Sell Stock                         | 04/11/2020    |               |             |                 |                 |
+| 0206 Reverse Linked List                                     | 04/11/2020    |               |             |                 |                 |
