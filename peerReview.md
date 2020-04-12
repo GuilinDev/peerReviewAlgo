@@ -50,3 +50,4 @@
 | 1103 Distribute Candies to People                            | 04/11/2020    |               |             |                 |                 |
 | 0121 Best Time to Buy and Sell Stock                         | 04/11/2020    |               |             |                 |                 |
 | 0206 Reverse Linked List                                     | 04/11/2020    |               |             |                 |                 |
+| 0543 Diameter of Binary Tree                                 | 04/11/2020    |               |             |                 |                 |
