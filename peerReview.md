@@ -32,7 +32,7 @@
 | 0876 Middle of the Linked List                               | 03/22/2020    |               |             |                 |                 |
 | 0892 Surface Area of 3D Shapes                               | 03/24/2020    |               |             |                 |                 |
 | 0999 Available Captures for Rook                             | 03/25/2020    |               |             |                 |                 |
-| 0914 X of Kind in a Deck of Cards                           | 03/26/2020    |               |             |                 |                 |
+| 0914 X of Kind in a Deck of Cards                            | 03/26/2020    |               |             |                 |                 |
 | 0820 Short Encoding of Words                                 | 03/27/2020    |               |             |                 |                 |
 | 1162 As Far from Land as Possible                            | 03/28/2020    |               |             |                 |                 |
 | 0912 Sort an Array                                           | 03/30/2020    |               |             |                 |                 |
@@ -53,3 +53,4 @@
 | 0543 Diameter of Binary Tree                                 | 04/11/2020    |               |             |                 |                 |
 | 0994 Rotting Oranges                                         | 04/11/2020    |               |             |                 |                 |
 | 1013 Partition Array Into Three Parts With Equal Sum         | 04/11/2020    |               |             |                 |                 |
+| 0355 Design Twitter                                          | 04/12/2020    |               |             |                 |                 |
