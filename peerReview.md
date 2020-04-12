@@ -52,3 +52,4 @@
 | 0206 Reverse Linked List                                     | 04/11/2020    |               |             |                 |                 |
 | 0543 Diameter of Binary Tree                                 | 04/11/2020    |               |             |                 |                 |
 | 0994 Rotting Oranges                                         | 04/11/2020    |               |             |                 |                 |
+| 1013 Partition Array Into Three Parts With Equal Sum         | 04/11/2020    |               |             |                 |                 |
