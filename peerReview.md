@@ -56,3 +56,4 @@
 | 0355 Design Twitter                                          | 04/12/2020    |               |             |                 |                 |
 | 0455 Add Two Numbers II                                      | 04/13/2020    |               |             |                 |                 |
 | 0542 01 Matrix                                               | 04/14/2020    |               |             |                 |                 |
+| 0056 Merge Intervals                                         | 04/15/2020    |               |             |                 |                 |
