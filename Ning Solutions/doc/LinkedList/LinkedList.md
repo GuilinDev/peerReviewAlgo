@@ -237,7 +237,7 @@ class Solution {
         Map<Node, Node> map = new HashMap<>();
         Node cur = head;
         while (cur != null) {
-            map.put(cur, new Node(cur.val));
+            map.put(cur, new Node(cur.val)); // CREATE NEW NODE IN VALUE
             cur = cur.next;
         }
         cur = head;
