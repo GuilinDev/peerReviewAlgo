@@ -128,7 +128,7 @@ class trieNode{
 // https://leetcode-cn.com/problems/word-search-ii/solution/java-zi-dian-shu-hui-su-ji-bai-liao-9969-de-yong-h/
 
 }
-/* 并查集模板
+// 并查集模板
 class UnionFind { 
 	private int count = 0; 
 	private int[] parent; 
@@ -141,7 +141,7 @@ class UnionFind {
 	} 
 	public int find(int p) { 
 		while (p != parent[p]) { 
-			parent[p] = parent[parent[p]]; 
+			parent[p] = parent[parent[p]]; // 不能合并下一步 因为要先更新数组
 			p = parent[p]; 
 		}
 		return p; 
@@ -155,7 +155,7 @@ class UnionFind {
 	}
 }
 
-*/
+
 
 
 
