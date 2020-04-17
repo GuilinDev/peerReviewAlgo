@@ -1,4 +1,4 @@
-package sample;
+package main.java.ningSL;
 
 import java.util.HashMap;
 import java.util.Map;
