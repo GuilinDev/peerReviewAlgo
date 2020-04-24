@@ -1,5 +1,5 @@
 ![数组中的逆序对](./imgs/offer51.png)
-> 类似leetcode 315的思想
+> 类似leetcode 315和406的思想，本质是merge sort在merge的时候，两个array的指针指向较大的那个元素的时候会停下来等待指向较小的那个；等待的时间就可以计算inversion的的数量。
 ## Solution 1
 > 暴力解法（超时），使用两层 for 循环枚举所有的数对，逐一判断是否构成逆序关系，时间复杂度O(n<sup>2</sup>)。
 ```java
