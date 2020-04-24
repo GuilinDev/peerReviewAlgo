@@ -63,3 +63,4 @@
 | 0200 Number of Islands                                       | 04/19/2020    |               |             |                 |                 |
 | 1248 Count Number of Nice Subarrays                          | 04/20/2020    |               |             |                 |                 |
 | 0199 Binary Tree Right Side View                             | 04/21/2020    |               |             |                 |                 |
+| 0046 Permutations                                            | 04/23/2020    |               |             |                 |                 |
