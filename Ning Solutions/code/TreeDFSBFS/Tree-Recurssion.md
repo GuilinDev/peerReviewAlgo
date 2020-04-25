@@ -71,6 +71,38 @@ class Solution {
 
     return min_depth + 1;
   }
+
+int minDepth(TreeNode root) {
+    if (root == null) return 0;
+    Queue<TreeNode> q = new LinkedList<>();
+    q.offer(root);
+    // root 本身就是一层，depth 初始化为 1
+    int depth = 1;
+
+    while (!q.isEmpty()) {
+        int sz = q.size();
+        /* 将当前队列中的所有节点向四周扩散 */
+        for (int i = 0; i < sz; i++) {
+            TreeNode cur = q.poll();
+            /* 判断是否到达终点 */
+            if (cur.left == null && cur.right == null) 
+                return depth;
+            /* 将 cur 的相邻节点加入队列 */
+            if (cur.left != null)
+                q.offer(cur.left);
+            if (cur.right != null) 
+                q.offer(cur.right);
+        }
+        /* 这里增加步数 */
+        depth++;
+    }
+    return depth;
+}
+//DFS 实际上是靠递归的堆栈记录走过的路径，你要找到最短路径，肯定得把二叉树中所有树杈都探索完才能对比出最短的路径有多长
+//而 BFS 借助队列做到一次一步「齐头并进」，是可以在不遍历完整棵树的条件下找到最短距离的。
+//BFS 可以找到最短距离，但是空间复杂度高，而 DFS 的空间复杂度较低。
+//DFS 最坏情况下顶多就是树的高度，也就是 O(logN) BFS最坏情况下空间复杂度应该是树的最底层节点的数量，也就是 N/2，
+// 用 Big O 表示的话也就是 O(N)。
 }
 
 // 112. Path Sum

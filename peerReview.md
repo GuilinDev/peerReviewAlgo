@@ -60,4 +60,9 @@
 | 0055 Jump Game                                               | 04/16/2020    |               |             |                 |                 |
 | 0011 Container With Most Water                               | 04/17/2020    |               |             |                 |                 |
 | 0466 Count the Repetitions                                   | 04/18/2020    |               |             |                 |                 |
+| 0200 Number of Islands                                       | 04/19/2020    |               |             |                 |                 |
+| 1248 Count Number of Nice Subarrays                          | 04/20/2020    |               |             |                 |                 |
+| 0199 Binary Tree Right Side View                             | 04/21/2020    |               |             |                 |                 |
+| 0046 Permutations                                            | 04/23/2020    |               |             |                 |                 |
 | 0023 Merge k Sorted Lists                                    | 04/25/2020    |               |             |                 |                 |
+
