@@ -279,9 +279,236 @@ class Solution {
         return -1;
     }
 }
+//301. Remove Invalid Parentheses
+//我们做BFS，上一层level和下一层level之间的关系为：把所有上一层level中的每个元素都拿出来，
+// 列举出在删除一个括号后的所有可能的情况。(不管删除以后是否合法），添加到下一个level中的元素。
+//  例如：current level是 ["(()", "())"]
+//  - 那么下一层level中的元素应该是:
+//  1. 对 "(()" 删除一个括号的所有可能为： (), (), ((
+//  2. 对 "())" 删除一个括号的所有可能为： (), )), ()
+//  这六个就是下一个level的全部内容了。
+//用SET判断是否类似（）（) 重复 用ISVALID判断有效括号
 
-// 
+class Solution {
+    public List<String> removeInvalidParentheses(String s) {
+        List<String> result = new ArrayList<>();
+        if (s == null) {
+            return result;
+        }
+        Set<String> visited = new HashSet<>();
+        Queue<String> queue = new LinkedList<>();//当前level的所有的组合   
+        visited.add(s);
+        queue.add(s);   
+        boolean found = false;
+        String temp = s;    
+        while (!queue.isEmpty()) {
+            temp = queue.poll();   
+            if (isValid(temp)) {
+                result.add(temp);
+                found = true;
+            }
+            if (found) { // 把当前层逻辑全部执行完的一种做法,不执行下一层
+                continue;
+            }
+            for (int i = 0; i < temp.length(); i++) {
+                if (temp.charAt(i) != '(' && temp.charAt(i)!= ')') {
+                    continue;
+                }
+                String tempSub = temp.substring(0, i) + temp.substring(i + 1);
+                if (!visited.contains(tempSub)) {
+                    queue.add(tempSub);
+                    visited.add(tempSub);
+                }
+            }
+        }
+        return result;
+    }
+    
+    private boolean isValid(String s) {
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                count++;
+            }
+           if (c == ')') {
+               if (count == 0)
+               return false;
+                 count --;
+              }
+        }
+        return count == 0;
+    }
+}
+//695. Max Area of Island
+class Solution {
+       private int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+       private int R, C;
+       private int[][] grid;
+       private boolean[][] visited;
+       public int maxAreaOfIsland(int[][] grid){
+           R = grid.length;
+           C = grid[0].length;
+           this.grid = grid;
+           visited = new boolean[R][C];
+           int res = 0;
+           for(int i = 0; i < R; i ++)
+               for(int j = 0; j < C; j ++)
+                   if(grid[i][j] == 1 && !visited[i][j])
+                       res = Math.max(res, dfs(i, j));
+           return res;
+       }  
+       private int dfs(int x, int y){
+           visited[x][y] = true;
+           int res = 1;
+           for(int d = 0; d < 4; d ++){
+               int nextx = x + dirs[d][0], nexty = y + dirs[d][1];
+               if(inArea(nextx, nexty) && grid[nextx][nexty] == 1 && !visited[nextx][nexty])
+                   res += dfs(nextx, nexty);
+           }
+           return res;
+       }
+   
+       private boolean inArea(int x, int y){
+           return x >= 0 && x < R && y >= 0 && y < C;
+       }
+   
+// 也可以用板来直接记录VISITED,但是这类代码让代码的可读性变弱
+class Solution {
+   public int maxAreaOfIsland(int[][] grid) {
+      int maxArea = 0;
+      for (int i = 0; i < grid.length; i++) {
+         for (int j = 0; j < grid[0].length; j++) {
+            if (grid[i][j] == 1) {
+               maxArea = Math.max(maxArea, dfs(grid, i, j));
+            }
+         }
+      }
 
+      return maxArea;
+   }
+   private int dfs(int[][] grid, int i, int j) {
+      if (i >= 0 && i < grid.length && j >= 0 && j < grid[0].length && grid[i][j] == 1) {
+         grid[i][j] = 0;//计算过了
+         return 1 + dfs(grid, i - 1, j) + dfs(grid, i + 1, j) + dfs(grid, i, j - 1) + dfs(grid, i, j + 1);//记得前面的1是本身，需要加上
+      }
+      return 0;//当前元素为0，不是island，直接返回
+   }
+}
+}
+// 200. Number of Islands
+class Solution {
+    int[][] dis = new int[][]{{-1,0},{0,-1},{0,1},{1,0}};
+    int R = 0;
+    int C =  0;
+    boolean[][] visited ;
+    char[][] grid;
+    public int numIslands(char[][] grid) {
+      this.grid = grid;
+      R = grid.length;  
+      if(R == 0) return 0;
+      C = grid[0].length;
+      visited = new boolean[R][C];  
+      int result = 0;
+      for(int i = 0; i < R; i ++)
+         for(int j = 0; j < C; j ++) {
+            if(grid[i][j] == '1' && !visited[i][j]){
+               dfs(grid,i,j);
+               result ++; // 联通分量
+            }
+         }
+      return result;
+    }
+     public void dfs(char[][] grid, int x, int y){
+      visited[x][y] = true;
+      for (int i = 0; i < 4; i ++){
+         int nextx = x + dis[i][0];
+         int nexty = y + dis[i][1]; // x , y 别弄混了
+         if(inArea(nextx,nexty) && grid[nextx][nexty] == '1' && !visited[nextx][nexty] ){
+            dfs(grid,nextx,nexty);
+         }
+      }
+   }
+   private boolean inArea(int x, int y){
+     return x >= 0 && x < R && y >=0 && y < C;
+   }
+}
+// 同样也可以省略VISITED：
+class Solution {
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0 || grid[0].length == 0){
+            return 0;
+        }
+        int m = grid.length;
+        int n = grid[0].length;
+        int result = 0;
+        for (int i = 0; i < m; i++) { // m , n need match;
+            for (int j = 0; j < n; j++){
+                if(grid[i][j] == '1'){
+                    dfsIslans(grid,i,j,m,n);
+                    result ++;  
+                }
+            }
+        }
+        return result;
+    }
+    
+    private void dfsIslans(char[][] grid, int i, int j, int m, int n){
+        if (i < 0|| j < 0 || i >= m || j >= n || grid[i][j] == '0'){ // i need larger than m; j larger than n;
+            return;
+        }
+        grid[i][j] = '0';
+        dfsIslans(grid, i+1, j, m, n);
+        dfsIslans(grid, i-1, j, m, n);
+        dfsIslans(grid, i, j+1, m, n);
+        dfsIslans(grid, i, j-1, m, n);
+    }
+}
+
+//1091. Shortest Path in Binary Matrix
+class Solution {
+
+    private int[][] dirs = {{-1, 0}, {-1, 1}, {0, 1}, {1, 1},
+                            {1, 0}, {1, -1}, {0, -1}, {-1, -1}};
+    private int R, C;
+
+    public int shortestPathBinaryMatrix(int[][] grid) {
+
+        R = grid.length;
+        C = grid[0].length;
+        boolean[][] visited = new boolean[R][C];
+        int[][] dis = new int[R][C];
+
+        if(grid[0][0] == 1) return -1;
+        if(R == 0 && C == 0) return 1;
+
+        // BFS
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(0);
+        visited[0][0] = true;
+        dis[0][0] = 1;
+        while(!queue.isEmpty()){
+            int cur = queue.remove();
+            int curx = cur / C, cury = cur % C;//一维转二维
+            for(int d = 0; d < 8; d ++){
+                int nextx = curx + dirs[d][0];
+                int nexty = cury + dirs[d][1];
+                if(inArea(nextx, nexty) && !visited[nextx][nexty] && grid[nextx][nexty] == 0){
+                    queue.add(nextx * C + nexty);
+                    visited[nextx][nexty] = true;
+                    dis[nextx][nexty] = dis[curx][cury] + 1;
+                    if(nextx == R - 1 && nexty == C - 1)
+                        return dis[nextx][nexty];
+                }
+            }
+        }
+        return -1;
+    }
+
+    private boolean inArea(int x, int y){
+        return x >= 0 && x < R && y >= 0 && y < C;
+    }
+}
 
 
 ```
