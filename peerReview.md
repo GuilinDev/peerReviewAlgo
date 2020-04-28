@@ -67,3 +67,4 @@
 | 0023 Merge k Sorted Lists                                    | 04/25/2020    |               |             |                 |                 |
 | 0033 Sorted in Rotated Sorted Array                          | 04/26/2020    |               |             |                 |                 |
 | 0260 Single Number III                                       | 04/27/2020    |               |             |                 |                 |
+| 1095 Find in Mountain Array                                  | 04/28/2020    |               |             |                 |                 |
