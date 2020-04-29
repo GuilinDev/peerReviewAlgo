@@ -48,7 +48,7 @@ public class Solution {
     public int minDepth(TreeNode root) {
         if(root == null) return 0;
         int left = minDepth(root.left);
-        int right = minDepth(root.right);
+        int right = minDepth(root.right);//假如一边是零 那意味着比较时候会选零做较小数 但是那样是错误的。
         return (left == 0 || right == 0) ? left + right + 1: Math.min(left,right) + 1;
        
     }
@@ -68,7 +68,6 @@ class Solution {
     if (root.right != null) {
       min_depth = Math.min(minDepth(root.right), min_depth);
     }
-
     return min_depth + 1;
   }
 
@@ -78,7 +77,6 @@ int minDepth(TreeNode root) {
     q.offer(root);
     // root 本身就是一层，depth 初始化为 1
     int depth = 1;
-
     while (!q.isEmpty()) {
         int sz = q.size();
         /* 将当前队列中的所有节点向四周扩散 */
@@ -111,6 +109,7 @@ public class Solution {
         if(root == null) return false; // root to leaf
         if(root.left == null && root.right == null && sum - root.val == 0) return true;
         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+//层层递进 但是每一层值减少 而且每次只能选一边。
     }
 }
 
@@ -123,8 +122,7 @@ public List<List<Integer>> pathSum(TreeNode root, int sum){
 	return result;
 }
 
-public void pathSum(TreeNode root, int sum, List<Integer> currentResult,
-		List<List<Integer>> result) {
+public void pathSum(TreeNode root, int sum, List<Integer> currentResult, List<List<Integer>> result) {
 	if (root == null)
 		return;
 	currentResult.add(new Integer(root.val));
@@ -359,7 +357,7 @@ class Solution {
   }
 }
 }
-// 96. Unique Binary Search Trees II
+// 96. Unique Binary Search Trees
 class Solution {
 public int numTrees(int n) { 
     if (n == 0) {
@@ -594,5 +592,57 @@ class Solution {
         return node.val + L + R - 1;
     }
 }
+//173. Binary Search Tree Iterator
+class BSTIterator {
+    Queue<Integer> queue; // need ;
+    public BSTIterator(TreeNode root) {
+        queue  = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null){
+                stack.push(cur);
+                cur = cur.left;
+            }
+            TreeNode node= stack.pop();
+            queue.offer(node.val);
+            cur = node.right; // must be node.right not node.left or cur.right
+        }
+    }
+    
+    /** @return the next smallest number */
+    public int next() {
+            return queue.poll();
+    }
+    
+    /** @return whether we have a next smallest number */
+    public boolean hasNext() {
+        return !queue.isEmpty();
+    }
+}
+// 105. Construct Binary Tree from Preorder and Inorder Traversal
+class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return buildTreeHelper(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+    }   
+        
+     public TreeNode buildTreeHelper(int[] preorder, int pleft, int pright, int[] inorder, int ileft, int iright) {
+         if (pleft > pright || ileft > iright ) {
+             return null;
+         }
+         int rootIndex = 0;
+         for (int i = ileft; i <= iright; i ++) {
+             if (preorder[pleft] == inorder[i]){
+                 rootIndex = i;
+                 break;
+             }
+         }
+         TreeNode root = new TreeNode(preorder[pleft]);
+         root.left = buildTreeHelper(preorder, pleft + 1, pleft + rootIndex - ileft, inorder, ileft, rootIndex - 1); // 
+         root.right =  buildTreeHelper(preorder, pleft + rootIndex - ileft + 1, pright,inorder, rootIndex + 1,iright ); 
+         return root;    
+     }
+    
+    }
 
 ```
