@@ -69,3 +69,4 @@
 | 0260 Single Number III                                       | 04/27/2020    |               |             |                 |                 |
 | 1095 Find in Mountain Array                                  | 04/28/2020    |               |             |                 |                 |
 | 0202 Happy Number                                            | 04/29/2020    |               |             |                 |                 |
+| 0022 Merge Two Sorted Lists                                  | 04/30/2020    |               |             |                 |                 |
