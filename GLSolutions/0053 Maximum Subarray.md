@@ -34,7 +34,7 @@ class Solution {
 ```
 
 ## Solution 2
-> Divide and Conquer
+> Divide and Conquer, Follow-up问题，时间复杂度为O(nlogn)，其实不如DP的问题
 ![分治法](./imgs/0053_1.png)
 ![分治法](./imgs/0053_2.png)
 
