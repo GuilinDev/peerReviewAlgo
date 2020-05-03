@@ -57,7 +57,7 @@
 | 0455 Add Two Numbers II                                      | 04/13/2020    |               |             |                 |                 |
 | 0542 01 Matrix                                               | 04/14/2020    |               |             |                 |                 |
 | 0056 Merge Intervals                                         | 04/15/2020    |               |             |                 |                 |
-| 0055 Jump Game                                               | 04/16/2020    |               |             |                 |                 |
+| 0055 Jump Game                                               | 04/16/2020    | 05/03/2020    |             |                 |                 |
 | 0011 Container With Most Water                               | 04/17/2020    |               |             |                 |                 |
 | 0466 Count the Repetitions                                   | 04/18/2020    |               |             |                 |                 |
 | 0200 Number of Islands                                       | 04/19/2020    |               |             |                 |                 |
