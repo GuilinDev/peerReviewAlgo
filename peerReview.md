@@ -72,3 +72,4 @@
 | 0022 Merge Two Sorted Lists                                  | 04/30/2020    |               |             |                 |                 |
 | 0003 Longest Substring without Repeating Characters          | 05/01/2020    |               |             |                 |                 |
 | 0053 Maximum Subarray                                        | 05/02/2020    |               |             |                 |                 |
+| 0098 Validate Binary Search Tree                             | 05/04/2020    |               |             |                 |                 |
