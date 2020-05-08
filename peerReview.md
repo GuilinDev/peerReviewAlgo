@@ -75,3 +75,4 @@
 | 0098 Validate Binary Search Tree                             | 05/04/2020    |               |             |                 |                 |
 | 0983 Minimum Cost for Ticketing                              | 05/05/2020    |               |             |                 |                 |
 | 0572 Subtree of Another Tree                                 | 05/06/2020    |               |             |                 |                 |
+| 0221 Maximal Square                                          | 05/07/2020    |               |             |                 |                 |
