@@ -78,3 +78,4 @@
 | 0572 Subtree of Another Tree                                 | 05/06/2020    |               |             |                 |                 |
 | 0221 Maximal Square                                          | 05/07/2020    |               |             |                 |                 |
 | 0069 Sqrt(x)                                                 | 05/08/2020    |               |             |                 |                 |
+| 0236 Lowest Common Ancestor of a Binary Tree                 | 05/09/2020    |               |             |                 |                 |
