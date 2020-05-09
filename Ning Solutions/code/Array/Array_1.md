@@ -12,6 +12,9 @@ class Solution {
         }
         return new int[0];        
     }
+// not recommend sort in two sum because it is aslking for index. after sort, index will missing.
+//we need to copy to another copy to keep order.
+// int[] nums2 = Arrays.copyOf(nums, nums.length);
 
 //2:Merge Two Sorted Lists  
    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -25,7 +28,8 @@ class Solution {
         } else {
             head = l2;
             head.next = mergeTwoLists(l1,l2.next);
-        }  
+        } 
+     return head; 
   } 
 
 
@@ -36,7 +40,7 @@ class Solution {
         int total = 1;
         for (int i = 1; i < nums.length; i ++) {
             if (nums[i] > nums[i - 1]) {
-                nums[total] = nums[i];
+                nums[total] = nums[i]; // you need to remove eletement not just count
                 total ++;
             }    }
         return total;    
