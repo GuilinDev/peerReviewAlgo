@@ -80,3 +80,4 @@
 | 0069 Sqrt(x)                                                 | 05/08/2020    |               |             |                 |                 |
 | 0050 Pow(x)                                                  | 05/10/2020    |               |             |                 |                 |
 | 0236 Lowest Common Ancestor of a Binary Tree                 | 05/09/2020    |               |             |                 |                 |
+| 0155 Min Stack                                               | 05/11/2020    |               |             |                 |                 |
