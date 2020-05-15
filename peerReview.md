@@ -84,3 +84,4 @@
 | 0155 Min Stack                                               | 05/11/2020    |               |             |                 |                 |
 | 0102 Binary Tree Level Order Traversal                       | 05/12/2020    |               |             |                 |                 |
 | 0560 Subarray Sum Equals to K                                | 05/14/2020    |               |             |                 |                 |
+| 0025 Reserve Nodes in k Groups                               | 05/15/2020    |               |             |                 |                 |
