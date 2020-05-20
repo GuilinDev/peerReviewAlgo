@@ -46,3 +46,9 @@ class Solution {
     }
 }
 ```
+
+## Solution 2
+> 哈希表的做法
+```java
+
+```

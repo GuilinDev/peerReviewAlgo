@@ -88,4 +88,5 @@
 | 0025 Reserve Nodes in k Groups                               | 05/15/2020    |               |             |                 |                 |
 | 0210 Course Schedule II                                      | 05/16/2020    |               |             |                 |                 |
 | 0680 Valid Palindrome II                                     | 05/18/2020    |               |             |                 |                 |
-| 1371 Find the Longest Substring Containing Vowels in Even Counts | 05/18/2020    |               |             |                 |                 |
+| 1371 Find the Longest Substring Containing Vowels in Even Counts | 05/19/2020    |               |             |                 |                 |
+| 0005 Longest Palindromic Substring                           | 05/20/2020    |               |             |                 |                 |
