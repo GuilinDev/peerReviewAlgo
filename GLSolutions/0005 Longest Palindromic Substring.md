@@ -32,8 +32,11 @@ class Solution {
 
 ## Solution 2
 > DP，dp[i][j]表示字符串区间[i,j]是否为回文串；
+
 > 当i == j时，只有一个字符，肯定是回文串；
+
 > 如果j = i + 1，那说嘛二者是相邻字符，此时判断s[i]是否等于s[j]；
+
 > 如果i和j不相邻，j - i >= 2的时候，除了判断s[i]和s[j]这两个两端的位置相等，还得保证dp[i+1][j-1]也得为真，才是回文串，所以递推式为
 ```java
 dp[i, j] = 1                                   if i == j为回文串
@@ -69,7 +72,7 @@ class Solution {
 }
 ```
 
-## Solution 1
+## Solution 3
 > Manacher's 算法，O(n),不掌握了
 ```java
 
