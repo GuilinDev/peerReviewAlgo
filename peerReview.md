@@ -90,5 +90,5 @@
 | 0680 Valid Palindrome II                                     | 05/18/2020    |               |             |                 |                 |
 | 1371 Find the Longest Substring Containing Vowels in Even Counts | 05/19/2020    |               |             |                 |                 |
 | 0005 Longest Palindromic Substring                           | 05/20/2020    |               |             |                 |                 |
-| 0105 Construct Binary Tree from Preorder and Inorder Traversal   | 05/20/2020    |               |             |                 |                 |
-| 0005 Longest Palindromic Substring                           | 05/20/2020    |               |             |                 |                 |
+| 0105 Construct Binary Tree from Preorder and Inorder Traversal   | 05/21/2020    |               |             |                 |                 |
+| 0076 Minimum Window Substring                                | 05/22/2020    |               |             |                 |                 |
