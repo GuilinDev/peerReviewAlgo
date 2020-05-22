@@ -1,3 +1,9 @@
 *.iml
 .idea
 .DS_Store
+.vscode
+.classpath
+.project
+.settings
+
+/target
