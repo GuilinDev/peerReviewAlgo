@@ -92,3 +92,4 @@
 | 0005 Longest Palindromic Substring                           | 05/20/2020    |               |             |                 |                 |
 | 0105 Construct Binary Tree from Preorder and Inorder Traversal   | 05/21/2020    |               |             |                 |                 |
 | 0076 Minimum Window Substring                                | 05/22/2020    |               |             |                 |                 |
+| 0004 Median of Two Sorted Arrays                             | 05/23/2020    |               |             |                 |                 |
