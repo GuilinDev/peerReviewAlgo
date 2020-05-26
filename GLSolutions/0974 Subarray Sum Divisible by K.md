@@ -25,7 +25,7 @@ class Solution {
 ## Solution 2
 > 使用前缀和，（同523. Continuous Subarray Sum），O(n)
 使用HashMap
-[题解](./imgs/0974_1.png)
+![题解](./imgs/0974_1.png)
 ```java
 class Solution {
     public int subarraysDivByK(int[] A, int K) {
@@ -46,7 +46,7 @@ class Solution {
 ```
 
 另一种解法
-[题解](./imgs/0974_2.png)
+![题解](./imgs/0974_2.png)
 ```java
 class Solution {
     public int subarraysDivByK(int[] A, int K) {
