@@ -96,3 +96,4 @@
 | 0146 LRU Cache                                               | 05/24/2020    |               |             |                 |                 |
 | 0287 Find the Duplicate Number                               | 05/25/2020    |               |             |                 |                 |
 | 0974 Subarray Sum Divisible by K                             | 05/26/2020    |               |             |                 |                 |
+| 0394 Decode String                                           | 05/27/2020    |               |             |                 |                 |
