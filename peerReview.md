@@ -98,3 +98,4 @@
 | 0974 Subarray Sum Divisible by K                             | 05/26/2020    |               |             |                 |                 |
 | 0394 Decode String                                           | 05/27/2020    |               |             |                 |                 |
 | 0198 House Robber                                            | 05/28/2020    |               |             |                 |                 |
+| 0084 Largest Rectangle in Histogram                          | 05/29/2020    |               |             |                 |                 |
