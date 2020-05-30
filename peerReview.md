@@ -99,3 +99,4 @@
 | 0394 Decode String                                           | 05/27/2020    |               |             |                 |                 |
 | 0198 House Robber                                            | 05/28/2020    |               |             |                 |                 |
 | 0084 Largest Rectangle in Histogram                          | 05/29/2020    |               |             |                 |                 |
+| 0101 Symmetric Tree                                          | 05/30/2020    |               |             |                 |                 |
