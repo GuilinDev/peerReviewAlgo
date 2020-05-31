@@ -4,7 +4,8 @@ class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         result = collections.defaultdict(list)
         for str in strs:
-            result[tuple(sorted(str))].append(str) ## sorted方法使用了Time Sort，根据数据采用归并排序或者插入排序，可以看作是KlogK
+            # 这里sorted方法使用了Time Sort，根据数据采用归并排序或者插入排序，可以看作是KlogK
+            result[tuple(sorted(str))].append(str) 
         return result.values()
 ```
 
