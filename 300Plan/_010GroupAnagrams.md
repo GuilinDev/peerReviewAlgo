@@ -1,4 +1,4 @@
-### 方法1 - 找任意一个字符串作为HashMap的key，O(NKlogK)
+#### 方法1 - 找任意一个字符串作为HashMap的key，O(NKlogK)
 ```python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
@@ -9,7 +9,7 @@ class Solution:
         return result.values()
 ```
 
-### 方法2 - 创建一个HashMap的独特的 key，这里使用元组（简单相加或者相乘容易冲突），也可以手动加入特殊字符，形成#1#0#2#10#0这样的key，顺序不同所以也不会产生有冲突的key，O(NK)
+#### 方法2 - 创建一个HashMap的独特的 key，这里使用元组（简单相加或者相乘容易冲突），也可以手动加入特殊字符，形成#1#0#2#10#0这样的key，顺序不同所以也不会产生有冲突的key，O(NK)
 ```python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
