@@ -100,3 +100,4 @@
 | 0198 House Robber                                            | 05/28/2020    |               |             |                 |                 |
 | 0084 Largest Rectangle in Histogram                          | 05/29/2020    |               |             |                 |                 |
 | 0101 Symmetric Tree                                          | 05/30/2020    |               |             |                 |                 |
+| 0049 Group Anagrams                                          | 05/31/2020    |               |             |                 |                 |
