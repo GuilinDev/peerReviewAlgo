@@ -13,6 +13,8 @@ def getNode(head, n, i):
     """
     if head is None:
         return None
+    if i >= n:
+        return None
     if i == 0:
         return head
 
