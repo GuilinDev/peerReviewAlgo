@@ -103,3 +103,4 @@
 | 0049 Group Anagrams                                          | 05/31/2020    |               |             |                 |                 |
 | 0837 New 21 Game                                             | 06/02/2020    |               |             |                 |                 |
 | 0238 Product of Array Except Self                            | 06/03/2020    |               |             |                 |                 |
+| 0054 Spiral Matrix                                           | 06/04/2020    |               |             |                 |                 |
