@@ -1,5 +1,6 @@
 ### Binary Search
 > 注意边界
+
 常规写法
 ```python
 class Solution:
