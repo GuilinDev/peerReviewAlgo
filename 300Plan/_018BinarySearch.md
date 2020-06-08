@@ -38,7 +38,7 @@ class Solution:
         return mid
 ```
 
-built-in方法
+built-in方法，index()是线性查找
 ```python
 class Solution:
     def search(self, nums, target):
@@ -46,4 +46,16 @@ class Solution:
             return nums.index(target)
         except ValueError:
             return -1
+```
+bisect标准库是对二分查找的实现，接收有序数组作为参数
+```python
+class Solution:
+    def search(self, nums, target):
+        result = bisect.bisect_left(nums, target)
+        
+        # 返回值为left所在的索引，所以在没找到的情况下需要判断一下是否和target相等
+        if result != len(nums) and target == nums[result]:
+            return result
+        
+        return -1
 ```
