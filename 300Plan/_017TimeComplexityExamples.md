@@ -103,4 +103,8 @@ def heap_permutation(data, n):
             data[i], data[n-1] = data[n-1], data[i]
         else:
             data[0], data[n-1] = data[n-1], data[0]
+            
+if __name__ == '__main__':
+    data = [1, 2, 3]
+    heap_permutation(data, len(data))
 ```
