@@ -45,14 +45,22 @@ def merge2(left, right):
     if left and right:
         if left[0] <= right[0]:
             temp.append(left[0])
-            temp = temp + merge2(left[1:], right)
+            temp += merge2(left[1:], right)
         else:
             temp.append((right[0]))
-            temp = temp + merge2(left, right[1:])
+            temp += merge2(left, right[1:])
 
     return temp
 
 
+def merge3(left, right):
+    if left and right:
+        if left[0] <= right[0]:
+            left, right = right, left
+        return [right[0]] + merge3(right[1:], left)
+    return left + right
+
+
 left = []
 right = [2, 5, 6, 9]
-print(merge2(left, right))
+print(merge3(left, right))
