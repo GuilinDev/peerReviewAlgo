@@ -54,6 +54,7 @@ def merge2(left, right):
 
 
 def merge3(left, right):
+    # 利用Python语言特性，更简洁的递归写法
     if left and right:
         if left[0] <= right[0]:
             left, right = right, left
