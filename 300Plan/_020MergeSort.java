@@ -11,11 +11,9 @@ public class _020MergeSort {
             merge(arr, left, right, mid);
         }
     }
-
     private void merge(int[] arr, int left, int right, int mid) {
         int lLen = mid - left + 1;
         int rLen = right - mid;
-
         int[] leftPart = new int[lLen];
         int[] rightPart = new int[rLen];
 
@@ -38,7 +36,6 @@ public class _020MergeSort {
             }
             index++;
         }
-
         // 检查还未排序的
         while (lIndex < lLen) {
             arr[index] = leftPart[lIndex];
