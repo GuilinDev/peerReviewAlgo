@@ -7,7 +7,7 @@ def reverse_print(s):
         return reverse_print(s[1:]) + s[0] 
 ```
 Leetcode 344 没有返回值
-```
+```python
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         """
