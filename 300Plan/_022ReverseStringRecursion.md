@@ -21,7 +21,7 @@ class Solution:
             self.reverse(s, left + 1, right - 1)
 ```
 
-Java Leetcode 344没有返回值
+Java Leetcode 344 没有返回值
 ```java
 class Solution {
     public void reverseString(char[] s) {
