@@ -1,4 +1,4 @@
-空间复杂度O(n)
+递归，空间复杂度O(n)
 ```python
 # Definition for singly-linked list.
 # class ListNode:
