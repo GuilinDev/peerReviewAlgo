@@ -37,6 +37,7 @@ public class Test {
 }
 ```
 ```python
+# Top Down
 def knapSack(W, wt, val, n): 
   
     # Base Case 
@@ -103,6 +104,7 @@ public class Test {
 
 ```
 ```python
+# Bottom up
 def knapSack(W, wt, val, n): 
     K = [[0 for x in range(W + 1)] for x in range(n + 1)] 
   
