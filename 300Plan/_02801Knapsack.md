@@ -82,7 +82,7 @@ public class Test {
         return (a > b) ? a : b;
     }
 
-    static int knapSack_topdown(int W, int wt[], int val[], int n) {
+    static int knapSackBottomup(int W, int wt[], int val[], int n) {
         int i, w;
         int K[][] = new int[n + 1][W + 1];
 
@@ -145,7 +145,7 @@ public class Test {
         System.out.println(knapSack_topdown(w, a2, a1, a1.length));
     }
 
-    static int knapSack_topdown(int W, int wt[], int val[], int n) {
+    static int knapSackBottomupSpace(int W, int wt[], int val[], int n) {
         int i, j;
         int c[] = new int[W + 1];
 
