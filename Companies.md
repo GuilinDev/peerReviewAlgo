@@ -5,5 +5,7 @@
 * Nutanix
 * Twilio
 * Splunk
+* ServiceNow
+$ Veeva
 * NetSuite - Oracle
 * AppDynamic - Cisco
