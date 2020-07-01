@@ -6,6 +6,6 @@
 * Twilio
 * Splunk
 * ServiceNow
-$ Veeva
+* Veeva
 * NetSuite - Oracle
 * AppDynamic - Cisco
