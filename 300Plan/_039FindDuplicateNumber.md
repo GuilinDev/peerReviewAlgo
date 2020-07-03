@@ -46,7 +46,7 @@ class Solution:
  ```
  
  #### 方法3，位操作
- 巧妙的填充位
+ 巧妙的填充位(同样的解法java过不了)
  ```python
  class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
