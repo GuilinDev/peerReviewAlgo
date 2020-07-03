@@ -44,3 +44,15 @@ class Solution:
             
         return slow # return fast
  ```
+ 
+ #### 方法3，位操作
+ 巧妙的填充位
+ ```python
+ class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        flag = 0
+        for num in nums:
+            if flag & (1 << num) > 0:
+                return num
+            flag |= (1 << num)
+ ```
