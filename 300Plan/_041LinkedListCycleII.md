@@ -26,3 +26,30 @@ class Solution:
         
         return slow # return fast
 ```
+
+同样的思路，另一种写法
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        try: # 如果为空，或只有一个结点，或者没环会进入except
+            slow = head.next
+            fast = head.next.next
+            while slow != fast:
+                slow = slow.next
+                fast = fast.next.next
+        except:
+            return None
+        
+        fast = head # 让slow或fast的中的其中一个指向head
+        while slow != fast:
+            slow = slow.next
+            fast = fast.next
+        
+        return slow # return fast
+```
