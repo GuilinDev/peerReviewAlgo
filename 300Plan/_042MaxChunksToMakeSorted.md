@@ -56,10 +56,10 @@ class Solution:
         result = 0
         preMax = 0
         for i, num in enumerate(arr):
-            if num > preMax:
-                preMax = num
+            preMax = max(preMax, num)
             if preMax == i:
                 result += 1
         return result
+
 
 ```
