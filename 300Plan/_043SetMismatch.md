@@ -13,9 +13,9 @@ class Solution:
         :rtype: List[int]
         """
         n = len(nums)
-        s = n * (n + 1) // 2
-        miss = s - sum(set(nums))
-        duplicate = sum(nums) + miss - s
+        s = n * (n + 1) // 2 # 把1...n的数全部加起来
+        miss = s - sum(set(nums)) # set()去重，重复数只加一次，这样找出缺失值
+        duplicate = sum(nums) + miss - s # 根据缺失值找出重复值
         return [duplicate, miss]
 ```
 简单为一行
