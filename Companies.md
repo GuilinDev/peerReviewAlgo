@@ -9,5 +9,5 @@
 * Veeva
 * NetSuite - Oracle
 * AppDynamic - Cisco
-* Altrex
+* Alteryx
 * The Trade Desk
