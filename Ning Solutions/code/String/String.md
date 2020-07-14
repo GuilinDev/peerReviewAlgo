@@ -49,33 +49,6 @@ public List<List<String>> groupAnagrams2(String[] strs) {
         return new ArrayList<List<String>>(map.values());
       }
 
-// 	5	 Longest Palindromic Substring    
-class Solution {
-    public String longestPalindrome(String s) {
-        if (s == null || s.length() == 0) return "";
-        int left = 0; int right = 0;
-        for (int i = 0; i < s.length(); i ++) {
-            int len1 = extendPalindrome(s, i, i);
-            int len2 = extendPalindrome(s, i, i + 1);
-            int len = Math.max(len1, len2);
-            if (len > right - left){ // don't forget this;
-                  left = i - (len - 1)/2;
-                 right = i + len/2;
-            }
-        }
-        return s.substring(left, right + 1);   
-    }
-    
-    public int extendPalindrome(String s, int left, int right) {
-        int L = left; int R = right;
-        while (L >=0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
-            L--;
-            R++;
-        }
-        return R-L-1;
-    }
-}
-
 // 709	To Lower Case
 class Solution {
     public String toLowerCase(String str) {
@@ -254,6 +227,32 @@ class Solution {
     }
 }
 
+// 	5	 Longest Palindromic Substring    
+class Solution {
+    public String longestPalindrome(String s) {
+        if (s == null || s.length() == 0) return "";
+        int left = 0; int right = 0;
+        for (int i = 0; i < s.length(); i ++) {
+            int len1 = extendPalindrome(s, i, i);
+            int len2 = extendPalindrome(s, i, i + 1);
+            int len = Math.max(len1, len2);
+            if (len > right - left){ // don't forget this;
+                  left = i - (len - 1)/2;
+                 right = i + len/2;
+            }
+        }
+        return s.substring(left, right + 1);   
+    }
+    
+    public int extendPalindrome(String s, int left, int right) {
+        int L = left; int R = right;
+        while (L >=0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+            L--;
+            R++;
+        }
+        return R-L-1;
+    }
+}
 
 // 125. Valid Palindrome
 class Solution {
@@ -305,7 +304,33 @@ public boolean isPalindrome(String s, int i, int j) {
     return true;
  }
 }
+}
 
+// 3. Longest Substring Without Repeating Characters
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) return 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+      
+        int left = 0, right = 0; int count = 0;
+        int max = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            map.put(c, map.getOrDefault(c,0) + 1);
+            if (map.get(c) > 1){
+                count ++;
+            }   
+            right ++;
+            while (count > 0) {
+                char l = s.charAt(left);
+                if(map.get(l) > 1) count --;
+                map.put(l, map.get(l) - 1);
+                left ++;
+            }
+            max = Math.max(max, right - left); //not right - left + 1;   
+        }
+        return max;
+        }
 }
 
 

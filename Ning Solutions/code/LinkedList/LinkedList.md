@@ -70,7 +70,7 @@ class Solution {
                 sum += l2.val;
                 l2 = l2.next;
             }
-            ListNode node = new ListNode(sum % 10);
+            ListNode node = new ListNode(sum % 10); // don't mess up with /10
             cur.next = node;
             cur = node;
             carry = sum / 10;

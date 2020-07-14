@@ -100,4 +100,144 @@ class Solution {
          }
     }
 }
+
+// 7. Merge Intervals
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        Arrays.sort(intervals, (a,b)-> a[0] - b[0]);
+        int i = 0;
+        int k = 0;
+        while (i < intervals.length){
+            int left = intervals[i][0];
+            int right = intervals[i][1];
+            while(i < intervals.length - 1 && right >= intervals[i + 1][0]){ // don't forget = case.
+                i ++;
+                right = Math.max(right, intervals[i][1]);
+            }
+            intervals[k][0] = left; // can use original arrays
+            intervals[k][1] = right;
+            k ++;
+            i ++;
+        }     
+        return Arrays.copyOf(intervals, k); // it is K not k + 1. since it has k ++ in the last.
+    }  
+}
+
+// 8.Insert Interval
+class Solution {
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        int[][] res = new int[intervals.length + 1][2];
+        int i = 0, k = 0;
+        while (i < intervals.length && newInterval[0] > intervals[i][1]) {
+            res[k++] = intervals[i];
+            i++;
+        }
+        int[] tmp = new int[]{newInterval[0], newInterval[1]};
+        while (i < intervals.length && newInterval[1] >= intervals[i][0]) {
+            tmp[0] = Math.min(tmp[0], intervals[i][0]);
+            tmp[1] = Math.max(tmp[1], intervals[i][1]);
+            i++;
+        }
+        res[k++] = tmp;
+        while (i < intervals.length) {
+            res[k++] = intervals[i];
+            i++;
+        }
+        return Arrays.copyOf(res,k); 
+    }
+}
+
+// 9 Non-overlapping Intervals
+class Solution {
+    public int eraseOverlapIntervals(int[][] intervals) {
+        int len = intervals.length;
+        if(len == 0) return 0;
+        Arrays.sort(intervals, (a,b) -> a[1] - b[1]);
+        int cur_end = intervals[0][1];
+        int i = 1;
+        int count = 0;
+        while(i < len) {
+            while(i < len && intervals[i][0] < cur_end){
+                i ++;
+                count++;
+            }
+            if(i < len){ // need this one. think about case [[1,2],[1,2],[1,2],[1,2]]
+              cur_end = intervals[i++][1];
+            }
+        }
+        return count;
+    }
+}
+
+// 10 Meeting Rooms
+class Solution {
+    public boolean canAttendMeetings(int[][] intervals) {
+        if(intervals.length == 0) return true;
+        Arrays.sort(intervals, (a,b) -> a[1] - b[1]);
+        int i = 1;
+        int cur_end = intervals[0][1];
+        while(i < intervals.length) {
+            if(intervals[i][0] < cur_end){
+                return false;
+            }
+            cur_end = intervals[i++][1];
+        }
+        return true;
+    }
+}
+
+// 11 Meeting Rooms II
+// PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder()); (Max heap)
+// PriorityQueue<Integer> pq = new PriorityQueue<>((x, y) -> y - x);(Max heap)
+//boolean add(E element): inserts the specified element into this priority queue.
+//public remove(): removes a single instance of the specified element from this queue, if it is present
+//public poll(): retrieves and removes the head of this queue,returns null if empty.
+//public peek(): retrieves, but does not remove, the head of this queue, returns null if empty.
+//boolean contains(Object o): This method returns true if this queue contains the specified element
+//boolean offer(E e): This method is used to insert a specific element into the priority queue.
+//int size(): The method is used to return the number of elements present in the set.
+//toArray(): This method is used to return an array containing all of the elements in this queue.
+
+class Solution {
+    public int minMeetingRooms(int[][] intervals) {
+        if(intervals.length == 0) return 0;
+        Arrays.sort(intervals,(a,b)->a[0] - b[0]);
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        int rooms = 0;
+        for(int i=0; i<intervals.length; i++) {
+            minHeap.offer(intervals[i][1]);
+            if (intervals[i][0] < minHeap.peek()) {
+                rooms ++;
+            } else {
+                minHeap.poll();
+            }
+        }
+        return rooms;
+    }
+}
+
+// 12  Interval List Intersections
+// https://labuladong.gitbook.io/algo/suan-fa-si-wei-xi-lie/qu-jian-jiao-ji-wen-ti
+class Solution {
+  public int[][] intervalIntersection(int[][] A, int[][] B) {
+    List<int[]> ans = new ArrayList();
+    int i = 0, j = 0;
+    while (i < A.length && j < B.length) {
+       int a1 = A[i][0], a2 = A[i][1];
+       int b1 = B[j][0], b2 = B[j][1];
+       if(b1 <= a2 && b2 >= a1){
+           ans.add(new int[]{Math.max(a1,b1),Math.min(a2,b2)});
+       }
+        if(a2 < b2){
+            i++;
+        } else {
+            j++;
+        }
+    }
+    return ans.toArray(new int[0][]);
+  }
+}
+
+
+
 ```
