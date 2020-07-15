@@ -8,8 +8,7 @@ class TreeNode:
 
 
 def list_to_binarytree(nums):
-    n = len(nums)
-    return levelOrder(nums, None, 0, n)
+    return levelOrder(nums, None, 0, len(nums))
 
 
 def levelOrder(nums, root, index, n):
