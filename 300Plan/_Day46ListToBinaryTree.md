@@ -35,7 +35,7 @@ if __name__ == '__main__':
     printInOder(root)
 
 ```
-前序打印结果:
+中序打印结果:
 ```text
 None 9 None 3 15 20 7
 ```
