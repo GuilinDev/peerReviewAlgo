@@ -1,4 +1,4 @@
-其实也是前缀和的思想
+leetcode 525，其实也是前缀和的思想
 ```python
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
