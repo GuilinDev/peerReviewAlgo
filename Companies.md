@@ -1,4 +1,5 @@
 #### 非FLAG
+* To Accumulate personal branding: [YCombinator Top Companies](https://www.ycombinator.com/topcompanies/)
 * Atlassian
 * Autodesk
 * Box
@@ -14,3 +15,5 @@
 * DocuSign
 * Jetbrains
 * HubSpot
+
+[Negotiate Offer](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/)
