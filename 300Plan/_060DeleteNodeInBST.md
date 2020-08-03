@@ -22,7 +22,7 @@ class Solution:
                 node.left = findKeyAndDelete(node.left, key)
             elif key > node.val: # 递归查找并更新当前节点的右子树
                 node.right = findKeyAndDelete(node.right, key)
-            else: # 已找到待删除
+            else: # 已找到待删除节点
                 """
                 处理四种情况：
                 1. 待删除节点没有left和right，返回null，表示直接就删除了
