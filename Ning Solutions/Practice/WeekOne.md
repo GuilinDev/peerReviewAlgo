@@ -32,6 +32,25 @@ class Solution {
 //https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-2/
 }
 
+//3 - Longest Substring Without Repeating Characters
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) return 0;
+        int res = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int left = 0, right = 0; right < s.length(); right ++) {
+            char c = s.charAt(right);
+            if (map.containsKey(c)){
+                left = Math.max(left, map.get(c) + 1); // need + 1; check case " ";
+            }
+            map.put(c,right);
+            res = Math.max(res, right - left + 1);
+        }
+        return res;
+    }
+}
+
+
 
 
 // 11 Container With Most Water
@@ -100,7 +119,33 @@ class Solution {
 */
 }
 
-
+// 33. Search in Rotated Sorted Array
+class Solution { 
+        public int search(int[] nums, int target) {
+        if (nums == null || nums.length == 0){return -1;}
+        int start = 0;
+        int end = nums.length - 1; // binary search use start, end, not left right.
+        int mid;
+        while (start <= end) { 
+             mid = start + (end - start) /2;
+            if (nums[mid] == target) {return mid;}
+            if (nums[start] <= nums[mid]){ // start less equals it is mid not target
+                if(target >= nums[start] && target < nums[mid]){
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
+            } else {
+                if(target <= nums[end] && nums[mid] < target ){ 
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
+}
 
 
 

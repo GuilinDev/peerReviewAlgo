@@ -122,50 +122,57 @@ class Solution {
         
     }
 
-// 23. Merge k Sorted Lists
+// 23. Merge k Sorted Lists solution 1
+class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists == null || lists.length == 0) {
-            return null;
-        }
-        return mergeListHelper(lists, 0 , lists.length - 1); 
-    }
-    
-    private ListNode mergeListHelper(ListNode[] lists, int left, int right) {
-        if (left == right) { // remember this binary search way
-            return lists[left];
-        } 
-        if (left > right) {
-            return null;
-        } else { 
-            int mid = left + (right - left) /2 ;
-            ListNode leftnode = mergeListHelper(lists, left, mid);
-            ListNode rightnode = mergeListHelper(lists, mid + 1, right);
-            return mergeTwoLists(leftnode, rightnode);    
-        }
-     
-        }
-    
-     private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if (l1 == null || l2 == null) {
-            return l1 == null ? l2 : l1;
-        }
-        ListNode dummy = new ListNode(-1);
-        ListNode cur = dummy;
-        while (l1 != null && l2 != null){
-            if (l1.val < l2.val){
-                cur.next = l1;
-                cur = l1;
-                l1 = l1.next;
-                
-            } else {
-                cur.next = l2;
-                cur = l2;
-                l2 = l2.next;
+        Queue<ListNode> pq = new PriorityQueue<>((v1, v2) -> v1.val - v2.val);
+        for (ListNode node: lists) {
+            if (node != null) { // don't forget this one
+                pq.offer(node);
             }
         }
-        cur.next = l1 == null ? l2 : l1;
-        return dummy.next;
+        ListNode dummyHead = new ListNode(0);
+        ListNode tail = dummyHead;
+        while (!pq.isEmpty()) {
+            ListNode minNode = pq.poll();
+            tail.next = minNode;
+            tail = minNode;
+            if (minNode.next != null) {
+                pq.offer(minNode.next);
+            }
+        }
+
+        return dummyHead.next;
     }
+}
+// 2 solution 2
+class Solution {
+   public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        return merge(lists, 0, lists.length - 1);
+    }
+
+    private ListNode merge(ListNode[] lists, int left, int right) {
+        if (left == right) return lists[left];
+        int mid = left + (right - left) / 2;
+        ListNode l1 = merge(lists, left, mid);
+        ListNode l2 = merge(lists, mid + 1, right);
+        return mergeTwoLists(l1, l2);
+    }
+
+    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
+        if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1,l2.next);
+            return l2;
+        }
+    }
+}
+
 
 // 206. Reverse Linked List
  public ListNode reverseList(ListNode head) {

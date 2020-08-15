@@ -116,10 +116,11 @@ class Solution {
             }
             intervals[k][0] = left; // can use original arrays
             intervals[k][1] = right;
-            k ++;
+            k ++; 
             i ++;
         }     
-        return Arrays.copyOf(intervals, k); // it is K not k + 1. since it has k ++ in the last.
+        return Arrays.copyOf(intervals, k); 
+      // it is K not k + 1. since it has k ++ in the end.
     }  
 }
 
@@ -205,10 +206,12 @@ class Solution {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         int rooms = 0;
         for(int i=0; i<intervals.length; i++) {
-            minHeap.offer(intervals[i][1]);
+            minHeap.offer(intervals[i][1]); 
             if (intervals[i][0] < minHeap.peek()) {
+// when new join and find his start time earlier than any end time, that means he need open new room.
                 rooms ++;
             } else {
+// need clean room for other people to use.
                 minHeap.poll();
             }
         }

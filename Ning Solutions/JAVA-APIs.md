@@ -56,6 +56,24 @@ toString(char ch)
 3：写代码 检测边界
 4：测试用例*/
 
+/*String 方法
+String[] charArray = s1.split(" ");
+ chars[i] = (char)(chars[i] - 'A' + 'a');
+charAt()
+equals()
+isEmpty()
+length() 
+split() not splitBy() 返回 String[]
+substring() not subString()
+"Chaitanya".substring(2) would return "aitanya".
+"Chaitanya".substring(2,5) would return "ait". 
+String substring (int i, int j): Returns the substring from i to j-1 index
+toCharArray()
+
+*/
+
+
+
 
 
 

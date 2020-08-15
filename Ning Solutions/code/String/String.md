@@ -52,14 +52,17 @@ public List<List<String>> groupAnagrams2(String[] strs) {
 // 709	To Lower Case
 class Solution {
     public String toLowerCase(String str) {
-        if(str == null || str.length() == 0) return "";
+        if (str == null || str.length() == 0) return "";
         char[] chars = str.toCharArray();
-        for(int i = 0; i < chars.length; i ++){
-             if(chars[i] >= 'A' && chars[i] <= 'Z'){ // need to check valid
-            chars[i] += 'a' - 'A'; // remember this.
-           }
+        for (int i = 0; i < chars.length; i ++) {
+            if (chars[i] >= 'A' && chars[i] <= 'Z'){
+                int loc = chars[i];
+                chars[i] = (char)(loc + 32);
+            //    chars[i] = (char)(chars[i] - 'A' + 'a');
+            //  charStr[i] += 'a' - 'A';    
+            }
         }
-        return new String(chars);  
+        return new String(chars);
     }
 }
 
@@ -129,7 +132,7 @@ class Solution {
         if (s == null || s.length == 0) return;
         int left = 0; 
         int right = s.length - 1;
-        while(left <= right){
+        while(left <= right){ 
             char temp = s[left];
             s[left] = s[right];
             s[right] = temp;
@@ -144,7 +147,7 @@ class Solution {
      public String reverseStr(String s, int k) {
         char[] a = s.toCharArray();
         for (int start = 0; start < a.length; start += 2 * k) {
-            int i = start, j = Math.min(start + k - 1, a.length - 1);
+            int i = start, j = Math.min(start + k - 1, a.length - 1); // need think about case of k > s.length();
             while (i < j) {
                 char tmp = a[i];
                 a[i++] = a[j];
@@ -172,6 +175,13 @@ class Solution {
         }
         
         return sb.toString();
+    }
+}
+public class Solution {
+    public String reverseWords(String s) {
+        String[] words = s.trim().split(" +");//用空格符来分隔每一个单词，而不是用正则
+        Collections.reverse(Arrays.asList(words));
+        return String.join(" ", words);
     }
 }
 
@@ -218,10 +228,8 @@ class Solution {
             char[] c = s.toCharArray();
             while(left <= right){
                 char temp = c[left];
-                c[left] = c[right];
-                c[right] = temp;
-                left ++;
-                right --;
+                c[left ++] = c[right];
+                c[right --] = temp;
             }
             return new String(c);
     }
@@ -256,32 +264,21 @@ class Solution {
 
 // 125. Valid Palindrome
 class Solution {
-      public boolean isPalindrome(String s) {
-        if (s == null || s.length() == 0) {
-            return true;
-            }
-        char[] total = s.toCharArray();
+    public boolean isPalindrome(String s) {
         int left = 0;
-        int right = s.length()- 1;
-        while (left < right) {  
-            char l = total[left];
-            char r = total [right];
-            if (!Character.isLetterOrDigit(l)){ // methods from Character
-               left ++;
-           } else if (!Character.isLetterOrDigit(r)) {
-               right --;
-           }   else {
-               if(Character.toLowerCase(l) == Character.toLowerCase(r)) {
-                   left ++;
-                   right--;
-               } else {
-                   return false;
-               }
-           } 
+        int right = s.length() - 1;
+        while (left < right) {
+            // 双指针嵌套WHILE的写法
+            while(left < right && !Character.isLetterOrDigit(s.charAt(left))) left ++;
+            while(left < right && ! Character.isLetterOrDigit(s.charAt(right))) right --;
+            if(Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) return false;
+            left ++;
+            right--;
         }
-        return true;
+       return true;
     }
 }
+
 
 // 680. Valid Palindrome II
 class Solution {
@@ -289,11 +286,14 @@ class Solution {
     for(int i = 0, j = s.length()-1; i < j ; i++, j--){ // the way to write i and j
         if(s.charAt(i) != s.charAt(j)){
             //分两种情况，一是右边减一，二是左边加一
-            return isPalindrome(s,i,j-1) || isPalindrome(s, i+1, j);
+            return isPalindrome(s,i,j - 1) || isPalindrome(s, i + 1, j);
         }
     }
     return true;
 }
+//使用双指针
+//1、如果左右指针的值相等，则移动左右指针
+//2、如果左右指针的值不相等，则在不相等的区间内去掉左指针的值或者去掉右指针的值再判断是否是回文数
 
 public boolean isPalindrome(String s, int i, int j) {
     while (i < j) {
@@ -333,11 +333,48 @@ class Solution {
         }
 }
 
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+       if (s == null || s.length() == 0) return 0;
+       char[] chars = s.toCharArray();
+       HashMap<Character, Integer> map = new HashMap<>(); 
+       int maxLen = 0; 
+       for (int right = 0, left = 0; right < s.length(); right++) {
+           char c = s.charAt(right);
+           if(map.containsKey(c)){
+               left = Math.max(left, map.get(c) + 1);
+           //    maxLen = Math.max(maxLen, right - left + 1);
+           } 
+           map.put(c,right); // not right + 1; it store exactly that char location
+           maxLen = Math.max(maxLen, right - left + 1);// don't miss this step and need put outside
+       }
+       return maxLen;   
+    }
+}
+//用一个HashMap来记录窗口内的字符和这些字符最后出现的位置，如果窗口右侧移动后发现有重复的字符，
+//那就将left索引指向HashMap里面保存的该字符的位置的下一位，窗口右侧继续移动，同时保持len的最长的值；
 
-
-
-
-
-
+//20. Valid Parentheses
+class Solution {
+    public boolean isValid(String s) {
+        if(s.isEmpty()) return true;
+        Stack<Character> st = new Stack<>();
+        for (char c : s.toCharArray()){
+            if(c == '(' || c == '[' || c == '{') {
+                st.push(c);
+            }
+            if (st.isEmpty()) return false; // need check empty before check right side parentheses
+            if((c == ')' && st.pop()!= '(') ||
+                (c == ']' && st.pop()!= '[') ||
+               (c == '}' && st.pop()!= '{')){
+                return false;
+            }  
+        }
+        if (!st.isEmpty()) { // check still have left side parentheses
+           return false; 
+        }
+        return true;
+    }
+}
 
 ```

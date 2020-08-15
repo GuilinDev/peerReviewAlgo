@@ -342,127 +342,79 @@ class Solution {
 }
 //695. Max Area of Island
 class Solution {
-       private int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-       private int R, C;
-       private int[][] grid;
-       private boolean[][] visited;
-       public int maxAreaOfIsland(int[][] grid){
-           R = grid.length;
-           C = grid[0].length;
-           this.grid = grid;
-           visited = new boolean[R][C];
-           int res = 0;
-           for(int i = 0; i < R; i ++)
-               for(int j = 0; j < C; j ++)
-                   if(grid[i][j] == 1 && !visited[i][j])
-                       res = Math.max(res, dfs(i, j));
-           return res;
-       }  
-       private int dfs(int x, int y){
-           visited[x][y] = true;
-           int res = 1;
-           for(int d = 0; d < 4; d ++){
-               int nextx = x + dirs[d][0], nexty = y + dirs[d][1];
-               if(inArea(nextx, nexty) && grid[nextx][nexty] == 1 && !visited[nextx][nexty])
-                   res += dfs(nextx, nexty);
-           }
-           return res;
-       }
-   
-       private boolean inArea(int x, int y){
-           return x >= 0 && x < R && y >= 0 && y < C;
-       }
-   
-// 也可以用板来直接记录VISITED,但是这类代码让代码的可读性变弱
-class Solution {
-   public int maxAreaOfIsland(int[][] grid) {
-      int maxArea = 0;
-      for (int i = 0; i < grid.length; i++) {
-         for (int j = 0; j < grid[0].length; j++) {
-            if (grid[i][j] == 1) {
-               maxArea = Math.max(maxArea, dfs(grid, i, j));
+    int[][] dis = new int[][]{{-1,0}, {0, -1}, {1, 0}, {0, 1}};
+    public int maxAreaOfIsland(int[][] grid) {
+        if (grid == null || grid.length == 0 || grid[0].length == 0) return 0;
+        int max = 0;
+        for (int r = 0; r < grid.length; r ++){
+            for (int c = 0; c < grid[0].length; c ++){
+                if (grid[r][c] == 1){
+                    int area = getArea(grid, r , c);
+                    max = Math.max(area, max);    
+                } 
             }
-         }
-      }
-
-      return maxArea;
-   }
-   private int dfs(int[][] grid, int i, int j) {
-      if (i >= 0 && i < grid.length && j >= 0 && j < grid[0].length && grid[i][j] == 1) {
-         grid[i][j] = 0;//计算过了
-         return 1 + dfs(grid, i - 1, j) + dfs(grid, i + 1, j) + dfs(grid, i, j - 1) + dfs(grid, i, j + 1);//记得前面的1是本身，需要加上
-      }
-      return 0;//当前元素为0，不是island，直接返回
-   }
-}
-}
-// 200. Number of Islands
-class Solution {
-    int[][] dis = new int[][]{{-1,0},{0,-1},{0,1},{1,0}};
-    int R = 0;
-    int C =  0;
-    boolean[][] visited ;
-    char[][] grid;
-    public int numIslands(char[][] grid) {
-      this.grid = grid;
-      R = grid.length;  
-      if(R == 0) return 0;
-      C = grid[0].length;
-      visited = new boolean[R][C];  
-      int result = 0;
-      for(int i = 0; i < R; i ++)
-         for(int j = 0; j < C; j ++) {
-            if(grid[i][j] == '1' && !visited[i][j]){
-               dfs(grid,i,j);
-               result ++; // 联通分量
-            }
-         }
-      return result;
+        }
+        return max;
     }
-     public void dfs(char[][] grid, int x, int y){
-      visited[x][y] = true;
-      for (int i = 0; i < 4; i ++){
-         int nextx = x + dis[i][0];
-         int nexty = y + dis[i][1]; // x , y 别弄混了
-         if(inArea(nextx,nexty) && grid[nextx][nexty] == '1' && !visited[nextx][nexty] ){
-            dfs(grid,nextx,nexty);
-         }
-      }
-   }
-   private boolean inArea(int x, int y){
-     return x >= 0 && x < R && y >=0 && y < C;
-   }
-}
-// 同样也可以省略VISITED：
-class Solution {
-    public int numIslands(char[][] grid) {
-        if (grid == null || grid.length == 0 || grid[0].length == 0){
+    
+    private int getArea(int[][] grid, int r, int c){
+        if (!inArea(grid, r, c)){
             return 0;
         }
-        int m = grid.length;
-        int n = grid[0].length;
-        int result = 0;
-        for (int i = 0; i < m; i++) { // m , n need match;
-            for (int j = 0; j < n; j++){
-                if(grid[i][j] == '1'){
-                    dfsIslans(grid,i,j,m,n);
-                    result ++;  
+        if(grid[r][c] != 1){
+            return 0;
+        }
+        grid[r][c] = 2;
+        int sum = 1;
+        for (int i = 0; i < 4; i ++){
+            int nextR = r + dis[i][0];
+            int nextC = c + dis[i][1];
+            sum += getArea(grid, nextR, nextC);
+        }
+        return sum;
+        
+    }
+    
+    private boolean inArea(int[][] grid, int r, int c) {
+        return r >= 0 && r < grid.length && c >= 0 && c < grid[0].length;
+    }
+}
+
+// 200. Number of Islands
+class Solution {
+    int[][] dis = new int[][]{{-1, 0}, {0, -1}, {0, 1}, {1, 0}};
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0) return 0;
+        int total = 0;
+        for (int r = 0; r < grid.length; r ++) {
+            for (int c = 0; c < grid[0].length; c++) {
+                if (grid[r][c] == '1') { // because it is char so we need use '1'
+                    searchArea(grid, r , c);
+                    total ++;
                 }
             }
         }
-        return result;
+        return total;
     }
     
-    private void dfsIslans(char[][] grid, int i, int j, int m, int n){
-        if (i < 0|| j < 0 || i >= m || j >= n || grid[i][j] == '0'){ // i need larger than m; j larger than n;
+    private void searchArea(char[][] grid, int r, int c){
+        if(!inArea(grid,r,c)){
             return;
         }
-        grid[i][j] = '0';
-        dfsIslans(grid, i+1, j, m, n);
-        dfsIslans(grid, i-1, j, m, n);
-        dfsIslans(grid, i, j+1, m, n);
-        dfsIslans(grid, i, j-1, m, n);
+        if(grid[r][c] != '1'){ 
+            return;
+        }
+        grid[r][c] = '2'; // use 2 is better
+        for (int i = 0; i < 4; i ++){
+            int nextR = r + dis[i][0];
+            int nextC = c + dis[i][1];
+            searchArea(grid, nextR, nextC);
+        }
     }
+    private boolean inArea(char[][] grid, int r, int c){
+        return r >= 0 && r < grid.length && c >= 0 && c < grid[0].length;
+    }
+// https://leetcode-cn.com/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/
 }
 
 //1091. Shortest Path in Binary Matrix-- muke graph
