@@ -15,6 +15,7 @@
 * DocuSign
 * Jetbrains
 * HubSpot
+* NetApp
 
 [Negotiate Offer](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/) - If The Offer Isn't Shockingly High, It's Probably Too Low.
 
