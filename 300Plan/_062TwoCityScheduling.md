@@ -1,6 +1,6 @@
 [返还金额的做法](https://leetcode.com/problems/two-city-scheduling/discuss/667786/Java-or-C%2B%2B-or-Python3-or-With-detailed-explanation)
 
-贪心法的思想，先假设把所有人都送去城市A面试，计算所有的费用，然后现在需要把一般人N送去城市B面试，需要获取refund来减少开支，refund[i] = cost[i][1] - cost[i][0]，这个refund值如果为正说明需要额外付钱，
+Leetcode 1029，贪心法的思想，先假设把所有人都送去城市A面试，计算所有的费用，然后现在需要把一般人N送去城市B面试，需要获取refund来减少开支，refund[i] = cost[i][1] - cost[i][0]，这个refund值如果为正说明需要额外付钱，
 如果为负则可以获得refund，对这个refund进行排序，前面的值为可能的refund（为负），加上即为最小开销。
 
 
