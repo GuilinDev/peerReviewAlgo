@@ -9,5 +9,6 @@ class Solution:
             return numBottles
         
         remain = numBottles % numExchange        
-        return (numBottles - remain) + self.numWaterBottles(numBottles // numExchange + remain, numExchange)# 这一轮的瓶子 + 后面轮的瓶子
+        # 这一轮的瓶子 + 后面轮的瓶子
+        return (numBottles - remain) + self.numWaterBottles(numBottles // numExchange + remain, numExchange)
 ```
