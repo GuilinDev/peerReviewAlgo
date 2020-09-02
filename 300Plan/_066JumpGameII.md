@@ -1,4 +1,4 @@
-Greedy
+Greedy，相当于1D数组的BFS
 ```python
 class Solution:
     def jump(self, nums: List[int]) -> int:
