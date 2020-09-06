@@ -1,0 +1,18 @@
+LC1042
+
+用优先队列来模拟一个大顶堆，每次取最大的两个数相减，然后把相减的数再返回队列。O(NLogN)。
+
+```python
+class Solution:
+    def lastStoneWeight(self, stones: List[int]) -> int:
+        stones = [-val for val in stones]
+        heapq.heapify(stones)
+        while len(stones) > 1:
+            x1 = heapq.heappop(stones)
+            x2 = heapq.heappop(stones)
+            if x1 != x2: # 防止0进入堆中
+                heapq.heappush(stones,x1-x2)
+        if len(stones) == 0:
+            return 0
+        return -stones[0]
+```
