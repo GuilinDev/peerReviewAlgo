@@ -136,15 +136,14 @@ class Solution {
         if (target < 0) {return;}
         if(target == 0){
             res.add(new ArrayList<>(temp));
+            return; //要返回
         }
-        if(target > 0){
-             for (int i = level; i < candidates.length;  i ++){
+        for (int i = level; i < candidates.length;  i ++){ // 用LEVEL是因为 避免出现相同子集（不同顺序 但是内容一样）
                   temp.add(candidates[i]);
-                  backTracking(res,temp,candidates, target - candidates[i], i); // 注意必须是I 因为元素可以再利用，
-                  // 如果变成 i+ 1 则没有重复元素
+                  backTracking(res,temp,candidates, target - candidates[i], i); // 注意必须是I  因为元素可以再利用
                   temp.remove(temp.size() - 1); 
             }   
-        }
+        
     }
 }
 
@@ -160,17 +159,22 @@ class Solution {
     
     public void backTracking(List<Integer> temp, int[] candidates, List<List<Integer>> res, int target, int start) {
         if (target < 0) return;
-        else if (target == 0) res.add(new ArrayList<>(temp));
-        else {
-            for (int i = start; i < candidates.length; i ++) {
+        else if (target == 0) {
+        res.add(new ArrayList<>(temp)); 
+        return;
+        }
+        for (int i = start; i < candidates.length; i ++) {
                 if (i > start && candidates[i] == candidates[i - 1]) continue; // need i > start
                 temp.add(candidates[i]);
                 backTracking(temp, candidates, res, target - candidates[i], i + 1); // need i + 1 元素虽然有重复 但是一个元素只能用一次
                 temp.remove(temp.size() - 1);
             }
-        }  
     }
 }
+
+//根据排列问题和组合问题画出的树来看，排列问题的树比较对称，而组合和子集问题的树越靠右节点越少。
+//在代码中的体现就是，排列问题每次通过 contains 方法来排除在 track 中已经选择过的数字；
+//而组合和子集问题通过传入一个 start 参数，来排除 start 索引之前的数字。
 
 
 

@@ -25,7 +25,7 @@ class Solution {
                 map.put(key, value);
             }
         }
-        return new ArrayList<>(map.values()); // map.values
+        return new ArrayList<>(map.values()); // map.values or use map.keySet()
         
     }
 
@@ -36,7 +36,7 @@ public List<List<String>> groupAnagrams2(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         for (String str : strs) {
             char[] chars = str.toCharArray();
-            Arrays.sort(chars);
+            Arrays.sort(chars);// remember this
             String key = String.valueOf(chars);
             if (map.containsKey(key)) {
                 map.get(key).add(str);
@@ -235,30 +235,30 @@ class Solution {
     }
 }
 
-// 	5	 Longest Palindromic Substring    
+// 	5 Longest Palindromic Substring    
 class Solution {
+    private int lo, maxLen;
     public String longestPalindrome(String s) {
-        if (s == null || s.length() == 0) return "";
-        int left = 0; int right = 0;
-        for (int i = 0; i < s.length(); i ++) {
-            int len1 = extendPalindrome(s, i, i);
-            int len2 = extendPalindrome(s, i, i + 1);
-            int len = Math.max(len1, len2);
-            if (len > right - left){ // don't forget this;
-                  left = i - (len - 1)/2;
-                 right = i + len/2;
-            }
+        int len = s.length();
+        if (len < 2)
+            return s;
+        for (int i = 0; i < len - 1; i++) {
+            extendPalindrome(s, i, i);  //assume odd length, try to extend Palindrome as possible
+            extendPalindrome(s, i, i + 1); //assume even length.
         }
-        return s.substring(left, right + 1);   
+        return s.substring(lo, lo + maxLen);
     }
-    
-    public int extendPalindrome(String s, int left, int right) {
-        int L = left; int R = right;
-        while (L >=0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
-            L--;
-            R++;
+
+    private void extendPalindrome(String s, int left, int right) {//字符串和两个指针
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
         }
-        return R-L-1;
+        //注意上面while循环是在左右不等才停止的，当前的maxLen是成员变量，需要维持奇偶中大的一个（较小的不进循环）
+        if (maxLen < right - left - 1) {
+            lo = left + 1;//回文子字符串的下标
+            maxLen = right - left - 1;//回文子字符串的上标
+        }
     }
 }
 
@@ -271,7 +271,8 @@ class Solution {
             // 双指针嵌套WHILE的写法
             while(left < right && !Character.isLetterOrDigit(s.charAt(left))) left ++;
             while(left < right && ! Character.isLetterOrDigit(s.charAt(right))) right --;
-            if(Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) return false;
+            if(Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) return false; 
+            // not S.charAt(i).toLowerCase
             left ++;
             right--;
         }

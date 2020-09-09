@@ -97,116 +97,21 @@ static int partition(int[] a, int begin, int end) {
     int pivot = end, counter = begin;
     for (int i = begin; i < end; i++) {
         if (a[i] < a[pivot]) {
-            int temp = a[counter]; a[counter] = a[i]; a[i] = temp;
+            swap(a, counter, i);
             counter++;
         }
     }
-    int temp = a[pivot]; a[pivot] = a[counter]; a[counter] = temp;
+    swap(a, pivot, count);
     return counter;
 }
+public void swap(int[] nums, int i, int j){
+    int temp = nums[i];
+    nums[i] = nums[j];
+    nums[j] = temp;
+}
 }
 
-// 56 Merge Intervals
-//先按首位置进行排序;接下来,如何判断两个区间是否重叠呢?
-//比如 a = [1,4],b = [2,3] 当 a[1] >= b[0] 说明两个区间有重叠.
-//但是如何把这个区间找出来呢?左边位置一定是确定，就是 a[0]，
-//而右边位置是 max(a[1], b[1]) 所以,我们就能找出整个区间为:[1,4]
-//Sorting takes O(n log(n)) and merging the intervals takes O(n). 
-// So, the resulting algorithm takes O(n log(n)).
-class Solution{
-public int[][] merge(int[][] intervals) {
-        List<int[]> res = new ArrayList<>();
-        if(intervals.length == 0 || intervals == null) return res.toArray(new int[0][]);
-        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
-        int start = intervals[0][0];
-        int end = intervals[0][1];
-        for(int[] i : intervals) { //画个图就懂了 
-            if(i[0] <= end) { // Overlapping intervals, move the end if needed
-                end = Math.max(end, i[1]);
-            }
-            else { // Disjoint intervals, add the new interval to the list
-                res.add(new int[]{start, end});
-                start = i[0];
-                end = i[1];
-            }
-        }
-        res.add(new int[]{start, end});
-       return res.toArray(new int[0][]);
-    }
-}
-
-
-// 349 Intersection of Two Arrays
-public class Solution {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        Set<Integer> set = new HashSet<>();
-        Set<Integer> intersect = new HashSet<>();
-        for (int i = 0; i < nums1.length; i++) {
-            set.add(nums1[i]);
-        }
-        for (int i = 0; i < nums2.length; i++) {
-            if (set.contains(nums2[i])) {
-                intersect.add(nums2[i]);
-            }
-        }
-        int[] result = new int[intersect.size()];
-        int i = 0;
-        for (Integer num : intersect) { // how to interate hashset using for loop
-            result[i++] = num;
-        }
-        return result;
-    }
-}
-
-public class Solution {
-    public int[] intersection(int[] nums1, int[] nums2) {
-        Set<Integer> set = new HashSet<>();
-        Arrays.sort(nums1);
-        Arrays.sort(nums2);
-        int i = 0;
-        int j = 0;
-        while (i < nums1.length && j < nums2.length) {
-            if (nums1[i] < nums2[j]) {
-                i++;
-            } else if (nums1[i] > nums2[j]) {
-                j++;
-            } else {
-                set.add(nums1[i]);
-                i++;
-                j++;
-            }
-        }
-        int[] result = new int[set.size()];
-        int k = 0;
-        for (Integer num : set) {
-            result[k++] = num;
-        }
-        return result;
-    }
-}
-
-// 253 Meeting Rooms II
-public class Solution {
-    public int minMeetingRooms(Interval[] intervals) {
-        int[] starts = new int[intervals.length];
-        int[] ends = new int[intervals.length];
-        for(int i=0; i<intervals.length; i++) {
-            starts[i] = intervals[i].start;
-            ends[i] = intervals[i].end;
-        }
-        Arrays.sort(starts);
-        Arrays.sort(ends);
-        int rooms = 0;
-        int endsItr = 0;
-        for(int i=0; i<starts.length; i++) {
-            if(starts[i]<ends[endsItr])
-                rooms++;
-            else
-                endsItr++;
-        }
-        return rooms;
-    }
-}
+//======================================================================= 
 // 493. Reverse Pairs 
 // important reverse pair if i < j and nums[i] > 2*nums[j].
 public class Solution {
