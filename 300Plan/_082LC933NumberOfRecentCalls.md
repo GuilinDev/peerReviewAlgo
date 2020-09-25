@@ -1,6 +1,6 @@
 LC 933 Number of Recent Calls
 
-二分法找到t - 3000的ceiling，list.size() - index就是比t-3000大的元素个数
+二分法找到t - 3000的左边界index，list.size() - index就是比t-3000大的元素个数
 ```python
 class RecentCounter:
 
