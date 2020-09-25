@@ -2,7 +2,20 @@ LC 933 Number of Recent Calls
 
 二分法找到t - 3000的ceiling，list.size() - index就是比t-3000大的元素个数
 ```python
+class RecentCounter:
 
+    def __init__(self):
+        self.ls = []
+
+    def ping(self, t: int) -> int:
+        self.ls.append(t)
+        return len(self.ls) - bisect.bisect_left(self.ls, t - 3000)
+        
+
+
+# Your RecentCounter object will be instantiated and called as such:
+# obj = RecentCounter()
+# param_1 = obj.ping(t)
 ```
 
 Heap
