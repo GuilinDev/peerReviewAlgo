@@ -532,8 +532,108 @@ class Solution {
          return root;    
      }  
 }
-// 211. Design Add and Search Words Data Structure
+// 208. Implement Trie (Prefix Tree)
+class Trie {
+    boolean isEnd;
+    Trie[] next;
 
+    public Trie() {
+        isEnd = false;
+        next = new Trie[26];
+    }
+
+    public void insert(String word) {
+        if (word.length() == 0) return;
+        Trie cur = this; // keyword "this" think as root
+        for (char c : word.toCharArray()){
+            if (cur.next[c - 'a'] == null) {
+                cur.next[c - 'a'] = new Trie();
+            }
+            cur = cur.next[c - 'a'];
+        }
+        cur.isEnd = true; // need cur.isEnd not isEnd.
+    }
+
+    public boolean search(String word) {
+       Trie node = searchPrefix(word);
+       return node != null && node.isEnd; 
+    }
+
+    public boolean startsWith(String prefix) {
+       Trie node = searchPrefix(prefix);
+       return node != null;
+    }
+    // 题目一般没有这个方法 但是加入后可以很容易的把前面两个方法解决
+    public Trie searchPrefix(String prefix) {
+        Trie node = this;  // keyword "this" think as root
+        for (char c : prefix.toCharArray()) {
+            node = node.next[c - 'a'];
+            if (node == null) return null;
+        }
+        return node;
+    }
+}
+
+// 211. Design Add and Search Words Data Structure
+public class WordDictionary {
+    class Node {
+        private Node[] next;
+        private boolean isWord;
+        public Node() {
+            next = new Node[26];
+            isWord = false;
+        }
+    }
+    private Node root;
+    public WordDictionary3() {
+        root = new Node();
+    }
+    /**
+     * Adds a word into the data structure.
+     */
+    public void addWord(String word) {
+        int len = word.length();
+        Node curNode = root;
+        for (int i = 0; i < len; i++) {
+            char curChar = word.charAt(i);
+            Node next = curNode.next[curChar - 'a'];
+            if (next == null) {
+                curNode.next[curChar - 'a'] = new Node();
+            }
+            curNode = curNode.next[curChar - 'a'];
+        }
+        if (!curNode.isWord) {
+            curNode.isWord = true;
+        }
+    }
+
+    /**
+     * Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter.
+     */
+    public boolean search(String word) {
+        return match(word, root, 0);
+    }
+
+    private boolean match(String word, Node node, int start) { // 用递归 加上节点和指针
+        if (start == word.length()) {
+            return node.isWord;
+        }
+        char alpha = word.charAt(start);
+        if (alpha == '.') {
+            for (int i = 0; i < 26; i++) {
+                if (node.next[i] != null && match(word, node.next[i], start + 1)) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            if (node.next[alpha - 'a'] == null) {
+                return false;
+            }
+            return match(word, node.next[alpha - 'a'], start + 1);
+        }
+    }
+}
 
 
 // 127. Word Ladder
@@ -570,6 +670,44 @@ class Solution {
       return 0;  
     }
 }
+
+// 937. Reorder Data in Log Files
+class Solution {
+    public String[] reorderLogFiles(String[] logs) {
+        List<String> letterLogs = new ArrayList<>();
+        List<String> numLogs = new ArrayList<>();
+        // 将字母日志和数字日志分开，分别放入两个list
+        for (String log : logs) {
+            int i = log.indexOf(" ") + 1;
+            if (log.charAt(i) >= '0' && log.charAt(i) <= '9')
+                numLogs.add(log);
+            else
+                letterLogs.add(log);
+        }
+        Collections.sort(letterLogs, new Comparator<String>() {
+            @Override
+            public int compare(String a, String b) {
+                // 取字母a日志的标识符及内容
+                int ai = a.indexOf(" ");
+                String ida = a.substring(0, ai);
+                String loga = a.substring(ai + 1);
+                // 取字母b日志的标识符及内容
+                int bi = b.indexOf(" ");
+                String idb = b.substring(0, bi);
+                String logb = b.substring(bi + 1);
+                
+                // 对比二者内容，如果相同则对比标识符
+                int cmp = loga.compareTo(logb);
+                if (cmp == 0) 
+                    return ida.compareTo(idb);
+                return cmp;
+            }
+        });
+        letterLogs.addAll(numLogs);
+        return letterLogs.toArray(new String[letterLogs.size()]);
+    }
+}
+
 
 
 ```
