@@ -34,7 +34,8 @@ class MyCircularQueue {
             cq[tail] = value;
             len++;
             return true;
-        } else return false;
+        } 
+        return false;
     }
     
     /** Delete an element from the circular queue. Return true if the operation is successful. */
@@ -43,7 +44,8 @@ class MyCircularQueue {
             head = (head + 1) % cq.length; // head指针位置向后移动一位，或者去头部
             len--;
             return true;
-        } else return false;
+        } 
+        return false;
     }
     
     /** Get the front item from the queue. */
