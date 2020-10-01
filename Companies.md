@@ -3,6 +3,7 @@
 * Atlassian
 * Autodesk
 * Box
+* Confluent
 * Nutanix
 * Twilio
 * Splunk
