@@ -44,7 +44,7 @@ class Solution {
 
 
 //111. Minimum Depth of Binary Tree
-public class Solution {
+public class Solution { 
     public int minDepth(TreeNode root) {
         if(root == null) return 0;
         int left = minDepth(root.left);
