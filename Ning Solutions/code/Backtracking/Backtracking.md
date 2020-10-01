@@ -2,6 +2,7 @@
 
 // 46. Permutations 
 // permutation(nums[0--n-1]) = 拿出一个数字 +  permutation（(nums[0--n-1]) - 拿出的数字）。
+//Input: [1,2,3] Output:[[1,2,3],[1,3,2],[2,1,3],[2,3,1], [3,1,2],[3,2,1]]
 class Solution {
     public  List<List<Integer>> permutationTest(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
@@ -29,6 +30,7 @@ class Solution {
 
 
 // 47. Permutations II
+
 class Solution {
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
@@ -59,6 +61,7 @@ class Solution {
 }
 
 // 77. Combinations -- 有几个孩子是不固定的树形结构 但是每个分支有递减关系
+//Input: n = 4, k = 2 Output:[ [2,4],  [3,4],  [2,3],  [1,2],  [1,3],  [1,4],]
 class Solution {  // muke 递归图 
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> res = new ArrayList<>();
@@ -80,6 +83,8 @@ class Solution {  // muke 递归图
     }
 }  
 //78. Subsets
+// Input: nums = [1,2,3] Output:[  [3],  [1],  [2],  [1,2,3],  [1,3], [2,3], [1,2],  []]
+
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
@@ -124,6 +129,7 @@ class Solution {
 }
 
 // 39. Combination Sum
+//Input: candidates = [2,3,6,7], target = 7 Output: [[2,2,3],[7]]
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();

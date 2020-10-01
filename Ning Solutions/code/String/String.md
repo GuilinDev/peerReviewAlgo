@@ -12,7 +12,7 @@ class Solution {
             }
             StringBuilder ckey = new StringBuilder();
             for (int i = 0; i < table.length; i ++){
-                if (table[i] != 0){
+                if (table[i] != 0) {
                     ckey.append(i -'a').append(table[i]); 
                 }
             }

@@ -73,9 +73,9 @@ class Solution {
             ListNode node = new ListNode(sum % 10); // don't mess up with /10
             cur.next = node;
             cur = node;
-            carry = sum / 10;
+            carry = sum / 10; 
         }
-        if (carry != 0){
+        if (carry != 0){ // if has tail
             cur.next = new ListNode(carry);
         }
         return dummy.next;  
@@ -171,6 +171,7 @@ class Solution {
             return l2;
         }
     }
+
 }
 
 
@@ -219,7 +220,7 @@ class Solution {
     ListNode mergeSortedList(ListNode l1, ListNode l2){
         if(l1 == null || l2 == null){
             return l1 == null ? l2 : l1;
-        }
+        } 
         ListNode dummy = new ListNode(-1);
         ListNode cur = dummy;
         while (l1 != null && l2 != null) {
@@ -255,6 +256,7 @@ class Solution {
         }
         return map.get(head);
     }
+// 两次遍历 一次设置数值根据原表复制 一次设置指针，根据MAP去指
 }
 
 //141. Linked List Cycle
