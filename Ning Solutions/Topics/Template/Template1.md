@@ -1,5 +1,5 @@
-package main.java.ningSL;
-
+```java
+//================================Trie=======================================
 public class Trie {
     private boolean isEnd;
     private Trie[] next;
@@ -7,7 +7,7 @@ public class Trie {
         isEnd = false;
         next = new Trie[26];
     }
-
+ 
     public void insert(String word) {
         if (word == null || word.length() == 0) return;
         Trie curr = this;
@@ -42,3 +42,37 @@ public class Trie {
         return node;
     }
 }
+//================================Union Find=======================================
+public class UnionFind {
+        public static int count = 0;
+        private int[] parent;
+        public UnionFind(int n) {
+            count = n;
+            parent = new int[n];
+            for (int i = 0; i < n; i++) {
+                parent[i] = i;
+            }
+        }
+        public int find(int p) {
+            while (p != parent[p]) {
+                parent[p] = parent[parent[p]];
+                p = parent[p];
+            }
+            return p;
+        }
+        public void union(int p, int q) {
+            int rootP = find(p);
+            int rootQ = find(q);
+            if (rootP == rootQ) return;
+            parent[rootP] = rootQ;
+            count--;
+        }
+}
+
+
+
+
+
+
+```
+ 

@@ -1,6 +1,6 @@
 ```java
 class Sort {
-// merge sort is post order; quick order is pre order
+// merge sort 是后续遍历; quick order 是前序遍历
 //==============================Merge sort======================================
 public static void mergeSort(int[] array, int left, int right) {
     if (right <= left) return; // what difference if I put right < left
@@ -23,8 +23,8 @@ public static void merge(int[] arr, int left, int mid, int right) {
         while (j <= right) temp[k++] = arr[j++];
 
         for (int p = 0; p < temp.length; p++) {
-            arr[left + p] = temp[p];
-        }// don't forget this
+            arr[left + p] = temp[p];// don't forget this
+        }
         // 也可以用 System.arraycopy(a, start1, b, start2, length)
     }
     
@@ -51,7 +51,6 @@ static int partition(int[] a, int begin, int end) {
 //================================Topologic sort=======================================  
 void sort() {
     Queue<Integer> q = new LinkedList(); // 定义一个队列 q
-
     // 将所有入度为 0 的顶点加入到队列 q
     for (int v = 0; v < V; v++) {
         if (indegree[v] == 0) q.add(v);
@@ -61,7 +60,6 @@ void sort() {
         int v = q.poll();
         // 每次循环中，从队列中取出顶点，即为按照入度数目排序中最小的那个顶点
         print(v); // DO something here
-
         // 将跟这个顶点相连的其他顶点的入度减 1，如果发现那个顶点的入度变成了 0，将其加入到队列的末尾
         for (int u = 0; u < adj[v].length; u++) {
             if (--indegree[u] == 0) {
@@ -70,9 +68,6 @@ void sort() {
         }
     }
 }
-
-
-
 }
 
  //================================Search======================================= 
@@ -130,15 +125,7 @@ class Solution {
       return res;  
     }
 }
-public class TreeNode { 
-    int val; 
-    TreeNode left; 
-    TreeNode right; 
-    TreeNode(int x) { 
-        val = x; 
-    } 
-} 
-
+//BFS
 class Solution {
 public List<List<Integer>> levelOrder(TreeNode root) { 
     List<List<Integer>> allResults = new ArrayList<>(); 
@@ -166,6 +153,41 @@ public List<List<Integer>> levelOrder(TreeNode root) {
 } 
 }
 
+}
+ //================================Sliding window=======================================
+// 76 567 438 3
+class Solution {   
+   public static String minWindow(String s, String t) {
+           HashMap<Character, Integer> window = new HashMap<>();
+           HashMap<Character, Integer> need = new HashMap<>();
+           for (char t1 : t.toCharArray()) {
+               need.put(t1, need.getOrDefault(t1,0) + 1);
+           }
+           int left = 0; int right = 0; int valid = 0;
+           while (right < s.length()) { // 区间[left, right)是左闭右开的，所以初始情况下窗口没有包含任何元素：
+               char s1 = s.charAt(right);
+               right ++;
+               if (need.containsKey(s2)) { 
+                  window.put(s1,window.getOrDefault(s1,0) + 1);
+               // Do something in window and may need to add valid
+               if (window.get(s1).equals(need.get(s1))){ // 哈希表值对比不能用 ==
+                    valid ++;
+                }
+                }
+               // 右指针移动当于在寻找一个「可行解」，然后移动左指针在优化这个「可行解」，最终找到最优解
+               while (valid == need.size()) {
+                   char s2 = s.charAt(left);
+                   left ++;
+                   if (need.containsKey(s2)) { 
+                   if (window.get(s2).equals(need.get(s2))){
+                      valid --;
+                   }
+                      window.put(s2,window.get(s2) - 1);
+                   }
+   
+               }
+           }
+       }
 }
 
 

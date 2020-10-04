@@ -137,6 +137,7 @@ class MyQueue {
     }
 }
 
+
 // 706. Design HashMap
 class MyHashMap {
         final ListNode[] nodes = new ListNode[10000];
