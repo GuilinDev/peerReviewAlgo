@@ -53,20 +53,35 @@ public class UnionFind {
                 parent[i] = i;
             }
         }
-        public int find(int p) {
-            while (p != parent[p]) {
-                parent[p] = parent[parent[p]];
-                p = parent[p];
-            }
-            return p;
+        public int find(int p, int[] parent) {
+           if(p == parent[p]) return p;
+           parent[p] = find(parent[p], parent);
+           return parent[p];
         }
         public void union(int p, int q) {
-            int rootP = find(p);
-            int rootQ = find(q);
+            int rootP = find(p, parent);
+            int rootQ = find(q, parent);
             if (rootP == rootQ) return;
             parent[rootP] = rootQ;
             count--;
         }
+}
+//================================String matching=======================================
+public class forceSearch{
+    public static int forceSearch(String txt, String pat) {
+        int M = txt.length();
+        int N = pat.length();
+        for (int i = 0; i <= M - N; i++) {
+            int j;
+            for (j = 0; j < N; j++) {
+                if (txt.charAt(i + j) != pat.charAt(j)) break;
+            }
+            if (j == N) {
+                return i;
+            }
+            }
+            return -1;
+    }
 }
 
 

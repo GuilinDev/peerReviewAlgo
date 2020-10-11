@@ -5,6 +5,10 @@ public class Test {
         System.out.println("hello");
         String input = "12-8/2";
         System.out.println(calculate(input));
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("abc", 1);
+        map.put("def", 2);
+        
 
     }
 

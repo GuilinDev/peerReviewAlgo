@@ -2,7 +2,7 @@
 // 208. Implement Trie (Prefix Tree) 
 class Trie {
     TrieNode root;
-    class TrieNode{
+    class TrieNode {
         boolean isEnd = false;
         Map<Character, TrieNode> nextNode;
         TrieNode(){
@@ -99,8 +99,6 @@ class Trie {
         //最后要回退，因为下一个起点可能会用到上一个起点的字符
         visited[i][j]=false;
     }
-
-
 }
 
 //字典树
@@ -119,7 +117,7 @@ class wordTrie{
     }
 }
 //字典树结点
-class trieNode{
+class trieNode {
     public String val;
     public trieNode[] child=new trieNode[26];
     public boolean isLeaf=false;
@@ -128,34 +126,7 @@ class trieNode{
 // https://leetcode-cn.com/problems/word-search-ii/solution/java-zi-dian-shu-hui-su-ji-bai-liao-9969-de-yong-h/
 
 }
-// 并查集模板
-class UnionFind { 
-	private int count = 0; 
-	private int[] parent; 
-	public UnionFind(int n) { 
-		count = n; 
-		parent = new int[n]; 
-		for (int i = 0; i < n; i++) { 
-			parent[i] = i;
-		}
-	} 
-	public int find(int p) { 
-		while (p != parent[p]) { 
-			parent[p] = parent[parent[p]]; // 不能合并下一步 因为要先更新数组
-			p = parent[p]; 
-		}
-		return p; 
-	}
-	public void union(int p, int q) { 
-		int rootP = find(p); 
-		int rootQ = find(q); 
-		if (rootP == rootQ) return; 
-		parent[rootP] = rootQ; 
-		count--;
-	}
-}
-
-
+    
 
 
 

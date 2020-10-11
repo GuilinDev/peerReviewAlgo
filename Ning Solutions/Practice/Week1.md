@@ -626,6 +626,8 @@ class Solution {
             findWay(coins,amount-coins[i],count+1);
         }
     }
+// 时间复杂度分析：子问题总数 x 解决每个子问题的时间。子问题总数为递归树节点个数，是 O(n^k)，是指数级别的。
+// 每个子问题中含有一个 for 循环，复杂度为 O(k)。所以总时间复杂度为 O(k * n^k)，指数级别。
 }
 
 class Solution {  
@@ -635,7 +637,7 @@ class Solution {
         memo = new int[amount + 1];
         return  coinChangeHelper(coins, amount);   
     }
-    
+ 
     public int coinChangeHelper(int[] coins, int amount){
         if (amount < 0) return -1;
         if(amount == 0) return 0;
@@ -645,15 +647,14 @@ class Solution {
         int res = Integer.MAX_VALUE;
         for(int i = 0; i < coins.length; i++){
             int value = coinChangeHelper(coins, amount - coins[i]);  
-            if (value >= 0){ // don't forget this one. when to compare.
-               res = Math.min(res, value + 1);  
+            if (value >= 0){ // don't forget this one. when to compare. or value < 0 continue
+               res = Math.min(res, value + 1);  // need plus one
             }
         }
         memo[amount] = (res == Integer.MAX_VALUE ? -1 : res);
         return memo[amount];
         // we can't return (res == Integer.MAX_VALUE ? -1 : res) directly
      }
-    
 }
 // 状态转移方程本质是把问题转换成一维或者二维数组中格子和格子之间的关系。本格子可以由前面的哪些个格子决定。
 class Solution {    
@@ -661,16 +662,17 @@ class Solution {
     public int coinChange(int[] coins, int amount) {
             if(coins.length == 0){
             return -1;
-        }
+            }
          int[] memo = new int[amount + 1];
          memo[0] = 0;   
          for (int i = 1; i <= amount; i ++) { // start from i = 1
              int min = Integer.MAX_VALUE; 
              // 每个状态之间互相不影响  所以他们的最小值也不能互相影响。
              //但是考虑到动态规划 状态和状态直接是可以转移的
-             for (int j = 0; j < coins.length; j ++){
-               if(i - coins[j] >= 0 && memo[i-coins[j]] < min){ 
+             for (int j = 0; j < coins.length; j ++){ // 选择
+               if(i - coins[j] >= 0 && memo[i-coins[j]] < min){  // i 做了选择的那个状态 看看有没有数组越界 以及是否是否比前面得出过的最小值大 如果还大 那没必要比了
                    // 考虑到做了选择后要如何，以及选择之后的状态如何转移 i - coins[j] 是做选择
+                   //// 状态转移 是把i 状态转移到做了选择后的状态 i做了很多选择 所以很多状态可以影响到最终结果 
                     min = memo[i-coins[j]] + 1;
                 }
              }
