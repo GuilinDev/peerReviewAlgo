@@ -1,19 +1,6 @@
 package main.java.ningSL;
 
 public class UnionFind {
-    public static void main(String[] args) {
-        UnionFind un = new UnionFind(10);
-        un.union(1,2);
-        un.union(3,4);
-        un.union(2,3);
-        un.union(5,6);
-        un.union(7,8);
-        un.union(9,0);
-       System.out.println(un.find(4));
-        System.out.println(count);
-
-    }
-
         public static int count = 0;
         private int[] parent;
         public UnionFind(int n) {
@@ -37,5 +24,4 @@ public class UnionFind {
             parent[rootP] = rootQ;
             count--;
         }
-
 }

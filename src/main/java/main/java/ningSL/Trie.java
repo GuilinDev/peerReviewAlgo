@@ -1,73 +1,44 @@
 package main.java.ningSL;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Trie {
-    public static void main(String[] args) {
-        Trie tre = new Trie();
-        tre.insert("abcd");
-        System.out.println(tre.search("abd"));
-        System.out.println(tre.startsWith("abc"));
+    private boolean isEnd;
+    private Trie[] next;
+    public Trie() {
+        isEnd = false;
+        next = new Trie[26];
     }
-        TrieNode head;
-        /** Initialize your data structure here. */
-        public Trie() {
-            head = new TrieNode();
-        }
 
-        /** Inserts a word into the trie. */
-        public void insert(String word) {
-            if(word == null)
-                return;
-            TrieNode node = head;
-            for(char ch : word.toCharArray()) {
-                if(!node.charToNode.containsKey(ch)){
-                    node.charToNode.put(ch, new TrieNode());
-                }
-                node = node.charToNode.get(ch);
+    public void insert(String word) {
+        if (word == null || word.length() == 0) return;
+        Trie curr = this;
+        char[] words = word.toCharArray();
+        for (int i = 0; i < words.length; i ++) {
+            int n = words[i] - 'a';
+            if(curr.next[n] == null) {
+                curr.next[n] = new Trie();
             }
-            node.isEnd = true;
+            curr = curr.next[n];
         }
+        curr.isEnd = true;
+    }
 
-        /** Returns if the word is in the trie. */
-        public boolean search(String word) {
-            if(word == null)
-                return false;
-            TrieNode node = head;
-            for(char ch : word.toCharArray()) {
-                if(!node.charToNode.containsKey(ch)){
-                    return false;
-                }
-                node = node.charToNode.get(ch);
+    public boolean search(String word) {
+        Trie node = searchPrefix(word);
+        return node!=null && node.isEnd;
+    }
 
-            }
-            return node.isEnd;
+    public boolean startsWith(String prefix) {
+        Trie node = searchPrefix(prefix);
+        return node != null;
+    }
 
+    private Trie searchPrefix(String word) {
+        Trie node = this;
+        char[] words = word.toCharArray();
+        for (int i = 0; i < words.length; i ++) {
+            node = node.next[words[i] - 'a'];
+            if(node == null) return null;
         }
-
-        /** Returns if there is any word in the trie that starts with the given prefix. */
-        public boolean startsWith(String prefix) {
-            if(prefix == null)
-                return false;
-            TrieNode node = head;
-            for(char ch : prefix.toCharArray()) {
-                if(!node.charToNode.containsKey(ch)){
-                    return false;
-                }
-                node = node.charToNode.get(ch);
-
-            }
-            return true;
-
-        }
-
-        class TrieNode{
-            Map<Character, TrieNode> charToNode;
-            boolean isEnd = false;
-            public TrieNode(){
-                charToNode = new HashMap();
-            }
-        }
-
+        return node;
+    }
 }
