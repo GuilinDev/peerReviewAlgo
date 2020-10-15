@@ -1,5 +1,5 @@
 
-** Why XX company?
+## Why XX company?
 Because I know xx is a top internet xx company with a strong focus on xx (customer experience/cutting edge clouding management technologies). 
 
 And there are a lot of talented people in xx creating amazing products to make people’s life easier. They are always showing strong ownership to their projects and they always want to make things perfect. Those spirits do touch me. 
@@ -16,7 +16,8 @@ So, we have similar spirits. That’s one big reason why I want to join xx.
 Secondly, the growth of xx company is so impressive, it is not only an xx (online retail shop/search engine/social media network), it also has a wide range of products like xx1, xx2, xx3, xx4(Alexa, kindle, fire tablet and TV, Amazon web service, etc). There are so many fantastic technologies and products here. I will never feel boring if I am in xx. And I’ll be excited about all the amazing things around me everyday. I can learn a lot of new technologies here. Beside that, I can also work with great people here for solutions with full-stack point of view, by engaging requirements, front-end, back-end, storage and all the other stuff.
 
 
-** Why you choose this position?
+## Why you choose this position?
+
 The job I applied is Software engineer in xx company yy team. The reason why I choose this job is I have the similar experience. 
 
 I remember when I just started to lead a smart log analyzer system, everything is new to me. And I’m so passionate about creating great services for the customers to save their precious time and money. 
@@ -33,9 +34,9 @@ Secondly, the growth of xx company is so impressive, it is not only an xx (onlin
 
 
 
-** The biggest mistake you made and what did you learn from it? (earn trust, customer obsession)
+## The biggest mistake you made and what did you learn from it? (earn trust, customer obsession)
 
-*** Case 1:
+### Case 1:
 
 The biggest mistake I’ve made happened when I led the smart log analyzer system for the first time. The original schedule is week, but I suddenly received a message from my manager says that he will show a the demo to one customer after two days. And at that time I was working on building the alerting/aggregating system, that will be an important part of the demo. But I paid too much attention on details, I want to make everything perfect. I didn’t notice that I don’t have enough time to finish all the details. 
 
@@ -43,7 +44,7 @@ Last day before the demo day, my manager pointed that out. I apologized to him a
 
 after working overtime, fortunately, the demonstration was not affected in the end. But from this mistake, I learnt that details are definitely important, but I also need to pay attention to the whole schedule, I need to always keep good communication with my teammates when I have my plan. I need to make sure that my schedule won’t affect other’s schedule.
 
-*** Case 2
+### Case 2
 
 I remember that after we first delivered the 2.11 version of smart log analyzer system to customer, which is the version that first with kafka feature and kerberos authentication feature. But the customer reported that they can not authenticate with their consumers. It is very weird cause after all the checks, all the features are running smoothly in the dev machine, but when it comes to the sensor, the authentication part will fail. 
 
@@ -52,7 +53,7 @@ After tracking the logs and error message, I found that the kerberos authenticat
 So, after that, I learnt that I should pay attention to each small detail during the development process, and document them in time so that we won’t forget. I need to make sure that all the things I delivered are fully qualified.
 
 
-** Most challenging project
+## Most challenging project
 
 The most challenging project is my current smart logan analyzer system. It is challenging because I need to implement all the new features on my own. It requires me to build monitoring tools for telecommunication network for both cloud-native and legacy systems. I haven’t done anything related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either. 
 
@@ -64,7 +65,7 @@ So through this process, I learnt that it is so important to be curious and keep
 
 
 
-** Couldn’t finish tasks before deadline
+## Couldn’t finish tasks before deadline
 I remember last time I was building the alerting system, my original schedule is one week, but my manager suddenly sent me an email said that he needs to show a demo to a customer two days later. One core feature of the demo is the alerting system. So I was asked to realize the function before two days deadline. If I still follow the original schedule, I definitely can not finish that. My original schedule is to let the alerting system generate rules automatically based on dynamic data. But I can not finish that in such a short time. So I figured out another temporary solution with my manager, is to make it a fake automation temporarily, to preset all the parameters and processes. If you run it, it will behave like generating rules automatically, so for the demo, the customer will have exactly the same experience. And I can also finish that before deadline. After that, I can make it real automation.
 If I couldn’t finish tasks before deadline, I will discuss with my colleagues, trying to figure out a way that can improve the efficiency and If necessary, I will use my private time to keep working on the task. After all, finishing the task with high quality as soon as possible is what we want. I’ll never sacrifice the customer experience or the quality of the product because of that. Customer experience is always the most important. We must make sure that the product we are gonna deliver is qualified. We can sacrifice our own time to try to finish the tasks. If we still can not finish the tasks, we will communicate with customers and related people, to tell them why and earn their trust. At the same time, we will try our best to finish the tasks as soon as possible.
 
