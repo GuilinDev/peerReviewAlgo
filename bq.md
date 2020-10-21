@@ -70,7 +70,6 @@ Dealing with conflict is never easy but I will do is to make sure I tackle it he
 Now when I work on parallel programs, I try to make it a point to seek out the other teams' progress too, and discuss game plans before the releases.
 
 ## What Would You Do if Someone Continues to Take Credit for Your Work?
-
 I’ll show my teammate that I’ll be fair to him, despite his actions. I will publicly give him credit for his own ideas, in hopes that he’ll start acknowledging me too.
 
 If that doesn’t work, I’ll confront him and hammer out an agreement where we can simultaneously present our ideas to our boss. Since our boss knows who came up with the idea, we can each get the credit we deserve.
@@ -81,6 +80,11 @@ It’s a different story if it’s my boss that’s taking credit for my ideas. 
 With a new job, I always ask for my new supervisor’s preference in managing employees and projects. If they prefer a more hands-on approach, I would work with them every step of the way.
 
 But if they want me to take the lead, I’ll do my best not to disappoint. The key for me is being flexible to meet the demands of my current work environment.
+
+## What’s the Riskiest Thing You’ve Done in Your Career?
+Risk depends on how we define it. What might be risky for me may be normal or conservative for you. While I’m not one for unnecessary risks, I appreciate calculated risks that push the limits of what’s possible.
+
+So before taking any risk, in life and at work, I consider the pros and cons, as well as the ramifications of my decision. That helps me determine if a risk is worth taking.
 
 ## 14 Leadership Principals
 
