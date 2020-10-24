@@ -4,4 +4,5 @@
 ![Linux 体系结构](/imgs/linux0.png)
     * 用户空间(User Space) ：用户空间又包括用户的应用程序(User Applications)、C 库(C Library) 。
     * 内核空间(Kernel Space) ：内核空间又包括系统调用接口(System Call Interface)、内核(Kernel)、平台架构相关的代码(Architecture-Dependent Kernel Code) 。
+    
 2. 
