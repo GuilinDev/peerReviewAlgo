@@ -343,7 +343,8 @@ public class TopKFrenquencyWords {
             }
         }
         Queue<Map.Entry<String, Integer>> maxHeap = new PriorityQueue<>((a, b)->
-                a.getValue() == b.getValue() ? a.getKey().compareTo(b.getKey()) : b.getValue() - a.getValue()); // why not a.val - b.val
+                a.getValue() == b.getValue() ? a.getKey().compareTo(b.getKey()) 
+                : b.getValue() - a.getValue()); // why not a.val - b.val
         maxHeap.addAll(map.entrySet());
         while(!maxHeap.isEmpty() && k > 0) { 
             res.add(maxHeap.poll().getKey());
@@ -454,7 +455,7 @@ class Solution {
     }
     
     public boolean inArea(char[][] grid, int row, int col){
-        return row >= 0 && row < grid.length && col >= 0 && col < grid[0].length;
+   return row >= 0 && row < grid.length && col >= 0 && col < grid[0].length;
     }
     
 }
@@ -490,7 +491,8 @@ class Solution {
 class Solution {
     public int[][] kClosest(int[][] points, int K) {
     PriorityQueue<int[]> pq = new PriorityQueue<int[]>((p1,p2) -> 
-                        p2[0] * p2[0] + p2[1] * p2[1] - p1[0] * p1[0] - p1[1] * p1[1]);
+                        p2[0] * p2[0] + p2[1] * p2[1] - 
+                       p1[0] * p1[0] - p1[1] * p1[1]);
     for (int i = 0; i < points.length; i ++){
         pq.offer(points[i]);
         if (pq.size() > K){
