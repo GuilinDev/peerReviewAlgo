@@ -1,4 +1,5 @@
 ## Self Introduction
+Hi My name is XXX. I graduated from University of XX in 2012 with a master degree in Information Technology. I am currently working at XX company and have been working there for two years as a Software Engineer. I am responsible for conducting software development, software architecture design and trouble shooting. particularly in big data and cloud native. Prior to this, I worked as a full time software engineer at multiple companies for 6 years where I had lots of experience in software development.
 
 ## Why XX company?
 Because I know xx is a top internet xx company with a strong focus on xx (customer experience/cutting edge clouding management technologies). 
