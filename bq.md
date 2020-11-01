@@ -1,5 +1,44 @@
-## Self Introduction
+## Sample
+### Self Introduction
 Hi My name is XXX. I graduated from University of XX in 2012 with a master degree in Information Technology. I am currently working at XX company and have been working there for two years as a Software Engineer. I am responsible for conducting software development, software architecture design and trouble shooting. particularly in big data and cloud native. Prior to this, I worked as a full time software engineer at multiple companies for 6 years where I had lots of experience in software development.
+
+### What is your greatest strength?
+> hard skills + soft/transferable skill + personal attributes/qualities
+* dive right in
+* curiousity on technology
+* good project management skills, when I am working on a project I do not want just to meet deadlines. Rather, I prefer to complete the project well ahead of schedule.
+
+### What is your greatest weakness?
+> focus on sth, minor and fixable
+* My greatest weakness is public speaking. I am ok with small meetings, but as English is not my first language, I am always afraid of making mistakes and I become nervous when speaking to a larger group of people. I have spent lots of time working on this by attending taostmasters and practising English and public speaking regularly and I think I have improved a lot.
+* I heard in here you use Oracle which I am not very familiar with, but I am a quick learner and currently studying this at the moment on my own.
+
+### Do you prefer to work independently or in a team?
+> both/depends on task complexity/I have experiences with both environments and I see value in both environments.
+
+### Where do you see yourself in 5 yeas?
+> goals for the future, realistic and achievable
+* In five years, I'd like to be recognized as an expert of clouding computing in the xx area, and I know that's sth that I will have an opportunity to do here. I am also really excited about taking on more responsibilities and potentially even take the lead role on some projects.
+
+### What makes you the best fit for this position?
+> focus on 专业技能
+I have 8 years experiences in the xx, and I thihnk my experience is perfectly aligned with the requirements you asked for the job listing. I believe that my expertise in the xx area would make me the best candidate for this position.
+> focus on soft skills
+I am a self motivated person who is willing to go above and beyond on any project. I know we are looking for a self-motivated software engineer with both skills and passion, and I am that person. My skill set would be a perfect match for that you are looking for.
+
+### Why do you want to leave your current job?
+> focus on the future
+I feel I have a lot more to offer than my current job requires and I am ready to fo for a new challenge and new opportunities where I can take on more responsibilities and contribute more.
+
+### What do you expect from your manager/supervisor?
+
+The most important thing I want from my manager is constructive feedback so I know here I eed to improve. I also expect my boss to give me support, guidance and encouragement as I want to continually grow and having a good manager will help me achieve my goal.
+
+### How do you handle stress and pressure?
+> focus 面对stress and pressure能采取的有效措施
+Prioritizing my work so I have a clear idea of what needs to be done when, and this has helped my effectively manage pressure on the job.
+
+I make a list to rank that is most important, and then I work through that list step by step, getting each task done in a timely manner.
 
 ## Why XX company?
 Because I know xx is a top internet xx company with a strong focus on xx (customer experience/cutting edge clouding management technologies). 
