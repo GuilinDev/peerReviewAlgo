@@ -167,7 +167,7 @@ class Solution {
            while (right < s.length()) { // 区间[left, right)是左闭右开的，所以初始情况下窗口没有包含任何元素：
                char s1 = s.charAt(right);
                right ++;
-               if (need.containsKey(s2)) { 
+               if (need.containsKey(s1)) { 
                   window.put(s1,window.getOrDefault(s1,0) + 1);
                // Do something in window and may need to add valid
                if (window.get(s1).equals(need.get(s1))){ // 哈希表值对比不能用 ==
