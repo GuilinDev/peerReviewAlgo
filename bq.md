@@ -22,21 +22,21 @@ Hi My name is XXX. I graduated from University of XX in 2012 with a master degre
 
 ### What makes you the best fit for this position?
 > focus on 专业技能
-I have 8 years experiences in the xx, and I thihnk my experience is perfectly aligned with the requirements you asked for the job listing. I believe that my expertise in the xx area would make me the best candidate for this position.
+* I have 8 years experiences in the xx, and I thihnk my experience is perfectly aligned with the requirements you asked for the job listing. I believe that my expertise in the xx area would make me the best candidate for this position.
 > focus on soft skills
 I am a self motivated person who is willing to go above and beyond on any project. I know we are looking for a self-motivated software engineer with both skills and passion, and I am that person. My skill set would be a perfect match for that you are looking for.
 
 ### Why do you want to leave your current job?
 > focus on the future
-I feel I have a lot more to offer than my current job requires and I am ready to fo for a new challenge and new opportunities where I can take on more responsibilities and contribute more.
+* I feel I have a lot more to offer than my current job requires and I am ready to fo for a new challenge and new opportunities where I can take on more responsibilities and contribute more.
 
 ### What do you expect from your manager/supervisor?
 
-The most important thing I want from my manager is constructive feedback so I know here I eed to improve. I also expect my boss to give me support, guidance and encouragement as I want to continually grow and having a good manager will help me achieve my goal.
+* The most important thing I want from my manager is constructive feedback so I know here I eed to improve. I also expect my boss to give me support, guidance and encouragement as I want to continually grow and having a good manager will help me achieve my goal.
 
 ### How do you handle stress and pressure?
 > focus 面对stress and pressure能采取的有效措施
-Prioritizing my work so I have a clear idea of what needs to be done when, and this has helped my effectively manage pressure on the job.
+* Prioritizing my work so I have a clear idea of what needs to be done when, and this has helped my effectively manage pressure on the job.
 
 I make a list to rank that is most important, and then I work through that list step by step, getting each task done in a timely manner.
 
