@@ -2,6 +2,8 @@ package main.java.ningSL.Questions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NavigableMap;
+import java.util.TreeMap;
 
 public class Items {
     public static void main(String[] args) {
@@ -17,7 +19,31 @@ public class Items {
 
 
     }
-    public static List<Integer> numberOfItems(String s, List<Integer> startIndices, List<Integer> endIndices) {
+    public static List<Integer> numberOfItems(String s, List<Integer> start, List<Integer> end) {
+        NavigableMap<Integer, Integer> treeMap = new TreeMap<>();
+        int countSoFar = 0;
+        for (int i = 0; i< s.length(); i++) {
+            if (s.charAt(i) == '|') {
+                treeMap.put(i, countSoFar);
+            } else {
+                countSoFar++;
+            }
+        }
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0; i<start.size(); i++) {
+            list.add(number(treeMap, start.get(i) - 1, end.get(i) - 1));
+        }
+        return list;
+    }
+
+    static int number(NavigableMap<Integer, Integer> treemap, int start, int end) {
+        if (treemap.floorEntry(end) == null || treemap.ceilingEntry(start) == null)
+            return 0;
+        int i = treemap.floorEntry(end).getValue() - treemap.ceilingEntry(start).getValue();
+        return Math.max(i, 0);
+    }
+
+    public static List<Integer> numberOfItems1(String s, List<Integer> startIndices, List<Integer> endIndices) {
         int l = s.length(); int n = startIndices.size();
         List<Integer> res = new ArrayList<>();
         int[] left = new int[l]; int[] right = new int[l]; int[] star = new int[l];

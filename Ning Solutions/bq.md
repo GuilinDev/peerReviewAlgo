@@ -1,6 +1,6 @@
 ## Sample
 ### Self Introduction
-Hi My name is XXX. I graduated from University of XX in 2012 with a master degree in Information Technology. 
+Hi My name is XXX. I graduated from University of XX in 2011 with a master degree in Information Technology. 
 I am currently working at XX company and have been working there for two years as a Software Engineer. 
 I am responsible for conducting software development, software architecture design and trouble shooting. 
 particularly in big data and cloud native. Prior to this, I worked as a full time software 
@@ -240,7 +240,7 @@ If they prefer a more hands-on approach, I would work with them every step of th
 But if they want me to take the lead, I’ll do my best not to disappoint. The key for me is being flexible to meet 
 the demands of my current work environment.
 
-## What’s the Riskiest Thing You’ve Done in Your Career?
+## What’s the riskiest Thing You’ve Done in Your Career?
 Risk depends on how we define it. What might be risky for me may be normal or conservative for you. 
 While I’m not one for unnecessary risks, I appreciate calculated risks that push the limits of what’s possible.
 

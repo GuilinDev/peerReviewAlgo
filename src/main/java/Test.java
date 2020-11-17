@@ -2,12 +2,15 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println("hello");
-        String input = "12-8/2";
-        System.out.println(calculate(input));
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put("abc", 1);
-        map.put("def", 2);
+    //    System.out.println("hello");
+    //    String input = "12-8/2";
+     //   System.out.println(calculate(input));
+      //  HashMap<String, Integer> map = new HashMap<>();
+     //   map.put("abc", 1);
+     //   map.put("def", 2);
+        String paragraph = "Bob hit a ball, the hit BALL flew, far after: it was hit.";
+        String p = paragraph.replaceAll("\\W+" , " ").toLowerCase();
+        System.out.println(p);
         
 
     }
