@@ -1,6 +1,8 @@
 ## Sample
 ### Self Introduction
-Hi My name is XXX. I graduated from University of XX in 2012 with a master degree in Information Technology. I am currently working at XX company and have been working there for two years as a Software Engineer. I am responsible for conducting software development, software architecture design and trouble shooting. particularly in big data and cloud native. Prior to this, I worked as a full time software engineer at multiple companies for 6 years where I had lots of experience in software development.
+Hi My name is XXX. I graduated from University of XX in 2012 with a master degree in Information Technology. I am currently working at XX company and have been working there for two years as a Software Engineer. XXX is a system that monitors mobile network communications, models realistic mobile user behavior and emulate session-based network traffic to measure voice and video quality, as well as the performance of the underlying infrastructure for business telecommunication customers. I am responsible for conducting software development, software architecture design and trouble shooting, particularly in big data and cloud native.
+
+Prior to this, I worked as a full time software engineer at multiple companies for 6 years where I had lots of experience in software development.
 
 ### What is your greatest strength?
 > hard skills + soft/transferable skill + personal attributes/qualities
@@ -16,7 +18,7 @@ Hi My name is XXX. I graduated from University of XX in 2012 with a master degre
 ### Do you prefer to work independently or in a team?
 > both/depends on task complexity/I have experiences with both environments and I see value in both environments.
 
-### Where do you see yourself in 5 yeas?
+### Where do you see yourself in 5 years?
 > goals for the future, realistic and achievable
 * In five years, I'd like to be recognized as an expert of clouding computing in the xx area, and I know that's sth that I will have an opportunity to do here. I am also really excited about taking on more responsibilities and potentially even take the lead role on some projects.
 
