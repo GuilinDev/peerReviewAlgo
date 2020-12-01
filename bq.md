@@ -162,7 +162,7 @@ When I worked on the network monitoring project, I was required to deploy Kafka 
 * Tell me about a time when you invented something.
 
 Case 1: 
-When I worked at XX, we have a ticketing system to record the development process, keep tracking all the tasks, bugs. But you know the ticketing system is a little bit crowded. It only shows a long list of tickets. With the first glance, you can hardly know current process of development. So to simplify it, I used a vis timeline to show all the tickets. Then we can see the whole process clearly through the timeline. With the timeline, we can schedule the tasks more easily. Everyone is happy with that.
+When I worked at XX, we have a ticketing system to record the development process, keep tracking all the tasks, bugs. But you know the ticketing system is a little bit crowded. It only shows a long list of tickets. With the first glance, you can hardly know current process of development. So to simplify it, I used a vis timeline to show all the tickets (by timestamp). Then we can see the whole process clearly through the timeline. With the timeline, we can schedule the tasks more easily. Everyone is happy with that.
 
 ### 4. Are Right, A Lot
 > Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.
