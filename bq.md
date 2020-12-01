@@ -16,7 +16,8 @@ Prior to this, I worked as a full time software engineer at multiple companies f
 * I heard in here you use Oracle which I am not very familiar with, but I am a quick learner and currently studying this at the moment on my own.
 
 ### Do you prefer to work independently or in a team?
-> both/depends on task complexity/I have experiences with both environments and I see value in both environments.
+> both/depends on task complexity/
+* I have experiences with both environments and I see value in both environments.
 
 ### Where do you see yourself in 5 years?
 > goals for the future, realistic and achievable
@@ -30,17 +31,17 @@ I am a self motivated person who is willing to go above and beyond on any projec
 
 ### Why do you want to leave your current job?
 > focus on the future
-* I feel I have a lot more to offer than my current job requires and I am ready to fo for a new challenge and new opportunities where I can take on more responsibilities and contribute more.
+* I feel I have a lot more to offer than my current job requires, and I am ready for a new challenge and new opportunity where I can take on more responsibilities and contribute more.
 
 ### What do you expect from your manager/supervisor?
 
-* The most important thing I want from my manager is constructive feedback so I know here I eed to improve. I also expect my boss to give me support, guidance and encouragement as I want to continually grow and having a good manager will help me achieve my goal.
+* The most important thing I want from my manager is constructive feedback so I know here I need to improve. 
+* I also expect my boss to give me support, guidance and encouragement as I want to continually grow and having a good manager will help me achieve my goal.
 
 ### How do you handle stress and pressure?
 > focus 面对stress and pressure能采取的有效措施
 * Prioritizing my work so I have a clear idea of what needs to be done when, and this has helped my effectively manage pressure on the job.
-
-I make a list to rank that is most important, and then I work through that list step by step, getting each task done in a timely manner.
+* I make a list to rank that is most important, and then I work through that list step by step, getting each task done in a timely manner.
 
 ## Why XX company?
 Because I know xx is a top internet xx company with a strong focus on xx (customer experience/cutting edge clouding management technologies). 
@@ -49,7 +50,7 @@ And there are a lot of talented people in xx creating amazing products to make p
 
 I remember when I just started to lead a network monitoring system, everything is new to me. And I’m so passionate about creating great services for the customers to save their precious time and money. 
 
-The customers of my project are IT supports, system engineers and product managers. Those people need to monitor their own complex systems for healthy check. Our system make this process more convenient so that customers can watch the dashboard we provide, visually to see if there are unexceptional events. 
+The customers of my project are telecommunication business customers. Those people need to monitor their own complex mobile netwrok systems. Our system make this process more convenient so that customers can watch the dashboard we provide, visually to see if there are unexceptional events. 
 
 We make our system to take care of all the monitoring stuff automatically. It will detect the delay/throughput/network errors/saturation events, evaluate metrics, report them and provide suggestions and solve them automatically. The s only need to do clicks on the website to make simple decisions based on the suggestions system provide for near real-time analysis and OLAP, so that they can focus more on their own things. 
 
