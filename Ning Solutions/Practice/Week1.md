@@ -632,7 +632,8 @@ class Solution {
 
 class Solution {  
     int[] memo;
-    // int res = Integer.MAX_VALUE; // why can't put res outside
+    // int res = Integer.MAX_VALUE; 
+    // why can't put res outside 因为每一次求解的是当前数量下的最小值。而不是所有 0 ~ amount的最大值
     public int coinChange(int[] coins, int amount) {
         memo = new int[amount + 1];
         return  coinChangeHelper(coins, amount);   
@@ -644,11 +645,12 @@ class Solution {
         if (memo[amount] != 0){
             return memo[amount];
         }
-        int res = Integer.MAX_VALUE;
-        for(int i = 0; i < coins.length; i++){
+        int res = Integer.MAX_VALUE; // 下一层递归时候又有自己的 RES 
+        for(int i = 0; i < coins.length; i++){ // 这个循环表示我在当前这个AMOUNT下我试了所有可能的组合
             int value = coinChangeHelper(coins, amount - coins[i]);  
             if (value >= 0){ // don't forget this one. when to compare. or value < 0 continue
-               res = Math.min(res, value + 1);  // need plus one
+               res = Math.min(res, value + 1);  
+            // 结果要和当前的结果组合 也就是加一 然后对比MAX，如果无效情况还是MAX
             }
         }
         memo[amount] = (res == Integer.MAX_VALUE ? -1 : res);
@@ -670,7 +672,8 @@ class Solution {
              // 每个状态之间互相不影响  所以他们的最小值也不能互相影响。
              //但是考虑到动态规划 状态和状态直接是可以转移的
              for (int j = 0; j < coins.length; j ++){ // 选择
-               if(i - coins[j] >= 0 && memo[i-coins[j]] < min){  // i 做了选择的那个状态 看看有没有数组越界 以及是否是否比前面得出过的最小值大 如果还大 那没必要比了
+               if(i - coins[j] >= 0 && memo[i-coins[j]] < min){  
+          // i 做了选择的那个状态 看看有没有数组越界 以及是否是否比前面得出过的最小值大 如果还大 那没必要比了
                    // 考虑到做了选择后要如何，以及选择之后的状态如何转移 i - coins[j] 是做选择
                    //// 状态转移 是把i 状态转移到做了选择后的状态 i做了很多选择 所以很多状态可以影响到最终结果 
                     min = memo[i-coins[j]] + 1;
