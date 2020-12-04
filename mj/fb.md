@@ -1,6 +1,6 @@
 ## Dec. 2020
 
-### 953 Verifying an Alien Dictionary
+### 953 Verifying an Alien Dictionary * 
 直接顺序对比
 ```java
 class Solution {
@@ -123,10 +123,13 @@ class Solution {
 ```
 
 ### 238 Product of Array Except Self
+[238 Product of Array Except Self](https://app.gitbook.com/@guilindev/s/interview/leetcode/array#238-product-of-array-except-self)
 
 ### 973 K Closest Points to Origin
+[973 K Closest Points to Origin](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer-1#973-k-closest-points-from-origin)
 
 ### 560 Subarray Sum Equals K
+[560 Subarray Sum Equals K](https://app.gitbook.com/@guilindev/s/interview/leetcode/array/zi-shu-zu-subarray#560-subarray-sum-equals-k)
 
 ### 680 Valid Palindrome II
 双指针
