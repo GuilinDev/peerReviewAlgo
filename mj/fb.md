@@ -301,124 +301,280 @@ class SparseVector {
 ```
 
 ### 211	Design Add and Search Words Data Structure
-[]()
+[Trie](https://app.gitbook.com/@guilindev/s/interview/leetcode/trie-qian-zhui-shu#211-add-and-search-word-data-structure-design)
 
 ### 215	Kth Largest Element in an Array
-[]()
+[pq/quick selct](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer-1#215-kth-largest-element-in-an-array)
 
 ### 721	Accounts Merge
-[]()
+[根据邮件和用户名合并账户 - DFS](https://leetcode-cn.com/problems/accounts-merge/solution/zhang-hu-he-bing-by-leetcode/)
 
 ### 125	Valid Palindrome	
-[]()
+[双指针](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-2#125-valid-palindrome)
 
 ### 124	Binary Tree Maximum Path Sum
-[]()
+[任意起点的路径最大值 - 回溯](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#124-binary-tree-maximum-path-sum)
 
 ### 278	First Bad Version	
-[]()
+[Binary Search](https://app.gitbook.com/@guilindev/s/interview/leetcode/er-fen-sou-suo#278-first-bad-version)
 
 ### 88	Merge Sorted Array	
-[]()
+[从后向前](https://app.gitbook.com/@guilindev/s/interview/leetcode/array/he-bing-you-xu-de-arrays#88-merge-sorted-array)
 
 ### 29	Divide Two Integers
-[]()
+[不用乘除和取余的除法 - 位操作](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled#29-divide-two-integers)
 
 ### 426	Convert Binary Search Tree to Sorted Doubly Linked List
-[]()
+[BST转换为有序链表 - 中序遍历+备忘录](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#426-convert-binary-search-tree-to-sorted-doubly-linked-list)
 
 ### 297	Serialize and Deserialize Binary Tree	
-[]()
+[先序或层序](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#297-serialize-and-deserialize-binary-tree)
 
 ### 438	Find All Anagrams in a String
-[]()
+[字符串中找到所有异位词子串](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#297-serialize-and-deserialize-binary-tree)
 
 ### 636	Exclusive Time of Functions
-[]()
+[抢占CPU资源的函数独占时间 - 栈](https://leetcode-cn.com/problems/exclusive-time-of-functions/solution/han-shu-de-du-zhan-shi-jian-by-leetcode/)
 
 ### 523	Continuous Subarray Sum
-[]()
+[找一个子数组，大小是给定k的n倍 - hashmap](https://leetcode-cn.com/problems/continuous-subarray-sum/solution/lian-xu-de-zi-shu-zu-he-by-leetcode/)
 
 ### 282	Expression Add Operators
-[]()
+[回溯](https://app.gitbook.com/@guilindev/s/interview/leetcode/backtracking#282-expression-add-operators)
 
 ### 173	Binary Search Tree Iterator	
-[]()
+[BST返回和检查下一个最小数 - Stack](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#173-binary-search-tree-iterator)
 
 ### 34	Find First and Last Position of Element in Sorted Array
-[]()
+[左右边界](https://app.gitbook.com/@guilindev/s/interview/leetcode/array/zai-array-zhong-cha-xun-yuan-su#34-find-first-and-last-position-of-element-in-sorted-array-search-for-a-range)
 
 ### 528	Random Pick with Weight
-[]()
+[前缀和+二分](https://app.gitbook.com/@guilindev/s/interview/leetcode/tag0#528-random-pick-with-weight)
 
 ### 987	Vertical Order Traversal of a Binary Tree
-[]()
+[垂序遍历 DFS记录坐标+排序](https://leetcode-cn.com/problems/vertical-order-traversal-of-a-binary-tree/solution/er-cha-shu-de-chui-xu-bian-li-by-leetcode-2/)
 
 ### 50	Pow(x, n)
-[]()
+[递归折半](https://app.gitbook.com/@guilindev/s/interview/leetcode/er-fen-sou-suo#50-power-x-n)
 
 ### 65	Valid Number	
-[]()
+[检查字符串是否是数](https://app.gitbook.com/@guilindev/s/interview/leetcode/string#65-valid-number)
 
 ### 986	Interval List Intersections
-[]()
+[两两合并两个数组中的intervals - 双指针](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-2#986-interval-list-intersections)
 
 ### 133	Clone Graph
-[]()
+[BFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/graph#133-clone-graph)
 
 ### 31	Next Permutation	
-[]()
+[记住特殊的解法](https://app.gitbook.com/@guilindev/s/interview/leetcode/array#31-next-permutation)
 
-### 708	Insert into a Sorted Circular Linked List
-[]()
+### 708	Insert into a Sorted Circular Linked List $
+[插入元素到循环有序链表中](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/)
+[one pass or two passes](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/discuss/149374/Java-5ms-One-Pass-and-Two-Pass-Traverse-With-Detailed-Comments-and-Edge-cases!)
+```java
+class Solution {
+    public Node insert(Node start, int x) {
+        // if start is null, create a node pointing to itself and return
+        if (start == null) {
+            Node node = new Node(x, null);
+            node.next = node;
+            return node;
+        }
+        // if start is not null, try to insert it into correct position
+        // 1st pass to find max node
+        Node cur = start;
+        while (cur.val <= cur.next.val && cur.next != start) 
+            cur = cur.next;
+        // 2nd pass to insert the node in to correct position
+        Node max = cur;
+        Node dummy = new Node(0, max.next); // use a dummy head to make insertion process simpler
+        max.next = null; // break the cycle
+        cur = dummy;
+        while (cur.next != null && cur.next.val < x) {
+            cur = cur.next;
+        }
+        cur.next = new Node(x, cur.next); // insert
+        Node newMax = max.next == null ? max : max.next; // reconnect to cycle
+        newMax.next = dummy.next;
+        return start;
+    }
+}
+```
 
-### 249	Group Shifted Strings
-[]()
+### 249	Group Shifted Strings $
+[找出可以往后shift的字符串](https://leetcode.com/problems/group-shifted-strings/)
+Basically we need to form some sort of key for each word to group them. (Remember the idea of group all anagrams?)
+
+Consider acf and pru. Now notice the differnce between each characters.
+acf = 0->2->3, and pru = 0->2->3. So these two form same group. So in this case, you can simply use integers ASCII difference to form key.
+
+Now consider corner case, az and ba, where az = 0->25 and ba = 0->-1. When it goes negative, just make it positive(rotate or mod equivalent) by adding 26. So it becomes, ba = 0->25, which forms same group.
+```java
+class Solution {
+    public List<List<String>> groupStrings(String[] strings) {
+    Map<String, List<String>> map = new HashMap<>();
+
+    for(String s : strings) {
+        String key = getKey(s);
+        List<String> list = map.getOrDefault(key, new ArrayList<>());
+        list.add(s);
+        map.put(key, list);
+    }
+    return new ArrayList<>(map.values());
+}
+
+private String getKey(String s) {
+    char[] chars = s.toCharArray();
+    String key = "";
+    for(int i = 1; i < chars.length; i++) {
+        int diff = chars[i] - chars[i-1];
+        key += diff < 0 ? diff + 26 : diff;
+        key += ",";
+    }
+    return key;
+}
+}
+```
 
 ### 42	Trapping Rain Water	
-[]()
+[DP/stack](https://app.gitbook.com/@guilindev/s/interview/leetcode/stack#42-trapping-rain-water)
 
-### 340	Longest Substring with At Most K Distinct Characters	
-[]()
+### 340	Longest Substring with At Most K Distinct Characters $
+[最多包含k个不同字符的子字符串 ](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+```java
+class Solution {
+    public int lengthOfLongestSubstringKDistinct(String s, int k) {
+    Map<Character, Integer> map = new HashMap<>();
+    int left = 0;
+    int best = 0;
+    for(int i = 0; i < s.length(); i++) {
+        char c = s.charAt(i);
+        map.put(c, map.getOrDefault(c, 0) + 1);
+        while (map.size() > k) {
+            char leftChar = s.charAt(left);
+            if (map.containsKey(leftChar)) {
+                map.put(leftChar, map.get(leftChar) - 1);                     
+                if (map.get(leftChar) == 0) { 
+                    map.remove(leftChar);
+                }
+            }
+            left++;
+        }
+        best = Math.max(best, i - left + 1);
+    }
+    return best;
+} 
+}
+```
 
 ### 543	Diameter of Binary Tree	
-[]()
+[DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#543-diameter-of-binary-tree)
 
 ### 398	Random Pick Index
-[]()
+[有重复元素的随机数返回 - 蓄水池抽样问题](https://leetcode-cn.com/problems/random-pick-index/solution/xu-shui-chi-chou-yang-wen-ti-by-an-xin-9/)
 
 ### 139	Word Break
-[]()
+[DP + 剪枝/Trie](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#139-word-break)
 
 ### 339	Nested List Weight Sum	
-[]()
+[嵌套数组求和 DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/dfs#339-nested-list-weight-sum)
 
 ### 785	Is Graph Bipartite?
-[]()
+[判断是否二分图 DFS/BFS/UF](https://leetcode-cn.com/problems/is-graph-bipartite/solution/bfs-dfs-bing-cha-ji-san-chong-fang-fa-pan-duan-er-/)
 
-### 270	Closest Binary Search Tree Value
-[]()
+### 270	Closest Binary Search Tree Value $
+[top down](https://leetcode.com/problems/closest-binary-search-tree-value/)
+```java
+class Solution {
+    public int closestValue(TreeNode root, double target) {
+		int ret = root.val;
+		while (root != null) {
+			if (Math.abs(target - root.val) < Math.abs(target - ret)) {
+				ret = root.val;
+				if (Math.abs(target - root.val) <= 0.5)
+					break;
+			}
+			root = root.val > target ? root.left : root.right;
+		}
+		return ret;
+	} 
+}
+```
 
 ### 378	Kth Smallest Element in a Sorted Matrix
-[]()
+[二分法](https://app.gitbook.com/@guilindev/s/interview/leetcode/er-fen-sou-suo#378-kth-smallest-element-in-a-sorted-matrix)
 
 ### 670	Maximum Swap
-[]()
+[非负整数中交换一次两位得到最大 - 存索引](https://leetcode-cn.com/problems/maximum-swap/solution/zui-da-jiao-huan-by-leetcode/)
 
 ### 76	Minimum Window Substring
-[]()
+[两个hashmap双指针](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-2#76-minimum-window-substring)
 
 ### 317	Shortest Distance from All Buildings
-[]()
+[周围楼间最短距离盖楼 BFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/tag5#317-shortest-distance-from-all-buildings)
 
-### 536	Construct Binary Tree from String
-[]()
+### 536	Construct Binary Tree from String $
+[从一个数字和小括号的字符串生成二叉树 DFS或Stack](https://leetcode.com/problems/construct-binary-tree-from-string/)
+```java
+class Solution {
+    public TreeNode str2tree(String s) {
+        Stack<TreeNode> stack = new Stack<>();
+        for(int i = 0, j = i; i < s.length(); i++, j = i){
+            char c = s.charAt(i);
+            if(c == ')')    stack.pop();
+            else if(c >= '0' && c <= '9' || c == '-'){
+                while(i + 1 < s.length() && s.charAt(i + 1) >= '0' && s.charAt(i + 1) <= '9') i++;
+                TreeNode currentNode = new TreeNode(Integer.valueOf(s.substring(j, i + 1)));
+                if(!stack.isEmpty()){
+                    TreeNode parent = stack.peek();
+                    if(parent.left != null)    parent.right = currentNode;
+                    else parent.left = currentNode;
+                }
+                stack.push(currentNode);
+            }
+        }
+        return stack.isEmpty() ? null : stack.peek();
+    }
+}
+```
+OP's solution is on average O(nlgn); worse case O(n^2).
+This could be solved in O(n). Here's my recursive one:
+```java
+class Solution {
+    int p;
+    
+    public TreeNode str2tree(String s) {
+        if (s == null || s.isEmpty()) return null;
+        p = 0;
+        s = "(" + s + ")";
+        return build(s);
+    }
+    
+    private TreeNode build(String s) {
+        int start = p + 1;
+        int end = start + 1;
+        while (end < s.length() && Character.isDigit(s.charAt(end))) end++;
+        int val = Integer.valueOf(s.substring(start, end));
+        TreeNode root = new TreeNode(val);
+        p = end;
+        if (s.charAt(p) == '(') {
+            root.left = build(s);
+            if (s.charAt(p) == '(') {
+                root.right = build(s);
+            }
+        }
+        p++;
+        return root;
+    }
+}
+```
 
 ### 896	Monotonic Array
-[]()
+[直接两次或一次遍历](https://leetcode-cn.com/problems/monotonic-array/solution/dan-diao-shu-lie-by-leetcode/)
 
 ### 621	Task Scheduler
-[]()
+[两个任务间至少间隔n个点](https://app.gitbook.com/@guilindev/s/interview/leetcode/queue#621-task-scheduler)
 
 ### 1060 Missing Element in Sorted Array
 []()
