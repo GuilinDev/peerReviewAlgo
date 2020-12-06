@@ -139,7 +139,7 @@ So before taking any risk, in life and at work, I consider the pros and cons, as
 * 细节是关键；避免泛化。针对回答的每个问题详细说明一种情况，并使用数据或指标来支持示例。
 * 坦率而直率。不要修饰或忽略故事的一部分。
 
-### 1. Customer Obsession 客户至尚 *
+### 1. Customer Obsession 客户至尚 ***
 > Leaders start with the customer and work backward. They work vigorously to earn and keep customer trust. Although leaders pay attention to competitors, they obsess over customers.
 
 > 领导者从客户入手，再反向推动工作。他们努力工作，赢得并维系客户对他们的信任。虽然领导者会关注竞争对手，但是他们更关注客户 。
@@ -170,7 +170,7 @@ So, finally, after the delivery, we get positive feedbacks from customers. I am 
 Case 1: 
 When I worked on the network monitoring project, I was required to deploy Kafka streaming processing and create few rules for the authentication system. Our authentication system is based on various Kerberos realms, and the situations and requirements for each realms are definitely different. Since I was the person who was leading network monitoring project, I want my customers to always have the best experience. So I started to think about automate the authentication. After the agreement from my manager, I categorized the current rules and the future rules based on different scenarios and requirements. Then I wrote a bunch of shell scripts to do the automation. I also created the APIs for those authentication, so if the customer doesn’t want the rule to be enabled, they can just click on dashboard to turn it off. After delivery, we had strong positive feedbacks from customer.
 
-### 3. Invent and Simplify 创新简化 * 
+### 3. Invent and Simplify 创新简化 ***
 > Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by “not invented here”. As we do new things, we accept that we may be misunderstood for long periods of time.
 
 > 领导者期望并要求自己的团队进行创新和发明，并始终寻求使工作简化的方法。他们了解外界动态，四处寻找新的创意，并且不局限于“非我发明”的观念。当我们开展新事物时，我们要接受被长期误解的可能。
@@ -198,7 +198,7 @@ Case 1:
 When I was building the network monitoring system through Kafka and Kerberos, I was asked to create rules for monitoring all the processes in the system. I have my initial plan to track the unique value of process names based on different sensors. 
 But I don’t quite understand the behavior of system metrics (Delays, Throughtput, Errors, Satuations), so I discussed with my leader, and she disagreed with plan. Actually we want to see the alert when the events in the system are down, or nearly down. What we really care about is the count of processes. We want to alert when there is a significant drop in process numbers. So, after that I changed my design and everyone is happy.
 
-### 5. Learn and Be Curious 好奇求知 * 
+### 5. Learn and Be Curious 好奇求知 ***
 > Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
 
 > 领导者从不停止学习，并不断寻找机会以提升自己。领导者对各种可能性充满好奇并付于行动加以探索。
@@ -214,7 +214,7 @@ But I don’t quite understand the behavior of system metrics (Delays, Throughtp
 Case 1:
 My leader asked me if there’s a way to export and import kerberos authentication, visuals more easily. Cause through the GUI side, it has the number limit and it is hard to manipulate from back end. So I came up with an idea we can utilize the RPC calling betweenn internal services between Kafka broker and Kerberos. We can write scripts to automate the loading process according to our own needs. I know that’s feasible. So finally I wrote the scripts and all the stuff in the system so that system metrics can be exported and imported automatically in back end.
 
-### 6. Hire and Develop The Best 选贤育能 * 
+### 6. Hire and Develop The Best 选贤育能 ***
 > Leaders raise the performance bar with every hire and promotion. They recognize exceptional talent and will move them throughout the organization. Leaders develop leaders and take seriously their role in coaching others.  We work on behalf of our people to invent mechanisms for development like Career Choice.
 
 > 领导者不断提升招聘和晋升员工的标准。他们表彰杰出的人才，并乐于在组织中通过轮岗磨砺他们。领导者培养领导人才，他们严肃地对待自己育才树人的职责。领导者从员工角度出发，创建职业发展机制。
@@ -301,7 +301,7 @@ Case 1: When I was building the network monitoring system, one of the important 
 * Tell me about a time where you thought of a clever new way to save money for the company.
 * Tell me about a time when you had to work with limited time or resources.
 
-### 11. Earn Trust * 
+### 11. Earn Trust ***
 > Leaders listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing.  Leaders do not believe their or their team’s body odor smells of perfume.  They benchmark themselves and their teams against the best.
 
 > 领导者专注倾听，坦诚沟通，尊重他人。领导者敢于自我批评，即便这样做会令自己尴尬或难堪。他们并不认为自己或其团队总是对的。领导者会以最佳领导者和团队为标准来要求自己及其团队。
@@ -317,7 +317,7 @@ Case 1: When I was building the network monitoring system, one of the important 
 * Tell me about a time when you had to dive deep into the data and the results you achieved.
 * Tell me about a time when you dived deep/drilled down to find the root issue.
 
-### 13. Have Backbone; Disagree and Commit 要有硬骨头 * 
+### 13. Have Backbone; Disagree and Commit 要有硬骨头 ***
 > Leaders are obligated to respectfully challenge decisions when they disagree, even when doing so is uncomfortable or exhausting. Leaders have conviction and are tenacious. They do not compromise for the sake of social cohesion. Once a decision is determined, they commit wholly.
 
 > 领导者必须能够不卑不亢地质疑他们无法苟同的决策，哪怕这样做让人心烦意乱、精疲力尽。领导者要信念坚定、矢志不移。他们不会为了保持一团和气而屈就妥协。一旦做出决定，他们就会全身心地致力于实现目标。
