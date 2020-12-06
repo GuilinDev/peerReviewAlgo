@@ -131,10 +131,17 @@ Risk depends on how we define it. What might be risky for me may be normal or co
 
 So before taking any risk, in life and at work, I consider the pros and cons, as well as the ramifications of my decision. That helps me determine if a risk is worth taking.
 
-## 14 Leadership Principals
+## 14 Leadership Principals 
+> 练习使用STAR方法回答上述基于行为的访谈问题，并结合Amazon Leadership Principles中的示例。
+> 确保每个答案都有一个开始，中间和结尾。描述情况或问题，采取的措施以及结果。
+> 准备一些不同情况的简短描述，并准备更详细地回答后续问题。选择一些示例来突出独特技能。
+> 有一些具体的例子可以展示经验，并证明在此过程中承担了风险，成功，失败和成长。
+> 细节是关键；避免泛化。针对回答的每个问题详细说明一种情况，并使用数据或指标来支持示例。
+> 坦率而直率。不要修饰或忽略故事的一部分。
 
-### 1. Customer Obsession
+### 1. Customer Obsession 客户至尚 *
 > Leaders start with the customer and work backward. They work vigorously to earn and keep customer trust. Although leaders pay attention to competitors, they obsess over customers.
+> 领导者从客户入手，再反向推动工作。他们努力工作，赢得并维系客户对他们的信任。虽然领导者会关注竞争对手，但是他们更关注客户 。
 
 * Who was your most difficult customer?
 * Give me an example of a time when you did not meet a client’s expectation. What happened, and how did you attempt to rectify the situation?
@@ -144,62 +151,97 @@ So before taking any risk, in life and at work, I consider the pros and cons, as
 Case 1: When I led the network monitoring project at the first time, it was very challenging to me. Cause I have no idea how to build the authentication structure. In order to understand it better, I googled a lot of papers and learnt a lot of basic concepts about network authentication. Based on that, I started to work with customers to figure out what kind of problems that customers concerned the most. Cause some customers who are using our products are not professional network developers. I need to use their language to tell them the story. They just need to know when they need do the authentication to pull the data, they don’t care about how we do the authentication. All they need to do is just make easy decisions based on the suggestions we provide. The system will take care of all the other stuff. Like if they need cleaned communication device vendor configration data, the system will bubble up an authentication status alert to let the customers know, and also providing them the links to the detailed dashboards. They can choose the suggestions provided by system, like choosing the data schema and formats, and timestamp range.
 So, finally, after the delivery, we get positive feedbacks from customers. I am always trying my best to listen to the customers and provide the best experience for them.
 
-### 2. Ownership
+### 2. Ownership 主人翁精神
 > Leaders are owners. They think long term and don’t sacrifice long-term value for short-term results. They act on behalf of the entire company, beyond just their own team. They never say “that’s not my job.
+> 领导者是主人翁。他们会从长远考虑，不会为了短期业绩而牺牲长期价值。他们不仅仅代表自己的团队，而且代表整个公司行事。他们绝不会说“那不是我的工作”。
 
-* Tell me about a time when you had to leave a task unfinished.
+* Tell me about a time when you had to leave a task unfinished. 
   Usually I tend to finish all of my tasks, that is why I try to avoid multitasking if possible, because it is better to finish one or two things, than start many and leave them undone, or halfway. But, when I was in unclear responsibilities ...
-* Tell me about a time when you had to work on a project with unclear responsibilities.
+* Tell me about a time when you had to work on a project with unclear responsibilities. (discuss the spec)
   Come out a consesus
+* Provide an example of when you personally demonstrated ownership. (show the design document, demo, suggest feature)
+* Tell me about a time you went above and beyond.(above and beyond, means do more than you need to)
+* Tell me about a time when you took on something significant outside your area of responsibility. Why was it important? What was the outcome?
+* Describe a project or idea (not necessarily your own) that was implemented primarily because of your efforts. What was your role? What was the outcome? (auth function)
+* Give an example of when you saw a peer struggling and decided to step in and help. What was the situation and what actions did you take? What was the outcome? (lead junior engineer)
 
 Case 1: 
 When I worked on the network monitoring project, I was required to deploy Kafka streaming processing and create few rules for the authentication system. Our authentication system is based on various Kerberos realms, and the situations and requirements for each realms are definitely different. Since I was the person who was leading network monitoring project, I want my customers to always have the best experience. So I started to think about automate the authentication. After the agreement from my manager, I categorized the current rules and the future rules based on different scenarios and requirements. Then I wrote a bunch of shell scripts to do the automation. I also created the APIs for those authentication, so if the customer doesn’t want the rule to be enabled, they can just click on dashboard to turn it off. After delivery, we had strong positive feedbacks from customer.
 
-### 3. Invent and Simplify
+### 3. Invent and Simplify 创新简化 * 
 > Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by “not invented here”. As we do new things, we accept that we may be misunderstood for long periods of time.
+> 领导者期望并要求自己的团队进行创新和发明，并始终寻求使工作简化的方法。他们了解外界动态，四处寻找新的创意，并且不局限于“非我发明”的观念。当我们开展新事物时，我们要接受被长期误解的可能。
 
 * Tell me about a time when you gave a simple solution to a complex problem. 
 * Tell me about a time when you invented something.
+* What improvements have you made at your current company?
+* Tell me about a time you had to think outside the box (think creatively) to close a sale or sell your product.
+* What is the most innovative project you’ve worked on?
+
+I was in a meeting in my previous job where the company’s sales figures were being discussed by the managers. Although the sales figures were healthy, there was concern amongst the group that the profitability was not as good as it should be, due to the marketing spend that was ongoing. At the end of the meeting, I decided to try and find a solution to this problem. I met up with the marketing team, and they explained to me the bulk of the marketing spend was going on Facebook and social media adverts. After some investigative work, it became apparent that the team was not using Facebook’s tracking pixels that are designed to measure the performance of the advertising spend. I quickly informed them of what I had found, and moving forward from that day on, the organization was able to measure accurately the marketing return on investment. This allowed us to cease adverts that were not giving us any return, which in turn increased profitability.
 
 Case 1: 
 When I worked at XX, we have a ticketing system to record the development process, keep tracking all the tasks, bugs. But you know the ticketing system is a little bit crowded. It only shows a long list of tickets. With the first glance, you can hardly know current process of development. So to simplify it, I used a vis timeline to show all the tickets (by timestamp). Then we can see the whole process clearly through the timeline. With the timeline, we can schedule the tasks more easily. Everyone is happy with that.
 
-### 4. Are Right, A Lot
+### 4. Leaders Are Right, A Lot 决策正确
 > Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.
+> 领导者在大多数情况下都能做出正确的决定。他们拥有卓越的业务判断能力和敏锐的直觉。他们寻求多样的视角，并挑战自己的观念。
 
 * Tell me about a time when you were wrong. 
-* Tell me about a time when you had to work with incomplete data or information.
+* Tell me about a time when you had to work with incomplete data or information.(PCS init) make a decision, but also consider the opinions of the other people(PCS init)
 
 Case 1: 
 When I was building the network monitoring system through Kafka and Kerberos, I was asked to create rules for monitoring all the processes in the system. I have my initial plan to track the unique value of process names based on different sensors. 
 But I don’t quite understand the behavior of system metrics (Delays, Throughtput, Errors, Satuations), so I discussed with my leader, and she disagreed with plan. Actually we want to see the alert when the events in the system are down, or nearly down. What we really care about is the count of processes. We want to alert when there is a significant drop in process numbers. So, after that I changed my design and everyone is happy.
 
-### 5. Learn and Be Curious
+### 5. Learn and Be Curious 好奇求知 * 
 > Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
+> 领导者从不停止学习，并不断寻找机会以提升自己。领导者对各种可能性充满好奇并付于行动加以探索。
 
+* How do you find the time to stay inspired, acquire new knowledge, innovate in your work?(seminar)
 * Tell me about a time when you influenced a change by only asking questions. 
 * Tell me about a time when you solved a problem through just superior knowledge or observation.
-* What are you doing to improve yourself?
-* If I Were to Ask Your Best Friend to Describe You and Your Goals, What Would They Say?
+* How do you stay inspired, acquire new knowledge, or innovate in your work?(seminar)
+* What can you teach me in 5 minutes that I don’t already know?(ImageMaker console)
+* Tell me about a time you hired someone smarter than you.
+* Tell me something interesting you’ve learned recently.(seminar)
 
 Case 1:
 My leader asked me if there’s a way to export and import kerberos authentication, visuals more easily. Cause through the GUI side, it has the number limit and it is hard to manipulate from back end. So I came up with an idea we can utilize the RPC calling betweenn internal services between Kafka broker and Kerberos. We can write scripts to automate the loading process according to our own needs. I know that’s feasible. So finally I wrote the scripts and all the stuff in the system so that system metrics can be exported and imported automatically in back end.
 
-### 6. Hire and Develop The Best
+### 6. Hire and Develop The Best 选贤育能 * 
 > Leaders raise the performance bar with every hire and promotion. They recognize exceptional talent and will move them throughout the organization. Leaders develop leaders and take seriously their role in coaching others.  We work on behalf of our people to invent mechanisms for development like Career Choice.
+> 领导者不断提升招聘和晋升员工的标准。他们表彰杰出的人才，并乐于在组织中通过轮岗磨砺他们。领导者培养领导人才，他们严肃地对待自己育才树人的职责。领导者从员工角度出发，创建职业发展机制。
 
-* Tell me about a time when you mentored someone.
+* Tell me about a time when you had to deal with a poor performer on your team.(junior engineer)
+* What is your experience with hiring people?
+* How do you ensure you hire the best people?
+* Give me an example of one of the best hires of your career. How did this person grow throughout their career? What did you identify during the hiring process that drove her success?
+* How do you help your employees grow?(junior engineer)
+* Tell me how you help your team members develop their careers. Can you give me two to three examples of a specific person in whom you invested and how you helped them develop their careers, including one who wasn’t being successful but in whom you saw potential and chose to invest?(junior engineer)
+* Give me an example of a time you provided feedback to develop and leverage the strengths of someone on your team. Were you able to positively impact that person’s performance? What were your most effective methods?(junior engineer)
+* How do you manage your top performers differently?
+* Give me an example of someone who was promoted one or two levels up in the organization, not just because they were a star who would naturally rise, but due to your coaching efforts. (junior engineer)
+* What is the composition of your current team, and how is your team organized?
 
 Case 1: 
 Few months ago, there was an intern assigned to my project. He was helping me build the Kafka and Kerberos authentication in network monitoring system. But I found that he gets lost about what we are doing and what he is going to do. So, I told him that it is not as complex as what he was thinking about. I explained the metrics monitoring concepts to him one by one and categorized the things what we were doing and what we are going to do. After he is getting comfortable of the whole environment and what I need him to do, I started to assign him the specific tasks. And he is doing pretty well. 
 So when new additions comes to a new environment, getting lost is quite normal. We'd better to have patience to make then get comfortable of the while environment. Otherwise the efficiency will be affected. And that will also help them get used to the working environment quickly and increase his enthusiasm and devote more to the work.
 
-### 7. Insist on the Highest Standards
+### 7. Insist on the Highest Standards 最高标准
 > Leaders have relentlessly high standards – many people may think these standards are unreasonably high. Leaders are continually raising the bar and driving their teams to deliver high-quality products, services, and processes. Leaders ensure that defects do not get sent down the line and that problems are fixed so they stay fixed.
+> 领导者有着近乎严苛的高标准 — 这些标准在很多人看来可能高得不可理喻。领导者不断提高标准，激励自己的团队提供优质产品、服务和流程。领导者会确保任何问题不会蔓延，及时彻底解决问题并确保问题不再出现。
 
-* Tell me about a time when you couldn’t meet your own expectations on a project. 
-* Tell me about a time when a team member didn’t meet your expectations on a project.
-* Tell Me About a Time You Failed.
+* Tell me about a time when you could have stopped working but persisted.(PCS latency improvement)
+* Tell me about a time when you mentored someone.(junior engineer)
+* Tell me when you need to sacrifice short-term benefit for long-term goal(PCS latency improvement)
+* Tell me about a time when you’ve been unsatisfied with the status quo. What did you do to change it? Were you successful? (short development cycle)
+* Tell me about a time you wouldn’t compromise on achieving a great outcome when others felt something was already good enough. What was the situation? (PCS)
+* What measures have you personally put in place to ensure performance improvement targets and standards are achieved? (short development cycle)
+* Describe the most significant, continuous improvement project that you’ve led. What was the catalyst for this change and how did you go about it?(PCS load balance)
+* Give me an example of a goal you’ve had where you wish you had done better. What was the goal and how could you have improved on it?
+* Tell me about a time when you worked to improve the quality of a product / service / solution that was already getting good customer feedback? Why did you think it needed more improvement?
+* Give an example where you refused to compromise your standards around quality/customer service, etc. Why did you feel so strongly about the situation? What were the consequences? The result?(PCS load balance)
 
 Case 1:
 I once misread the price for a high-end product to a new customer. Of course, the customer saw it as a good deal and we immediately began processing the sale. I got sticker shock after entering the product code into our system and realizing the correct price.
@@ -210,53 +252,71 @@ I owned up to my mistake and asked for help, admitting that I’m not sure if it
 
 Case 1: When I was building the network monitoring system, one of the important features is to generate authentication rules automatically. But I found that if the Kafka indices are in a large scale, or we meet some edge cases,  the efficiency of the process will be very low. Cause we are generating a lot of duplicate rules from ClickHouse. So I built the L1 cache to story the previous status, and also make the main cache as one node in L1 cache layer, if there are new indexes, then the system will create corresponding new rules for them. Otherwise it will only update them or do nothing. Also if there are old rules that we do not need anymore, we will remove them. And I also created links for those rules, so that we can decrease IO throughput. It turned out that the efficiency was improved a lot.
 
-### 8. Think Big
+### 8. Think Big 远见卓识
 > Thinking small is a self-fulfilling prophecy. Leaders create and communicate a bold direction that inspires results. They think differently and look around corners for ways to serve customers.
+> 局限性思考只能带来局限性的结果。领导者大胆提出并阐明大局策略，由此激发良好的成果。他们从不同角度考虑问题，并广泛寻找服务客户的方式。
 
-* What's the NO 1 accomplishment you are most proud of?
+* Tell me about a time when you proposed a new business
+* Tell me about a time you took a calculated risk in order to achieve a professional goal. What were the tradeoffs? What was the outcome?
+* Tell me about a time you took a big risk and it failed. What did you learn? What would you do differently?
+* Tell me about a time you went way beyond the scope of the project and delivered.
 * Tell me about your proudest professional achievement.
-    My proudest professional achievement is the network monitoring project I owned. I tried my best to make it look perfect and make my customers have best experience. I build the both the legacy monotholic and scalable container-based tools for monitoring from Radio Access Netwrok (RAN) to Software Defined Networking (SDN) / Network Function Vitualization (NFV), each marked data exchange evetn in these networks anomaly and malicious event will be reported to the system. And I also created the authentication system, so that we don’t need people to sit there monitoring the boring data and create rules by hands. The authentication system will do all the stuff automatically. Customers love that, cause it really saves them a lot of time and money.
-* Tell me about a time when you went way beyond the scope of the project and delivered.
-    When the first version of network monitoring system that with machine learning feature was delivered, I was starting to think about bring more automation into the system. Cause one of our core features is to analyze the events of networks (RAN, SDN/NFV). But each network has its own environment and their behaviors are definitely different, so I need to build specific judging rules and awarding rules play like a rules engine. So that it can always have good performance regarding to each environment. And I’m still working on that.
+* Give me an example of a radical approach to a problem you proposed. What was the problem and why did you feel it required a completely different way of thinking about it? Was your approach successful?
+* How do you drive adoption for your vision/ideas? How do you know how well your idea or vision has been adopted by other teams or partners? Give a specific example highlighting one of your ideas.
+* Tell me about time you were working on an initiative or goal and saw an opportunity to do something much bigger than the initial focus.
+* Tell me about a time you looked at a key process that was working well and questioned whether it was still the right one. What assumptions were you questioning and why? Did you end up making a change to the process?
 
-### 9. Bias for Action
+### 9. Bias for Action 崇尚行动
 > Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk taking.  
+> 速度对业务影响至关重要。很多决策和行动都可以改变，因此不需要进行过于广泛的推敲。我们提倡在深思熟虑前提下进行冒险。
 
-* Describe a time when you saw some problem and took the initiative to correct it rather than waiting for someone else to do it. 
-* Tell me about a time when you took a calculated risk.
-* Tell me about a time you needed to get information from someone who wasn’t very responsive. What did you do?
-* How to handle a chanllenge?
-  Due to an unexpected work emergency, my leader left town in the midst of a plugin in newtork monitoring system for a difficult client. I was assigned to create a demo from the research he left and the briefing we received a few weeks ago.
-  I’ve never made a presentation on my own before, I always had my manager’s help. After going through our previous presentations, I buckled down and did the work. Two all-nighters later, I finished the presentation and earned the approval of our Director.
+* Describe how you would handle a busy situation where three people are waiting for help from you
+* Describe a time when you saw some problem and took the initiative to correct it rather than waiting for someone else to do it.(FW auth function)
+* Tell me about a time when you took a calculated risk.(prototype, with fixed port, change it to automate method)
+* Tell me about a time you needed to get information from someone who wasn’t very responsive. What did you do?(field engineer, wrong issue report on ImageMaker)
+* Tell me about a time you took a risk. What kind of risk was it?
+* Give me an example of a calculated risk that you have taken where speed was critical. What was the situation and how did you handle it? What steps did you take to mitigate the risk? What was the outcome?
+* Tell me about a time you had to make a decision with incomplete information. How did you make it and what was the outcome?(PCS)
+* Describe a situation where you made an important business decision without consulting your manager. What was the situation and how did it turn out?
+* Tell me about a time when you had to analyze facts quickly, define key issues, and respond immediately to a situation. What was the outcome?
+* Tell me about a time when you have worked against tight deadlines and didn’t have the time to consider all options before making a decision. How much time did you have? What approach did you take?
+* Give an example of when you had to make an important decision and had to decide between moving forward or gathering more information. What did you do? What information is necessary for you to have before acting?
+* Describe a time when you saw some problem and took the initiative to correct it rather than waiting for someone else to do it.
 
-### 10. Frugality
+### 10. Frugality 勤俭节约
 > Accomplish more with less. Constraints breed resourcefulness, self-sufficiency, and invention.  There are no extra points for growing headcount, budget size or fixed expense.
+> 力争以更少的投入实现更大的产出。勤俭节约可以让我们开动脑筋、自给自足并不断创新。增加人力、预算以及固定支出并不会为你赢得额外加分。
 
+* Instead of investing time to develop new tools, use existed and verified tools to accomplish tasks.
+* Tell me about a time where you thought of a clever new way to save money for the company.
 * Tell me about a time when you had to work with limited time or resources.
 
-### 11. Earn Trust
+### 11. Earn Trust * 
 > Leaders listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing.  Leaders do not believe their or their team’s body odor smells of perfume.  They benchmark themselves and their teams against the best.
+> 领导者专注倾听，坦诚沟通，尊重他人。领导者敢于自我批评，即便这样做会令自己尴尬或难堪。他们并不认为自己或其团队总是对的。领导者会以最佳领导者和团队为标准来要求自己及其团队。
 
-* What would you do if you found out that your closest friend at work was stealing?
-* Tell me about a time when you had to tell someone a harsh truth.
+* Tell me about a time you made a serious mistake at work.
+* Tell me how that project you were leading failed.
 
-### 12. Dive Deep
+### 12. Dive Deep 刨根问底
 > Leaders operate at all levels, stay connected to the details, audit frequently, and are skeptical when metrics and anecdote differ. No task is beneath them.
+> 领导者深入各个环节，随时掌控细节，经常进行审核，当数据与传闻不一致时持有怀疑态度。领导者不会遗漏任何工作。
 
-* Give me two examples of when you did more than what was required in any job experience.
-    Create authentication rules, not only the rules, but also automate them.
-    Both legacy monolithic system and container-based system.
+* Tell me about a time when you had to dive deep into the data and the results you achieved.
+* Tell me about a time when you dived deep/drilled down to find the root issue.
 
-### 13. Have Backbone; Disagree and Commit
+### 13. Have Backbone; Disagree and Commit 要有硬骨头 * 
 > Leaders are obligated to respectfully challenge decisions when they disagree, even when doing so is uncomfortable or exhausting. Leaders have conviction and are tenacious. They do not compromise for the sake of social cohesion. Once a decision is determined, they commit wholly.
+> 
 
 * Tell me about a time when you did not accept the status quo.
 * Tell me about an unpopular decision of yours.
 * Tell me about a time when you had to step up and disagree with a team members approach.
 * If your direct manager was instructing you to do something you disagreed with, how would you handle it?
 
-### 14. Deliver Results
+### 14. Deliver Results 达成业绩
 > Leaders focus on the key inputs for their business and deliver them with the right quality and in a timely fashion. Despite setbacks, they rise to the occasion and never settle.
+> 领导者会关注其业务的关键决定条件，确保工作质量并及时完成。尽管遭受挫折，领导者依然勇于面对挑战，从不气馁。
 
 * By providing an example, tell me when you have had to handle a variety of assignments. Describe the results.
 * What is the most difficult situation you have ever faced in your life? How did you handle it?
