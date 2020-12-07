@@ -132,7 +132,7 @@ class Solution {
 [560 Subarray Sum Equals K](https://app.gitbook.com/@guilindev/s/interview/leetcode/array/zi-shu-zu-subarray#560-subarray-sum-equals-k)
 
 ### 680 Valid Palindrome II
-双指针
+可以删掉一个字符，双指针
 ```java
 class Solution {
     public boolean validPalindrome(String s) {
