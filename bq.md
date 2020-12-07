@@ -234,7 +234,7 @@ Case:
 
 **Result:** So when new additions comes to a new environment, getting lost is quite normal. We'd better to have patience to make then get comfortable of the while environment. Otherwise the efficiency will be affected. And that will also help them get used to the working environment quickly and increase his enthusiasm and devote more to the work.
  
-### 5. Earn Trust ***
+### 5. Earn Trust 赢得信任 ***
 > Leaders listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing.  Leaders do not believe their or their team’s body odor smells of perfume.  They benchmark themselves and their teams against the best.
 
 > 领导者专注倾听，坦诚沟通，尊重他人。领导者敢于自我批评，即便这样做会令自己尴尬或难堪。他们并不认为自己或其团队总是对的。领导者会以最佳领导者和团队为标准来要求自己及其团队。
