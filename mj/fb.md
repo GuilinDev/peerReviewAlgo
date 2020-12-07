@@ -170,7 +170,7 @@ class Solution {
 ```
 
 ### 415 Add Strings
-各一个指针
+两个数字字符串相加，各一个指针
 ```java
 class Solution {
     public String addStrings(String num1, String num2) {
