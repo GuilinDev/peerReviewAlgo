@@ -1,7 +1,7 @@
 ## Dec. 2020
 
 ### 953 [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/solution/) * 
-直接顺序对比
+直接顺序对比相邻字符串
 ```java
 class Solution {
     public boolean isAlienSorted(String[] words, String order) {
@@ -482,7 +482,7 @@ class Solution {
 [DP + 剪枝/Trie](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#139-word-break)
 
 ### 339	Nested List Weight Sum	
-[嵌套数组深度为权重求和 DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/dfs#339-nested-list-weight-sum)
+[嵌套数组深度为权重求和 - DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/dfs#339-nested-list-weight-sum)
 
 ### 785	Is Graph Bipartite?
 Recall that a graph is bipartite if we can split its set of nodes into two independent subsets A and B, such that every edge in the graph has one node in A and another node in B. 若无向图 G=(V,E) 的顶点集 V 可以分割为两个互不相交的子集，且图中每条边的两个顶点分别属于不同的子集，则称图 G 为一个二分图。
@@ -703,49 +703,49 @@ class Solution {
 ```java
 class Solution {
     public List<List<Integer>> verticalOrder(TreeNode root) {
-    List<List<Integer>> res = new ArrayList<>();
-    if (root == null) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+        
+        Map<Integer, ArrayList<Integer>> map = new HashMap<>();
+        Queue<TreeNode> q = new LinkedList<>(); // 存nodes
+        Queue<Integer> cols = new LinkedList<>(); //存列数信息
+
+        q.add(root); 
+        cols.add(0);
+
+        int min = 0;
+        int max = 0;
+        
+        while (!q.isEmpty()) {
+            TreeNode node = q.poll();
+            int col = cols.poll();
+            
+            if (!map.containsKey(col)) {
+                map.put(col, new ArrayList<Integer>());
+            }
+            map.get(col).add(node.val);
+
+            if (node.left != null) {
+                q.add(node.left); 
+                cols.add(col - 1);
+                min = Math.min(min, col - 1);
+            }
+            
+            if (node.right != null) {
+                q.add(node.right);
+                cols.add(col + 1);
+                max = Math.max(max, col + 1);
+            }
+        }
+
+        for (int i = min; i <= max; i++) {
+            res.add(map.get(i));
+        }
+
         return res;
     }
-    
-    Map<Integer, ArrayList<Integer>> map = new HashMap<>();
-    Queue<TreeNode> q = new LinkedList<>();
-    Queue<Integer> cols = new LinkedList<>();
-
-    q.add(root); 
-    cols.add(0);
-
-    int min = 0;
-    int max = 0;
-    
-    while (!q.isEmpty()) {
-        TreeNode node = q.poll();
-        int col = cols.poll();
-        
-        if (!map.containsKey(col)) {
-            map.put(col, new ArrayList<Integer>());
-        }
-        map.get(col).add(node.val);
-
-        if (node.left != null) {
-            q.add(node.left); 
-            cols.add(col - 1);
-            min = Math.min(min, col - 1);
-        }
-        
-        if (node.right != null) {
-            q.add(node.right);
-            cols.add(col + 1);
-            max = Math.max(max, col + 1);
-        }
-    }
-
-    for (int i = min; i <= max; i++) {
-        res.add(map.get(i));
-    }
-
-    return res;
-}
 }
 ```
 
@@ -1040,7 +1040,7 @@ class Solution {
 [二分二维数组中，将0变成1形成最短的桥，需要转换0的最小次数 - BFS](https://leetcode-cn.com/problems/shortest-bridge/solution/zui-duan-de-qiao-by-leetcode/)
 
 ### 129	Sum Root to Leaf Numbers
-[root到leaf形成的最大数](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#129-sum-root-to-leaf-numbers)
+[root到leaf各条路劲形成的数的和](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#129-sum-root-to-leaf-numbers)
 
 ### 752	Open the Lock
 [圆形转盘锁解锁 - BFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/tag1#752-open-the-lock)
@@ -1104,7 +1104,7 @@ class Solution {
 ### 920	Number of Music Playlists
 [播放列表，全部播完才能重复，大数据集 - DP](https://leetcode-cn.com/problems/number-of-music-playlists/solution/bo-fang-lie-biao-de-shu-liang-by-leetcode/)
 
-### 380	Insert Delete GetRandom O(1)
+### 380	Insert Delete GetRandom O(1) - 无重复
 [常数时间对数据结构插入删除和随机访问](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/solution/chang-shu-shi-jian-cha-ru-shan-chu-he-huo-qu-sui-j/)
 
 ### 844	Backspace String Compare
@@ -1117,7 +1117,7 @@ class Solution {
 [扫雷游戏 - DFS/BFS](https://leetcode-cn.com/problems/minesweeper/solution/sao-lei-you-xi-by-leetcode-solution/)
 
 ### 329	Longest Increasing Path in a Matrix
-[记忆化搜索/DP](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#329-longest-increasing-path-in-a-matrix)
+[从任意单元格开始的最长路径 - 记忆化搜索/DP](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#329-longest-increasing-path-in-a-matrix)
 
 ### 875	Koko Eating Bananas
 [吃香蕉的速度 - 二分](https://leetcode-cn.com/problems/koko-eating-bananas/solution/ai-chi-xiang-jiao-de-ke-ke-by-leetcode/)
@@ -1160,7 +1160,7 @@ class Solution {
 [删除只是k倍相邻并相同的字符（循环往复操作） - 栈](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string-ii/solution/shan-chu-zi-fu-chuan-zhong-de-suo-you-xiang-lin--4/)
 
 ### 408	Valid Word Abbreviation $
-[理解题意，字符串数组中才是有效的缩写 - 双指针](https://leetcode.com/problems/valid-word-abbreviation/)
+[理解题意，字符串数组中单词才是有效的缩写 - 双指针](https://leetcode.com/problems/valid-word-abbreviation/)
 
  Iterate over the characters of abbr and skip number of characters of word. Then compare ith chracter of word with jth character of abbr
 ```java
@@ -1268,7 +1268,7 @@ public static int calculate(String s) {
 [顺风车拼车](https://leetcode-cn.com/problems/car-pooling/solution/gou-zao-fu-zai-shu-zu-jian-cha-fu-zai-ji-ke-by-the/)
 
 ### 974	Subarray Sums Divisible by K
-[找到所有子数组可被K整除 - hashmap](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/solution/he-ke-bei-k-zheng-chu-de-zi-shu-zu-by-leetcode-sol/)
+[找到所有子数组，子数组所有元素的和可被K整除 - hashmap](https://leetcode-cn.com/problems/subarray-sums-divisible-by-k/solution/he-ke-bei-k-zheng-chu-de-zi-shu-zu-by-leetcode-sol/)
 
 ### 39 Combination Sum
 [背诵题](https://app.gitbook.com/@guilindev/s/interview/leetcode/backtracking#39-combination-sum)
@@ -1372,7 +1372,7 @@ class Solution {
 [只有小括号和星号，星号可表示任意左右括号，判断是否有效 - 两个栈](https://leetcode-cn.com/problems/valid-parenthesis-string/solution/fen-zhi-tan-xin-shuang-xiang-bian-li-shuang-zhan-j/)
 
 ### 1262 Greatest Sum Divisible by Three
-[数组中某些元素加起来最大并可被3整除 - DP](https://leetcode-cn.com/problems/greatest-sum-divisible-by-three/solution/kuo-zhan-yi-xia-ba-ti-mu-de-chu-3bian-cheng-chu-kx/)
+[数组中挑选一些元素，加起来最大可能值可被3整除 - DP](https://leetcode-cn.com/problems/greatest-sum-divisible-by-three/solution/kuo-zhan-yi-xia-ba-ti-mu-de-chu-3bian-cheng-chu-kx/)
 
 ### 1216 Valid Palindrome III $
 [可以移除K个字符的 - DP](https://leetcode.com/problems/valid-palindrome-iii/discuss/397606/Find-Longest-Palindromic-Subsequence.)
@@ -1436,7 +1436,7 @@ class Solution {
 [两个数组](https://app.gitbook.com/@guilindev/s/interview/leetcode/graph#277-find-the-celebrity)
 
 ### 14 Longest Common Prefix
-[居然可以二分查找](https://leetcode-cn.com/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode-solution/)
+[居然可以二分查找，不过效率更低](https://leetcode-cn.com/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode-solution/)
 
 ### 703	Kth Largest Element in a Stream
 [最小堆](https://app.gitbook.com/@guilindev/s/interview/leetcode/heap#703-kth-largest-element-in-a-stream)
@@ -1597,7 +1597,7 @@ class Solution {
 [字符串组成除法方程并求值 - UF](https://leetcode-cn.com/problems/evaluate-division/solution/ni-zhen-de-zhi-dao-bing-cha-ji-de-gou-zao-guo-chen/)
 
 ### 1055 Shortest Way to Form String $
-[从一个短字符串添加字符形成另一个字符串（subsequence）的最短路径](https://leetcode.com/problems/shortest-way-to-form-string/discuss/330938/Accept-is-not-enough-to-get-a-hire.-Interviewee-4-follow-up)
+[从一个短字符串添加自身有的字符形成另一个字符串（subsequence）的最短路径](https://leetcode.com/problems/shortest-way-to-form-string/discuss/330938/Accept-is-not-enough-to-get-a-hire.-Interviewee-4-follow-up)
 
 ### 1439 Find the Kth Smallest Sum of a Matrix With Sorted Rows
 [从矩阵中每行选择一个数字，组成一个array，求出第k大的array - BFS](https://leetcode-cn.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/solution/java-bfs-zui-xiao-dui-by-bran_wang/)
@@ -1630,7 +1630,7 @@ class Solution {
 [计算器，只有加减和括号](https://app.gitbook.com/@guilindev/s/interview/leetcode/stack#224-basic-calculator)
 
 ### 128	Longest Consecutive Sequence
-[LCS - DP](https://app.gitbook.com/@guilindev/s/interview/leetcode/array#128-longest-consecutive-sequence)
+[整数数组中最长递增LCS - DP](https://app.gitbook.com/@guilindev/s/interview/leetcode/array#128-longest-consecutive-sequence)
 
 ### 102	Binary Tree Level Order Traversal
 [层序遍历 - BFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#102-binary-tree-level-order-traversal)
@@ -2203,6 +2203,9 @@ class Solution {
 
 ### 47 Permutations II
 [背诵题](https://app.gitbook.com/@guilindev/s/interview/leetcode/backtracking#47-permutations-ii)
+
+### 394 Decode Strings
+[压缩的字符串解码](https://leetcode-cn.com/problems/decode-string/solution/zi-fu-chuan-jie-ma-by-leetcode-solution/)
 
 
 
