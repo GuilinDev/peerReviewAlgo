@@ -42,7 +42,7 @@ class Solution {
 ```
 
 ### 1249 Minimum Remove to Make Valid Parentheses
-额外Stack和Set记录哪些字符串可以删掉
+跟301的区别是这道题只需要返回一个有效的结果就行，额外Stack和Set记录哪些字符串可以删掉
 ```java
 class Solution {
     public String minRemoveToMakeValid(String s) {
@@ -170,7 +170,7 @@ class Solution {
 ```
 
 ### 415 Add Strings
-两个数字字符串相加，各一个指针
+将两个string形式的十进制数相加，并且保存在string中，从后向前各一个指针
 ```java
 class Solution {
     public String addStrings(String num1, String num2) {
@@ -198,6 +198,7 @@ class Solution {
 ```
 
 ### 67 Add Binary
+将两个string形式的二进制数相加，并且保存在string中
 [67 Add Binary](https://app.gitbook.com/@guilindev/s/interview/leetcode/string#67-add-binary)
 
 ### 273 Integer to English
@@ -259,7 +260,7 @@ public class Solution extends Reader4 {
 ### 301 Remove Invalid Parenthesis
 [301 Remove Invalid Parenthesis](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-3#301-remove-invalid-parentheses)
 
-### 1570 Dot Product of Two Sparse Vectors
+### 1570 [Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/solution/) $
 ```java
 class SparseVector {
     
@@ -331,22 +332,22 @@ class SparseVector {
 [先序或层序](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#297-serialize-and-deserialize-binary-tree)
 
 ### 438	Find All Anagrams in a String
-[字符串中找到所有异位词子串](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#297-serialize-and-deserialize-binary-tree)
+[一个字符串中找到所有异位词子串的起始位置 - 滑动窗口 + HashMap/Array](https://leetcode.com/problems/find-all-anagrams-in-a-string/solution/)
 
 ### 636	Exclusive Time of Functions
-[抢占CPU资源的函数独占时间 - 栈](https://leetcode-cn.com/problems/exclusive-time-of-functions/solution/han-shu-de-du-zhan-shi-jian-by-leetcode/)
+[抢占CPU资源的函数独占时间，关键是单线程非抢占cpu，就是说父函数调用子函数，子函数结束之后、父函数才有可能结束。不会出现父函数结束了，子函数继续运行的情况 - 栈](https://leetcode-cn.com/problems/exclusive-time-of-functions/solution/han-shu-de-du-zhan-shi-jian-by-leetcode/)
 
 ### 523	Continuous Subarray Sum
-[找一个子数组，大小是给定k的n倍 - hashmap](https://leetcode-cn.com/problems/continuous-subarray-sum/solution/lian-xu-de-zi-shu-zu-he-by-leetcode/)
+[找一个子数组，子数组的和是给定k的n倍 - 存前缀累积和](https://leetcode-cn.com/problems/continuous-subarray-sum/solution/lian-xu-de-zi-shu-zu-he-by-leetcode/)
 
 ### 282	Expression Add Operators
-[回溯](https://app.gitbook.com/@guilindev/s/interview/leetcode/backtracking#282-expression-add-operators)
+[给一个字符串形式的数，组合加减乘得到给定值的所有情况 - 回溯](https://app.gitbook.com/@guilindev/s/interview/leetcode/backtracking#282-expression-add-operators)
 
 ### 173	Binary Search Tree Iterator	
 [BST返回和检查下一个最小数 - Stack](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#173-binary-search-tree-iterator)
 
 ### 34	Find First and Last Position of Element in Sorted Array
-[左右边界](https://app.gitbook.com/@guilindev/s/interview/leetcode/array/zai-array-zhong-cha-xun-yuan-su#34-find-first-and-last-position-of-element-in-sorted-array-search-for-a-range)
+[二分找左右边界](https://app.gitbook.com/@guilindev/s/interview/leetcode/array/zai-array-zhong-cha-xun-yuan-su#34-find-first-and-last-position-of-element-in-sorted-array-search-for-a-range)
 
 ### 528	Random Pick with Weight
 [前缀和+二分](https://app.gitbook.com/@guilindev/s/interview/leetcode/tag0#528-random-pick-with-weight)
@@ -403,7 +404,8 @@ class Solution {
 ```
 
 ### 249	Group Shifted Strings $
-[找出可以往后shift的字符串](https://leetcode.com/problems/group-shifted-strings/)
+[找出可以往后shift的字符串的分组](https://leetcode.com/problems/group-shifted-strings/)
+
 Basically we need to form some sort of key for each word to group them. (Remember the idea of group all anagrams?)
 
 Consider acf and pru. Now notice the differnce between each characters.
@@ -441,17 +443,17 @@ private String getKey(String s) {
 [DP/stack](https://app.gitbook.com/@guilindev/s/interview/leetcode/stack#42-trapping-rain-water)
 
 ### 340	Longest Substring with At Most K Distinct Characters $
-[最多包含k个不同字符的子字符串 ](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+[最多包含k个不同字符的子字符串的长度 - HashMap记录滑动窗口](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
 ```java
 class Solution {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
     Map<Character, Integer> map = new HashMap<>();
-    int left = 0;
+    int left = 0; // 记录窗口的最左边字符的index
     int best = 0;
     for(int i = 0; i < s.length(); i++) {
         char c = s.charAt(i);
         map.put(c, map.getOrDefault(c, 0) + 1);
-        while (map.size() > k) {
+        while (map.size() > k) { // 检查hashmap的size
             char leftChar = s.charAt(left);
             if (map.containsKey(leftChar)) {
                 map.put(leftChar, map.get(leftChar) - 1);                     
@@ -469,22 +471,24 @@ class Solution {
 ```
 
 ### 543	Diameter of Binary Tree	
-[DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#543-diameter-of-binary-tree)
+[一个结点到另一个结点最长距离 - DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#543-diameter-of-binary-tree)
 
 ### 398	Random Pick Index
-[有重复元素的随机数返回 - 蓄水池抽样问题](https://leetcode-cn.com/problems/random-pick-index/solution/xu-shui-chi-chou-yang-wen-ti-by-an-xin-9/)
+[有重复元素的随机数返回索引 - 蓄水池抽样问题](https://leetcode-cn.com/problems/random-pick-index/solution/xu-shui-chi-chou-yang-wen-ti-by-an-xin-9/)
 
 ### 139	Word Break
 [DP + 剪枝/Trie](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#139-word-break)
 
 ### 339	Nested List Weight Sum	
-[嵌套数组求和 DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/dfs#339-nested-list-weight-sum)
+[嵌套数组深度为权重求和 DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/dfs#339-nested-list-weight-sum)
 
 ### 785	Is Graph Bipartite?
+Recall that a graph is bipartite if we can split its set of nodes into two independent subsets A and B, such that every edge in the graph has one node in A and another node in B. 若无向图 G=(V,E) 的顶点集 V 可以分割为两个互不相交的子集，且图中每条边的两个顶点分别属于不同的子集，则称图 G 为一个二分图。
+
 [判断是否二分图 DFS/BFS/UF](https://leetcode-cn.com/problems/is-graph-bipartite/solution/bfs-dfs-bing-cha-ji-san-chong-fang-fa-pan-duan-er-/)
 
 ### 270	Closest Binary Search Tree Value $
-[top down](https://leetcode.com/problems/closest-binary-search-tree-value/)
+[Top Down给定的值可能为double](https://leetcode.com/problems/closest-binary-search-tree-value/)
 ```java
 class Solution {
     public int closestValue(TreeNode root, double target) {
@@ -492,7 +496,7 @@ class Solution {
 		while (root != null) {
 			if (Math.abs(target - root.val) < Math.abs(target - ret)) {
 				ret = root.val;
-				if (Math.abs(target - root.val) <= 0.5)
+				if (Math.abs(target - root.val) <= 0.5) //BST且没重复，不会有比这更小的值
 					break;
 			}
 			root = root.val > target ? root.left : root.right;
@@ -503,19 +507,19 @@ class Solution {
 ```
 
 ### 378	Kth Smallest Element in a Sorted Matrix
-[二分法](https://app.gitbook.com/@guilindev/s/interview/leetcode/er-fen-sou-suo#378-kth-smallest-element-in-a-sorted-matrix)
+[二维矩阵中第k小的值 - 二分法](https://app.gitbook.com/@guilindev/s/interview/leetcode/er-fen-sou-suo#378-kth-smallest-element-in-a-sorted-matrix)
 
 ### 670	Maximum Swap
 [非负整数中交换一次两位得到最大 - 存索引](https://leetcode-cn.com/problems/maximum-swap/solution/zui-da-jiao-huan-by-leetcode/)
 
 ### 76	Minimum Window Substring
-[两个hashmap双指针](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-2#76-minimum-window-substring)
+[最短substring中包含给定字符串中的所有字符 - 两个hashmap双指针](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-2#76-minimum-window-substring)
 
 ### 317	Shortest Distance from All Buildings
 [周围楼间最短距离盖楼 BFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/tag5#317-shortest-distance-from-all-buildings)
 
 ### 536	Construct Binary Tree from String $
-[从一个数字和小括号的字符串生成二叉树 DFS或Stack](https://leetcode.com/problems/construct-binary-tree-from-string/)
+[从一个数字（根）和小括号（层数）的字符串生成二叉树 DFS或Stack](https://leetcode.com/problems/construct-binary-tree-from-string/)
 ```java
 class Solution {
     public TreeNode str2tree(String s) {
@@ -571,10 +575,10 @@ class Solution {
 ```
 
 ### 896	Monotonic Array
-[直接两次或一次遍历](https://leetcode-cn.com/problems/monotonic-array/solution/dan-diao-shu-lie-by-leetcode/)
+[判断数组是单调递增或递减 - 可以一次遍历](https://leetcode-cn.com/problems/monotonic-array/solution/dan-diao-shu-lie-by-leetcode/)
 
 ### 621	Task Scheduler
-[两个任务间至少间隔n个点](https://app.gitbook.com/@guilindev/s/interview/leetcode/queue#621-task-scheduler)
+[两个任务间至少间隔n个点 - 贪心/PQ](https://app.gitbook.com/@guilindev/s/interview/leetcode/queue#621-task-scheduler)
 
 ### 1060 Missing Element in Sorted Array $
 [找出有序数组中从1开始第Kth缺失的元素 - 二分](https://leetcode.com/problems/missing-element-in-sorted-array/solution/)
@@ -638,16 +642,16 @@ class Solution {
 ```
 
 ### 140	Word Break II
-[列举所有可拆分的情况](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#140-word-break-ii)
+[列举所有单词可拆分的情况](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#140-word-break-ii)
 
 ### 56	Merge Intervals
-[排序](https://app.gitbook.com/@guilindev/s/interview/leetcode/hui-wen-jie-gou#56-merge-intervals)
+[排序/PQ](https://app.gitbook.com/@guilindev/s/interview/leetcode/hui-wen-jie-gou#56-merge-intervals)
 
 ### 938	Range Sum of BST
-[BST的范围和](https://leetcode-cn.com/problems/range-sum-of-bst/solution/er-cha-sou-suo-shu-de-fan-wei-he-by-leetcode/)
+[BST的low, high之间的范围和](https://leetcode-cn.com/problems/range-sum-of-bst/solution/er-cha-sou-suo-shu-de-fan-wei-he-by-leetcode/)
 
 ### 616	Add Bold Tag in String $
-[Dict子串中加入<b>标识](https://leetcode.com/problems/add-bold-tag-in-string/discuss/104248/Java-Solution-boolean-array)
+[Dict包含的子串分别加入<b>标识 - 用一个01二叉树组标记位置是不是子串](https://leetcode.com/problems/add-bold-tag-in-string/discuss/104248/Java-Solution-boolean-array)
 ```java
 class Solution {
     public String addBoldTag(String s, String[] dict) {
@@ -679,7 +683,7 @@ class Solution {
 ```
 
 ### 827	Making A Large Island
-[将1格海填充成陆地求得最大岛屿 记录连通块标号（不是UF）](https://leetcode-cn.com/problems/making-a-large-island/solution/zui-da-ren-gong-dao-by-leetcode/)
+[最多将1格海填充成陆地求得最大岛屿 - UF/DFS标记/BFS标记](https://leetcode-cn.com/problems/making-a-large-island/solution/dao-yu-wen-ti-zhi-zui-da-ren-gong-dao-danaus-genut/)
 
 ### 23	Merge k Sorted Lists
 [Merge Sort](https://app.gitbook.com/@guilindev/s/interview/leetcode/linkedlist#23-merge-k-sorted-lists)
