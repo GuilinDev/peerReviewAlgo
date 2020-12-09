@@ -76,25 +76,6 @@ So, we have similar spirits. That’s one big reason why I want to join xx.
 Secondly, the growth of xx company is so impressive, it is not only an xx (online retail shop/search engine/social media network), it also has a wide range of products like xx1, xx2, xx3, xx4(Alexa, kindle, fire tablet and TV, Amazon web service, etc). There are so many fantastic technologies and products here. I will never feel boring if I am in xx. And I’ll be excited about all the amazing things around me everyday. I can learn a lot of new technologies here. Beside that, I can also work with great people here for solutions with full-stack point of view, by engaging requirements, front-end, back-end, storage and all the other stuff.
 
 
-## The biggest mistake you made and what did you learn from it? (earn trust, customer obsession)
-
-### Case 1
-
-I remember that after we first delivered the 2.11 version of network monitoringsystem to customer, which is the version that first with kafka feature and kerberos authentication feature. But the customer reported that they can not authenticate with their consumers. It is very weird cause after all the checks, all the features are running smoothly in the dev environment, but when it comes to the sensor, the authentication part will fail. 
-
-After tracking the logs and error messages, I found that the kerberos authentication was not able to be connected at the very beginning. It seems that it doesn’t have the proper environment to run. Then I noticed that all the python related stuff in the system are based on python 3, except one module for alerting, which is based on python 2. So I double checked the document, I didn’t document the detail in the documentation. So the sensor doesn’t have python 2 environment. It is definitely a silly mistake. I apologized to my manager and the customer. And we added the updated python envrionment to a new sensor as soon as possible and sent it to customer again. 
-
-So, after that, I learnt that I should pay attention to each small detail during the development process, and document them in time so that we won’t forget. I need to make sure that all the things I delivered are fully qualified.
-
-### Case 2
-
-The biggest mistake I’ve made happened when I led the smart network monitoring system for the first time. The original schedule is week, but I suddenly received a message from product manager says that he will show a the demo to one customer after two days. And at that time I was working on building the alerting/aggregating system, that will be an important part of the demo. But I paid too much attention on details, I want to make everything perfect. I didn’t notice that I don’t have enough time to finish all the details. 
-
-Last day before the demo day, my manager pointed that out. I apologized to him and then we started to figure out if there is a way to keep the demo the same as what we want it to be, but sacrificing some backend performance that customer won’t notice, cause it is just a demo. After the demo, I can rewrite the code to meet the original requirements. 
-
-after working overtime, fortunately, the demonstration was not affected in the end. But from this mistake, I learnt that details are definitely important, but I also need to pay attention to the whole schedule, I need to always keep good communication with my teammates when I have my plan. I need to make sure that my schedule won’t affect other’s schedule.
-
-
 ## Most challenging project
 
 The most challenging project is my current network monitoring system. It is challenging because I need to implement all the new features on my own. It requires me to build monitoring tools for telecommunication network for both cloud-native and legacy systems. I haven’t done too much related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either. 
@@ -170,17 +151,14 @@ Restoring trust is about admitting you were wrong and, above all, listening. I h
 * Tell me about a time you had to think outside the box (think creatively) to close a sale or sell your product.
 * What is the most innovative project you’ve worked on?
 
-Case：(创新简化 + 崇尚行动)
+Case：(创新简化 + 崇尚行动 + 客户至尚)
 
-**Problem:** 
+**Problem:** I was in a meeting in my previous job at K-XX where the team’s Jira tasks burning figures were being discussed by the manager. Although the figures were healthy, there was concern amongst the group that the tasks digestion was not as good as it should be, due to the comparation with similar projects we did before. At the end of the meeting, I decided to try and find a solution to this problem.
 
-**Action:** 
+**Action:** I met up with the product team, and they explained to me the bulk of the customer spending time to ask questions and keep changing their requirement, especially required to add new features of advertisements analysis. After some investigative work, I know the customer was going on Facebook and social media adverts, and it became apparent that they were not using Facebook’s tracking pixels that are designed to measure the performance of the advertising spend, instead they asked us to add those features into the new release. I quickly informed them of what I had found, and moving forward from that day on, the organization was able to measure accurately the marketing return on product.
 
-**Result:** 
-I was in a meeting in my previous job where the company’s sales figures were being discussed by the managers. Although the sales figures were healthy, there was concern amongst the group that the profitability was not as good as it should be, due to the marketing spend that was ongoing. At the end of the meeting, I decided to try and find a solution to this problem. I met up with the marketing team, and they explained to me the bulk of the marketing spend was going on Facebook and social media adverts. After some investigative work, it became apparent that the team was not using Facebook’s tracking pixels that are designed to measure the performance of the advertising spend. I quickly informed them of what I had found, and moving forward from that day on, the organization was able to measure accurately the marketing return on investment. This allowed us to cease adverts that were not giving us any return, which in turn increased profitability.
+**Result:** This allowed us to focus on the core feature development, and at the same time it saved the internal customer's time for analysis, instead to ask new requirements for development
 
-Case 1: 
-When I worked at XX, we have a ticketing system to record the development process, keep tracking all the tasks, bugs. But you know the ticketing system is a little bit crowded. It only shows a long list of tickets. With the first glance, you can hardly know current process of development. So to simplify it, I used a vis timeline to show all the tickets (by timestamp). Then we can see the whole process clearly through the timeline. With the timeline, we can schedule the tasks more easily. Everyone is happy with that.
 
 ### 3. Learn and Be Curious 好奇求知 ***
 > Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
@@ -242,13 +220,13 @@ Case:
 * Tell me about a time you made a serious mistake at work.
 * Tell me how that project you were leading failed.
 
-Case：
+### Case (Entrust, customer obession)
 
-**Problem:** 
+**Problem:** I remember that after we first delivered the 2.11 version of network monitoring system to customers, which is the version that first with kafka feature and kerberos authentication feature. But the customer reported that they can not authenticate with their consumers. It is very weird cause after all the checks, all the features are running smoothly in the dev environment, but when it comes to the sensor, the authentication part will fail. 
 
-**Action:** 
+**Action:** After tracking the logs and error messages, I found that the kerberos authentication was not able to be connected at the very beginning. It seems that it doesn’t have the proper environment to run. Then I noticed that all the python related stuff in the system are based on python 3, except one module for alerting, which is based on python 2. So I double checked the document, I didn’t document the detail in the documentation. So the sensor doesn’t have python 2 environment. It is definitely a silly mistake. I apologized to my manager and the customer. And we added the updated python envrionment to a new sensor as soon as possible and sent it to customer again. 
 
-**Result:** 
+**Result:** So, after that, I learnt that I should pay attention to each small detail during the development process, and document them in time so that we won’t forget. I need to make sure that all the things I delivered are fully qualified.
 
 ### 6. Have Backbone; Disagree and Commit 要有硬骨头 ***
 > Leaders are obligated to respectfully challenge decisions when they disagree, even when doing so is uncomfortable or exhausting. Leaders have conviction and are tenacious. They do not compromise for the sake of social cohesion. Once a decision is determined, they commit wholly.
