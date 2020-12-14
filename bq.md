@@ -4,6 +4,8 @@ Hi My name is XXX. I graduated from University of XX in 2012 with a master degre
 
 Prior to this, I worked as a full time software engineer at multiple companies for 6 years where I had lots of experience in software development.
 
+In future, 
+
 ### What is your greatest strength?
 > hard skills + soft/transferable skill + personal attributes/qualities
 * dive right in
