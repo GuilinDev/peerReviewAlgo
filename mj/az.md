@@ -25,30 +25,32 @@ class Solution {
 ```
 
 ### 763 Partition Labels
-[贪心算法](https://leetcode-cn.com/problems/partition-labels/solution/hua-fen-zi-mu-qu-jian-by-leetcode-solution/)
+[划分字符串，让同一字符都出现在一个片段里 - 贪心算法](https://leetcode-cn.com/problems/partition-labels/solution/hua-fen-zi-mu-qu-jian-by-leetcode-solution/)
 
 ### 1192 Critical Connections in a Network
-[tarjan算法DFS实现](https://leetcode-cn.com/problems/critical-connections-in-a-network/solution/1192-java-dfstarjansuan-fa-shi-jian-fu-za-du-ove-b/)
+[服务器的关键连接，移除了某些服务器会让别的服务器无法工作 - tarjan算法DFS实现](https://leetcode-cn.com/problems/critical-connections-in-a-network/solution/1192-java-dfstarjansuan-fa-shi-jian-fu-za-du-ove-b/)
 
 ### 692 Top K Frequent Words
 [小根堆](https://leetcode-cn.com/problems/top-k-frequent-words/solution/qian-kge-gao-pin-dan-ci-by-leetcode/)
 
 ### 588 Design In-Memory File System
 [实现ls/mkdir/addContentToFile/readContentFromFile](https://leetcode.com/problems/design-in-memory-file-system/solution/)
-[简洁实现](https://leetcode.com/problems/design-in-memory-file-system/discuss/861440/The-most-clean-and-easiest-Java-solution.)
+
+[稍简洁实现](https://leetcode.com/problems/design-in-memory-file-system/discuss/861440/The-most-clean-and-easiest-Java-solution.)
 
 ### 547 Friend Circles
 [BFS/DFS/Union Find](https://app.gitbook.com/@guilindev/s/interview/leetcode/gao-ji-de-shu-ju-jie-gou-he-suan-fa#547-friend-circles)
 
 ### 1335 Minimum Difficulty of a Job Schedule   
 [工作计划的最低难度，DP](https://leetcode-cn.com/problems/minimum-difficulty-of-a-job-schedule/solution/dong-tai-gui-hua-zi-di-xiang-shang-by-yue-ke-2/) 
+
 [逆序遍历工作，可以1D的DP](https://leetcode-cn.com/problems/minimum-difficulty-of-a-job-schedule/solution/dong-tai-gui-hua-yi-wei-shu-zu-you-hua-by-shuwan12/)
 
 ### 49 Group Anagrams
 [49 Group Anagrams](https://app.gitbook.com/@guilindev/s/interview/leetcode/string#49-group-anagrams)
 
-### 1152 Analyze User Website Visit Pattern 
-用户网站访问行为分析，主要是了解题意
+### 1152 [Analyze User Website Visit Pattern](https://leetcode.com/problems/analyze-user-website-visit-pattern/) $
+用户网站访问行为分析，主要是了解题意，返回最多访问的三个网站
 
 1. Sort all the entries using their timestamp as we need to consider that as well.
 2. Now create a list of websites visited by particular User ( added based on timestamp order as all entries sorted in first step)
@@ -151,13 +153,13 @@ class Solution {
 [BFS或者DFS判断奇偶](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-1#103-binary-tree-zigzag-level-order-traversal)
 
 ### 212 Word Search II
-[Trie](https://app.gitbook.com/@guilindev/s/interview/leetcode/trie-qian-zhui-shu#212-word-search-ii)
+[79强行DFS的提升 - Trie](https://app.gitbook.com/@guilindev/s/interview/leetcode/trie-qian-zhui-shu#212-word-search-ii)
 
 ### 210 Course Schedule II
 [拓扑排序](https://app.gitbook.com/@guilindev/s/interview/leetcode/graph#210-course-schedule-ii)
 
 ### 726 Number of Atoms
-[原子的数量，递归或Stack](https://leetcode-cn.com/problems/number-of-atoms/solution/yuan-zi-de-shu-liang-by-leetcode/)
+[化学式中原子的数量，递归或Stack](https://leetcode-cn.com/problems/number-of-atoms/solution/yuan-zi-de-shu-liang-by-leetcode/)
 
 ### 185 Department Top Three Salaries
 [SQL部门前三高的工资](https://leetcode-cn.com/problems/department-top-three-salaries/solution/bu-men-gong-zi-qian-san-gao-de-yuan-gong-by-leetco/)
@@ -181,13 +183,13 @@ WHERE
 ```
 
 ### 682 Baseball Game
-[利用Stack](https://leetcode-cn.com/problems/baseball-game/solution/bang-qiu-bi-sai-by-leetcode/)
+[棒球比赛计分 - 利用Stack](https://leetcode-cn.com/problems/baseball-game/solution/bang-qiu-bi-sai-by-leetcode/)
 
 ### 901 Online Stock Span
-[股票价格跨度 - 单调栈](https://leetcode-cn.com/problems/online-stock-span/solution/gu-piao-jie-ge-kua-du-by-leetcode/)
+[股票价格跨度（往回数） - 单调栈](https://leetcode-cn.com/problems/online-stock-span/solution/gu-piao-jie-ge-kua-du-by-leetcode/)
 
-### 1167 Minimum Cost to Connect Sticks * 
-[连接棍子的最低费用 - 贪心算法](https://leetcode.com/problems/minimum-cost-to-connect-sticks/solution/)
+### 1167 Minimum Cost to Connect Sticks $
+[连接棍子的最低代价 - 贪心算法](https://leetcode.com/problems/minimum-cost-to-connect-sticks/solution/)
 ```java
 class Solution {
     public int connectSticks(int[] sticks) {
@@ -217,7 +219,7 @@ class Solution {
 ```
 
 ### 1120 Maximum Average Subtree * 
-[求子树元素的最大平均值 - 后序遍历](https://leetcode.com/problems/maximum-average-subtree/solution/)
+[求所有子树中的最大的那个平均值 - 后序遍历](https://leetcode.com/problems/maximum-average-subtree/solution/)
 ```java
 class Solution {
     // for each node in the tree, we will maintain three values
@@ -282,7 +284,7 @@ class Solution {
 ### 472 Concatenated Words
 [连接词是给定dict中至少两个单词连接而成的新词 - Trie](https://leetcode-cn.com/problems/concatenated-words/solution/472-lian-jie-ci-java-trie-dfs-by-mmmmmmosky/)
 
-### 1597 Build Binary Expression Tree From Infix Expression * 
+### 1597 Build Binary Expression Tree From Infix Expression $
 [二叉表达式树Recursion + 2 Passes](https://leetcode.com/problems/build-binary-expression-tree-from-infix-expression/discuss/861513/Recursion-%2B-2-Passes)
 The tricky part of this question is the data structure. I decided I would convert all characters to nodes, and store them in a list.
 
@@ -335,7 +337,7 @@ class Solution {
 ```
 
 ### 1520 Maximum Number of Non-Overlapping Substrings
-[最多不重叠的子字符串 - 贪心](https://leetcode-cn.com/problems/maximum-number-of-non-overlapping-substrings/solution/zui-duo-de-bu-zhong-die-zi-zi-fu-chuan-by-leetcode/)
+[最多不重叠的子字符串，一个字符只在一个子字符串中 - 贪心](https://leetcode-cn.com/problems/maximum-number-of-non-overlapping-substrings/solution/zui-duo-de-bu-zhong-die-zi-zi-fu-chuan-by-leetcode/)
 
 ### 126 Word Ladder II
 [单词接龙II - BFS](https://leetcode-cn.com/problems/word-ladder-ii/solution/dan-ci-jie-long-ii-by-leetcode-solution/)
@@ -347,7 +349,7 @@ class Solution {
 [股票买卖 - 只可买一次](https://app.gitbook.com/@guilindev/s/interview/leetcode/divide-and-conquer#121-best-time-to-buy-and-sell-stock)
 
 ### 735 Asteroid Collision
-[行星碰撞正负表示运行方向 - Stack存储](https://leetcode-cn.com/problems/asteroid-collision/solution/xing-xing-peng-zhuang-by-leetcode/)
+[行星横向碰撞正负表示运行方向 - Stack存储](https://leetcode-cn.com/problems/asteroid-collision/solution/xing-xing-peng-zhuang-by-leetcode/)
 
 ### 323 Number of Connected Components in an Undirected Graph
 [图中的连通分量 - BFS/DFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/dfs#323-number-of-connected-components-in-an-undirected-graph)
@@ -536,7 +538,7 @@ ORDER BY i.item_category;
 ### 188 Best Time to Buy and Sell Stock IV
 [股票买卖 - k笔交易DP](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/solution/si-chong-jie-fa-tu-jie-188mai-mai-gu-piao-de-zui-j/)
 
-### 1429 First Unique Number *
+### 1429 First Unique Number $
 [一队列的数字中找第一个出现一次的数字 - Queue/HashMap](https://leetcode.com/problems/first-unique-number/solution/)
 ```java
 class FirstUnique {
@@ -692,7 +694,7 @@ class FileSystem {
 [一个整数的最近回文数 - 获取前一半](https://leetcode-cn.com/problems/find-the-closest-palindrome/solution/qu-de-qian-mian-yi-ban-de-shu-ju-bing-qie-fan-zhua/)
 
 ### 895 Maximum Frequency Stack
-[实现一个栈可以去最多的数 - hashmap](https://leetcode-cn.com/problems/maximum-frequency-stack/solution/zui-da-pin-lu-zhan-by-leetcode/)
+[实现一个栈可以移除并返回最频繁的数 - hashmap](https://leetcode-cn.com/problems/maximum-frequency-stack/solution/zui-da-pin-lu-zhan-by-leetcode/)
 
 ### 1258 Synonymous Sentences *
 [近义词的句子 BFS](https://leetcode.com/problems/synonymous-sentences/discuss/430604/Java-BFS-Solution-Picture-Explain-Clean-code)
