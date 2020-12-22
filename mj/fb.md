@@ -1741,6 +1741,8 @@ class Solution {
 
 ### 228	Summary Ranges
 
+### 597 Friend Requests I: Overall Acceptance Rate $
+
 ### 
 
 ### 307	Range Sum Query - Mutable
