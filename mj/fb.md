@@ -665,8 +665,7 @@ class Solution {
                 }
             }
             bold[i] = end > i;
-        }
-        
+        }       
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             if (!bold[i]) {
@@ -677,8 +676,7 @@ class Solution {
             while (j < s.length() && bold[j]) j++;
             result.append("<b>" + s.substring(i, j) + "</b>");
             i = j - 1;
-        }
-        
+        }        
         return result.toString();
     }
 }
@@ -1708,6 +1706,36 @@ class Solution {
 ### 52 N-Queens II
 
 ### 940 Distinct Subsequences II
+
+### 27 Remove Element 
+
+### 930 Binary Subarrays With Sum
+
+### 1574 Shortest Subarray to be Removed to Make Array Sorted
+
+### 1123 Lowest Common Ancestor of Deepest Leaves
+
+### Two City Scheduling
+
+### 674 Longest Continuous Increasing Subsequence
+
+### 547 Friend Cycles
+
+### 485 Max Consecutive Ones
+
+### 468 Validate IP Address 
+
+### 210 Course Schedule II
+
+### 130 Surrounded Regions 
+
+### 69 Sqrt(x) 
+
+### 40 Combination Sum II 
+
+### 39 Combination Sum
+
+### 
 
 ### 307	Range Sum Query - Mutable
 [一维数组 - 线段树](https://app.gitbook.com/@guilindev/s/interview/leetcode/design#307-range-sum-query-mutable)
