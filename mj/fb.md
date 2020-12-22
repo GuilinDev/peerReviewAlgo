@@ -257,7 +257,7 @@ public class Solution extends Reader4 {
 解法2，利用queue
 [158 Read N Characters Given Read4 II - Call multiple times](https://qingshijiao.github.io/2019/11/06/leetcode%E7%94%A8Read4%20API%E8%AF%BB%E5%8F%96N%E4%B8%AA%E5%AD%97%E7%AC%A6II/)
 
-### 301 Remove Invalid Parenthesis
+### 301 Remove Invalid Parentheses
 [301 Remove Invalid Parenthesis](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-3#301-remove-invalid-parentheses)
 
 ### 1570 [Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/solution/) $
