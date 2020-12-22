@@ -1703,6 +1703,12 @@ class Solution {
 ### 127	Word Ladder
 [单词顺着dict变化 - 无向图BFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-3#127-word-ladder)
 
+### 126 Word Ladder II
+
+### 52 N-Queens II
+
+### 940 Distinct Subsequences II
+
 ### 307	Range Sum Query - Mutable
 [一维数组 - 线段树](https://app.gitbook.com/@guilindev/s/interview/leetcode/design#307-range-sum-query-mutable)
 
