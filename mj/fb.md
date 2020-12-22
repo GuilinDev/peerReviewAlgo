@@ -1739,6 +1739,10 @@ class Solution {
 
 ### 1650 Lowest Common Ancestor of a Binary Tree III
 
+### 228	Summary Ranges
+
+### 
+
 ### 307	Range Sum Query - Mutable
 [一维数组 - 线段树](https://app.gitbook.com/@guilindev/s/interview/leetcode/design#307-range-sum-query-mutable)
 
