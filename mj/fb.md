@@ -201,7 +201,7 @@ class Solution {
 将两个string形式的二进制数相加，并且保存在string中
 [67 Add Binary](https://app.gitbook.com/@guilindev/s/interview/leetcode/string#67-add-binary)
 
-### 273 Integer to English
+### 273 Integer to English Words
 [273 Integer to English](https://app.gitbook.com/@guilindev/s/interview/leetcode/string#273-integer-to-english-words)
 
 ### 269 Alien Dictionary
