@@ -1745,6 +1745,10 @@ class Solution {
 
 ### 388 Longest Absolute File Path
 
+### 214	Shortest Palindrome
+
+### 
+
 ### 307	Range Sum Query - Mutable
 [一维数组 - 线段树](https://app.gitbook.com/@guilindev/s/interview/leetcode/design#307-range-sum-query-mutable)
 
