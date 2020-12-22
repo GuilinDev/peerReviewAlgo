@@ -1749,6 +1749,12 @@ class Solution {
 
 ### 1038 Binary Search Tree to Greater Sum Tree
 
+### 188 Best Time to Buy and Sell Stock IV
+
+### 367 Valid Perfect Square
+
+### 178	Rank Scores
+
 ### 
 
 ### 307	Range Sum Query - Mutable
