@@ -1747,6 +1747,8 @@ class Solution {
 
 ### 214	Shortest Palindrome
 
+### 1038 Binary Search Tree to Greater Sum Tree
+
 ### 
 
 ### 307	Range Sum Query - Mutable
