@@ -1,6 +1,13 @@
 
 
 System design
+授之以渔：
+
+对每家onsite的公司 -> 在地里翻完最近两年所有onsite面筋aggregate所有design题目 -> 对每个题目找工业界实现的blog -> 阅读每个blog，选中最好的一到两个 -> 读到烂熟，整理出我当面试官的话会问的所有问题不停考自己 -> 白板英文自行mock 3遍 -> over. From 1point 3acres bbs
+
+举个栗子：
+面试lyft -> lyft喜欢考payment system -> google之 -> uber有个分布式的实现，不怎么详细，airbnb有个非常详细的SQL sharding的实现，很详细在它的blog上，采用
+然后lyft onsite果然考了，秒了
 
 1.	Design facebook mem cache
 2.	设计一个图片分享app， 讨论了怎么实现image feed还有实现拍照获得图片
