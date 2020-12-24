@@ -201,7 +201,7 @@ class Solution {
 将两个string形式的二进制数相加，并且保存在string中
 [67 Add Binary](https://app.gitbook.com/@guilindev/s/interview/leetcode/string#67-add-binary)
 
-### 273 Integer to English
+### 273 Integer to English Words
 [273 Integer to English](https://app.gitbook.com/@guilindev/s/interview/leetcode/string#273-integer-to-english-words)
 
 ### 269 Alien Dictionary
@@ -257,7 +257,7 @@ public class Solution extends Reader4 {
 解法2，利用queue
 [158 Read N Characters Given Read4 II - Call multiple times](https://qingshijiao.github.io/2019/11/06/leetcode%E7%94%A8Read4%20API%E8%AF%BB%E5%8F%96N%E4%B8%AA%E5%AD%97%E7%AC%A6II/)
 
-### 301 Remove Invalid Parenthesis
+### 301 Remove Invalid Parentheses
 [301 Remove Invalid Parenthesis](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-3#301-remove-invalid-parentheses)
 
 ### 1570 [Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/solution/) $
@@ -665,8 +665,7 @@ class Solution {
                 }
             }
             bold[i] = end > i;
-        }
-        
+        }       
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             if (!bold[i]) {
@@ -677,8 +676,7 @@ class Solution {
             while (j < s.length() && bold[j]) j++;
             result.append("<b>" + s.substring(i, j) + "</b>");
             i = j - 1;
-        }
-        
+        }        
         return result.toString();
     }
 }
@@ -1702,6 +1700,62 @@ class Solution {
 
 ### 127	Word Ladder
 [单词顺着dict变化 - 无向图BFS](https://app.gitbook.com/@guilindev/s/interview/leetcode/untitled-3#127-word-ladder)
+
+### 126 Word Ladder II
+
+### 52 N-Queens II
+
+### 940 Distinct Subsequences II
+
+### 27 Remove Element 
+
+### 930 Binary Subarrays With Sum
+
+### 1574 Shortest Subarray to be Removed to Make Array Sorted
+
+### 1123 Lowest Common Ancestor of Deepest Leaves
+
+### Two City Scheduling
+
+### 674 Longest Continuous Increasing Subsequence
+
+### 547 Friend Cycles
+
+### 485 Max Consecutive Ones
+
+### 468 Validate IP Address 
+
+### 210 Course Schedule II
+
+### 130 Surrounded Regions 
+
+### 69 Sqrt(x) 
+
+### 40 Combination Sum II 
+
+### 39 Combination Sum
+
+### 691	Stickers to Spell Word
+
+### 1650 Lowest Common Ancestor of a Binary Tree III
+
+### 228	Summary Ranges
+
+### 597 Friend Requests I: Overall Acceptance Rate $
+
+### 388 Longest Absolute File Path
+
+### 214	Shortest Palindrome
+
+### 1038 Binary Search Tree to Greater Sum Tree
+
+### 188 Best Time to Buy and Sell Stock IV
+
+### 367 Valid Perfect Square
+
+### 178	Rank Scores
+
+### 
 
 ### 307	Range Sum Query - Mutable
 [一维数组 - 线段树](https://app.gitbook.com/@guilindev/s/interview/leetcode/design#307-range-sum-query-mutable)
