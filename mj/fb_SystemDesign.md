@@ -32,25 +32,29 @@ a.	这个不是系统设计，我主要说了底层的设计，hashtable, lru，
     * Event pass
     * three way merge (类似subversion)
 
-###  5. tinyURL
+#### 5. tinyURL
 * A tinyURL is an URL service that allows users to enter a long URL, and then it returns a shorter, unique URL. When clicking the short link, users are redirected to the original URL. 
 * 
 
-###  6.	Design Instagram
-5.	设计一个景区签到系统，估计类似Yelp，答主答了Geohash 之类的东西
+#### 6. Design Instagram
+
+#### 7.	[Facebook API News Feed](https://learnsystemdesign.blogspot.com/p/design-facebook-newsfeed.html)
+
+#### 8.	设计一个景区签到系统，估计类似Yelp，答主答了Geohash 之类的东西
+* 类似的location based design. 类似yelp
+    * a.	asked to use quad-tree not geo hash)
+    * b.	He said geohash is not accurate, as close points might not have close geo hash - i think guad tree also have the same issue
 
 7.	Design a tree of sensor 
 8.	design load balancer
-9.	Facebook API News Feed
+
 10.	给一个坐标，返回和它距离k的所有建筑
 a.	https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=536531
 11.	用户过去七天里听的最多的十首歌
 a.	用户每听一首歌，就调用一次API: hit(userID，songID)，设计一个系统，返回用户最近7天听过最多的歌
 12.	经常被考的那道搜索自动补充
 a.	设计在线text autocomplete，要求reliability，low latency
-13.	location based design. 类似yelp
-a.	asked to use quad-tree not geo hash)
-b.	He said geohash is not accurate, as close points might not have close geo hash - i think guad tree also have the same issue
+
 14.	Design a translation/internationalization service for an application/web service like FB.
 a.	设计一个类似网页translator。网页的内容需要根据不同的地区翻译成该地区的语言。
 b.	follow up - 对于dynamic的内容，如何实现
