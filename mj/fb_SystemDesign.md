@@ -9,13 +9,36 @@ System design
 面试lyft -> lyft喜欢考payment system -> google之 -> uber有个分布式的实现，不怎么详细，airbnb有个非常详细的SQL sharding的实现，很详细在它的blog上，采用
 然后lyft onsite果然考了，秒了
 
-1.	Design facebook mem cache
-2.	设计一个图片分享app， 讨论了怎么实现image feed还有实现拍照获得图片
-3.	google photos app
-4.	Design Instagram
-5.	设计一个景区签到系统，估计类似Yelp，答主答了Geohash 之类的东西
-6.	加面的题目是设计单机版memcached
+#### 1. [Design facebook mem cache](http://www.cs.utah.edu/~stutsman/cs6963/public/papers/memcached.pdf)
+读密集型的可扩展的分布式键值存储
+[辅助材料](https://medium.com/@shagun/scaling-memcache-at-facebook-1ba77d71c082)
+* k-v存储，read heavy, 如果有写请求，客户端向数据库发出更新请求，向memcache发出删除命令，这个过程是幂等的
+* 三种部署法 - 1）一个集群；2）不同集群之间的复制；3）遍布全球的集群
+* read靠UDP，每个请求返回的数据量小；set和delete还是依靠tcp，更reliability
+* Within a cluster, data is distributed across hundreds of servers through consistent hashing
+
+* 加面的题目是设计单机版memcached
 a.	这个不是系统设计，我主要说了底层的设计，hashtable, lru，memory management，怎么处理高并发。可能这个题要看面试官怎么问，这个可以问很深我觉得
+
+#### 2. [Amazon Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
+写密集型的小数据量的workloads
+[辅助材料](https://medium.com/@shagun/dynamo-9665c22a1ddb)
+
+#### 3. 设计一个图片分享app， 讨论了怎么实现image feed还有实现拍照获得图片
+
+#### 4. google photos app / dropbox
+* Differential Synchronization
+    * Lock - ownership
+    * Event pass
+    * three way merge (类似subversion)
+
+###  5. tinyURL
+* A tinyURL is an URL service that allows users to enter a long URL, and then it returns a shorter, unique URL. When clicking the short link, users are redirected to the original URL. 
+* 
+
+###  6.	Design Instagram
+5.	设计一个景区签到系统，估计类似Yelp，答主答了Geohash 之类的东西
+
 7.	Design a tree of sensor 
 8.	design load balancer
 9.	Facebook API News Feed
