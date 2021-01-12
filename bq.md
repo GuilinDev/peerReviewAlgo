@@ -1,4 +1,5 @@
 # Sample
+## General BQ
 ### Self Introduction
 Hi My name is XXX. I graduated from University of XX in 2012 with a master degree in Information Technology. I am currently working at XX company and have been working there for two years as a Software Engineer. XXX is a system to enable telecommunication customers to securely connect their network data with XXX's data and analysis, so that they can gain valuable insights into their mobile wireless network's health, which can lead to higher subscribers engagement and greater revenue opportunities. Majorly I am responsible for conducting software development, architecture design and trouble shooting, particularly in technology stacks of big data and cloud native.
 
@@ -45,7 +46,7 @@ I am a self motivated person who is willing to go above and beyond on any projec
 * Prioritizing my work so I have a clear idea of what needs to be done when, and this has helped my effectively manage pressure on the job.
 * I make a list to rank that is most important, and then I work through that list step by step, getting each task done in a timely manner.
 
-## Why XX company?
+### Why XX company?
 Because I know xx is a top internet xx company with a strong focus on xx (customer experience/cutting edge clouding management technologies). 
 
 And there are a lot of talented people in xx creating amazing products to make people’s life easier. They are always showing strong ownership to their projects and they always want to make things perfect. Those spirits do touch me. 
@@ -62,7 +63,7 @@ So, we have similar spirits. That’s one big reason why I want to join xx.
 Secondly, the growth of xx company is so impressive, it is not only an xx (online retail shop/search engine/social media network), it also has a wide range of products like xx1, xx2, xx3, xx4(Alexa, kindle, fire tablet and TV, Amazon web service, etc). There are so many fantastic technologies and products here. I will never feel boring if I am in xx. And I’ll be excited about all the amazing things around me everyday. I can learn a lot of new technologies here. Beside that, I can also work with great people here for solutions with full-stack point of view, by engaging requirements, front-end, back-end, storage and all the other stuff.
 
 
-## Why you choose this position?
+### Why you choose this position?
 
 The job I applied is Software engineer in xx company yy team. The reason why I choose this job is I have the similar experience. 
 
@@ -78,6 +79,18 @@ So, we have similar spirits. That’s one big reason why I want to join xx.
 Secondly, the growth of xx company is so impressive, it is not only an xx (online retail shop/search engine/social media network), it also has a wide range of products like xx1, xx2, xx3, xx4(Alexa, kindle, fire tablet and TV, Amazon web service, etc). There are so many fantastic technologies and products here. I will never feel boring if I am in xx. And I’ll be excited about all the amazing things around me everyday. I can learn a lot of new technologies here. Beside that, I can also work with great people here for solutions with full-stack point of view, by engaging requirements, front-end, back-end, storage and all the other stuff.
 
 
+## Diffcult BQ
+
+### 1. Tell me about time when you worked successfully as a member of a team.
+
+
+### 2. How Do You Handle Conflict in the Workplace?
+**Situation**: A few months ago when I worked as a software engineer at Exxx, I was leading a team who had been tasked with solving monitoring plugin in some software. Another software team was working on a parallel program that was intended to eventually intertwine with our program. At one point, one of the senior members of the other team sent an email out accusing us of intentionally delaying their program so they could have extra time to finish the work by integrating our feature in new release before that agile sprint. 
+**Task**: I had to make sure the plugin should be published in time, otherwise our sprint would be postponed and rearanged. 
+**Approach**: Rather than send a retaliatory email out to him, and escalate the conflict further, instead I invited him to a meeting room. We talked about our two programs we were developing, and I had him walk me through his project and how it worked. I then showed him what we were doing and how the two programs would eventually overlap. During this process we realized that our work had set his team back, but that it was simply a result of the testing process we were doing. 
+**Result**: Once he realized it was an accident and in no way malicious, he relaxed, and we set about coming up with a schedule that would allow us to test our end without stalling out work on his end. We also inform our managers to let him know the problems and our solutions, this can make my manager life easier on high level scope in case in future he came across the similar situations among his team members.
+I realized that dealing with conflict is never easy but I would do is to make sure I tackle it head on quickly, it is the key to success. Now when I work on parallel programs, I try to make it a point to seek out the other teams' progress too, and discuss game plans before the releases.
+
 ## Most challenging project
 
 The most challenging project is my current network monitoring system. It is challenging because I need to implement all the new features on my own. It requires me to build monitoring tools for telecommunication network for both cloud-native and legacy systems. I haven’t done too much related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either. 
@@ -92,10 +105,6 @@ So through this process, I learnt that it is so important to be curious and keep
 I remember last time I was building one plugin in the network monitoring system, my original schedule is one week, but my manager suddenly sent me an email said that he needs to show a demo to a customer two days later. One core feature of the demo is the authentication and notification function. So I was asked to realize the function before two days deadline. If I still follow the original schedule, I definitely can not finish that. My original schedule is to let the notification function generate rules automatically based on dynamic data. But I can not finish that in such a short time. So I figured out another temporary solution with my manager, is to make it a hard coding notification temporarily, to preset all the parameters and processes. If you run it, it will behave like generating rules automatically, so for the demo, the customer will have exactly the same experience. And I can also finish that before deadline. After that, I can make it real automation.
 If I couldn’t finish tasks before deadline, I will discuss with my colleagues, to discuss whether we have some buffer time, at the same time trying to figure out a way that can improve the efficiency and If necessary, I will work overtime to keep working on the task, at least to mocking the core features. After all, finishing the task with high quality as soon as possible is what we want. I’ll never sacrifice the user/customer experience or the quality of the product because of that. User/Customer experience is always the most important. I must make sure that the product I am gonna deliver is qualified. I can sacrifice my own time to try to finish the tasks. If I still can not finish the tasks, I will communicate with customers and related people, to tell them why and earn their trust. At the same time, we will try our best to finish the tasks as soon as possible.
 
-## How Do You Handle Conflict in the Workplace?
-
-Dealing with conflict is never easy but I will do is to make sure I tackle it head on quickly, it is the key to success. A few months ago, I was leading a a team who had been tasked with solving network monitoring plugin in some software we were designing for a client. Another software team was working on a parallel program of devops that was intended to eventually intertwine with our program. At one point, one of the senior members of the second team sent an email out accusing us of intentionally delaying their program so they could have extra time to finish their work by integrating our feature in new release. Rather than send a retaliatory email out, and escalate the conflict further, I invited him out for lunch. We sat down and talked about our two programs we were developing, and I had him walk me through his project and how it worked. I then showed him what we were doing and how the two programs would eventually overlap. During this process we realized that our work had set his team back, but that it was simply a result of the testing process we were doing. Once he realized it was an accident and in no way malicious, he relaxed, and we set about coming up with a schedule that would allow us to test our end without stalling out work on his end. We also inform our manager to let him know the problems and our solutions, this can make my manager life easier on high level scope in case in future he came across the similar situations among his team members.
-Now when I work on parallel programs, I try to make it a point to seek out the other teams' progress too, and discuss game plans before the releases.
 
 ## What Would You Do if Someone Continues to Take Credit for Your Work?
 I’ll show my teammate that I’ll be fair to him, despite his actions. I will publicly give him credit for his own ideas, in hopes that he’ll start acknowledging me too.
