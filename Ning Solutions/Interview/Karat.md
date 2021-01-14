@@ -1,7 +1,8 @@
 :::python
 Domain
 1. Leetcode 811
-We are given a list cpdomains of count-paired domains. We would like a list of count-paired domains, (in the same format as the input, and in any order), that explicitly counts the number of visits to each subdomain.
+We are given a list cpdomains of count-paired domains. We would like a list of count-paired domains, 
+(in the same format as the input, and in any order), that explicitly counts the number of visits to each subdomain.
 
 Example 1:
 Input: 
@@ -152,8 +153,11 @@ function adsConversionRate(completedPurchaseUserIds, adClicks, allUserIps) {
 }
 选课
 1. 两名学生的课程overlap
-You are a developer for a university. Your current project is to develop a system for students to find courses they share with friends. The university has a system for querying courses students are enrolled in, returned as a list of (ID, course) pairs.
-Write a function that takes in a list of (student ID number, course name) pairs and returns, for every pair of students, a list of all courses they share.
+You are a developer for a university. Your current project is to develop a system for students to find 
+courses they share with friends. The university has a system for querying courses students are enrolled
+ in, returned as a list of (ID, course) pairs.
+Write a function that takes in a list of (student ID number, course name) pairs and returns, 
+for every pair of students, a list of all courses they share.
 
 Sample Input:
 
@@ -232,9 +236,11 @@ function courseOverlaps(studentCoursePairs) {
 以下是当时面试结束后留在editor里的所有内容。没有整理。题目是第三题，大家大概参考一下吧。。第三题写的是不对的当时没时间debug了。
 
 /*
-Students may decide to take different "tracks" or sequences of courses in the Computer Science curriculum. There may be more than one track that includes the same course, but each student follows a single linear track from a "root" node to a "leaf" node. In the graph below, their path always moves left to right.
-
-Write a function that takes a list of (source, destination) pairs, and returns the name of all of the courses that the students could be taking when they are halfway through their track of courses.
+Students may decide to take different "tracks" or sequences of courses in the Computer Science curriculum. 
+There may be more than one track that includes the same course, but each student follows a single linear 
+track from a "root" node to a "leaf" node. In the graph below, their path always moves left to right.
+Write a function that takes a list of (source, destination) pairs, and returns the name of all of the
+ courses that the students could be taking when they are halfway through their track of courses.
 
 Sample input:
 all_courses = [
@@ -472,7 +478,9 @@ function findAllOverlaps(studentCoursePairs) {
 // console.log(findAllOverlaps(studentCoursePairs2));
 矩阵题
 1. 找一个矩形
-there is an image filled with 0s and 1s. There is at most one rectangle in this image filled with 0s, find the rectangle. Output could be the coordinates of top-left and bottom-right elements of the rectangle, or top-left element, width and height.
+there is an image filled with 0s and 1s. There is at most one rectangle in this image filled with 0s, 
+find the rectangle. Output could be the coordinates of top-left and bottom-right elements of the rectangle, 
+or top-left element, width and height.
 function findOneRectangle(board) {
   if (!board || board.length === 0 || board[0].length === 0) {
     return [];
@@ -500,7 +508,8 @@ function findOneRectangle(board) {
   return result;
 }
 2. 找多个矩形
-for the same image, it is filled with 0s and 1s. It may have multiple rectangles filled with 0s. The rectangles are separated by 1s. Find all the rectangles.
+for the same image, it is filled with 0s and 1s. It may have multiple rectangles filled with 0s. 
+The rectangles are separated by 1s. Find all the rectangles.
 function findMultipleRectangle(board) {
   if (!board || board.length === 0 || board[0].length === 0) {
     return [];    
@@ -531,7 +540,8 @@ function findMultipleRectangle(board) {
   return result;
 }
 3. 找多个形状
-the image has random shapes filled with 0s, separated by 1s. Find all the shapes. Each shape is represented by coordinates of all the elements inside.
+the image has random shapes filled with 0s, separated by 1s. Find all the shapes.
+ Each shape is represented by coordinates of all the elements inside.
 function findMultipleShapes(board) {
   if (!board || board.length === 0 || board[0].length === 0) {
     return [];    
@@ -584,8 +594,11 @@ function wordWrap(words, maxLen) {
   return result;
 }
 2. word processor
-We are building a word processor and we would like to implement a "reflow" functionality that also applies full justification to the text.
-Given an array containing lines of text and a new maximum width, re-flow the text to fit the new width. Each line should have the exact specified width. If any line is too short, insert '-' (as stand-ins for spaces) between words as equally as possible until it fits.
+We are building a word processor and we would like to implement a "reflow" functionality that also applies full 
+justification to the text.
+Given an array containing lines of text and a new maximum width, re-flow the text to fit the new width. 
+Each line should have the exact specified width. If any line is too short, insert '-' (as stand-ins for spaces) 
+between words as equally as possible until it fits.
 Note: we are using '-' instead of spaces between words to make testing and visual verification of the results easier.
 
 lines = [ "The day began as still as the",
@@ -705,10 +718,9 @@ function isNumeric(c) {
   return c >= '0' && c <= '9';
 }
 3. 带变量计算器
-不光有数字和operator，还有一些变量，这些变量有些可以表示为一个数值，需要从给定的map里去get这个变量的value。然后有的变量不能转为数字，所以结果要包含这些不可变成数字的单词以及其他数字部分通过计算器得到的结果。
-
+不光有数字和operator，还有一些变量，这些变量有些可以表示为一个数值，需要从给定的map里去get这个变量的value。然后有的变量不能转为数字，
+所以结果要包含这些不可变成数字的单词以及其他数字部分通过计算器得到的结果。
 这题就写个思路吧，估计不会问太深。Leetcode770是原题，discussion区域都是喷这道题的。
-
 
 矩阵合法
 1. 矩阵合法
@@ -748,7 +760,9 @@ function isValidMatrix(matrix) {
 }
 2. nonogram
 """
-A nonogram is a logic puzzle, similar to a crossword, in which the player is given a blank grid and has to color it according to some instructions. Specifically, each cell can be either black or white, which we will represent as 0 for black and 1 for white.
+A nonogram is a logic puzzle, similar to a crossword, in which the player is given a blank grid and has to color
+ it according to some instructions. Specifically, each cell can be either black or white, 
+ which we will represent as 0 for black and 1 for white.
 
 +------------+
 | 1  1  1  1 |
@@ -758,13 +772,17 @@ A nonogram is a logic puzzle, similar to a crossword, in which the player is giv
 | 0  0  1  1 |
 +------------+
 
-For each row and column, the instructions give the lengths of contiguous runs of black (0) cells. For example, the instructions for one row of [ 2, 1 ] indicate that there must be a run of two black cells, followed later by another run of one black cell, and the rest of the row filled with white cells.
+For each row and column, the instructions give the lengths of contiguous runs of black (0) cells. 
+For example, the instructions for one row of [ 2, 1 ] indicate that there must be a run of two black cells, 
+followed later by another run of one black cell, and the rest of the row filled with white cells.
 
 These are valid solutions: [ 1, 0, 0, 1, 0 ] and [ 0, 0, 1, 1, 0 ] and also [ 0, 0, 1, 0, 1 ]
 This is not valid: [ 1, 0, 1, 0, 0 ] since the runs are not in the correct order.
 This is not valid: [ 1, 0, 0, 0, 1 ] since the two runs of 0s are not separated by 1s.
 
-Your job is to write a function to validate a possible solution against a set of instructions. Given a 2D matrix representing a player's solution; and instructions for each row along with additional instructions for each column; return True or False according to whether both sets of instructions match.
+Your job is to write a function to validate a possible solution against a set of instructions. 
+Given a 2D matrix representing a player's solution; and instructions for each row along with additional 
+instructions for each column; return True or False according to whether both sets of instructions match.
 
 Example instructions #1
 
@@ -1092,7 +1110,8 @@ function invalidBadgeRecords(records) {
 }
 2. 一小时内access多次
 给 list of [name, time], time is string format: '1300' //下午一点
-return: list of names and the times where their swipe badges within one hour. if there are multiple intervals that satisfy the condition, return any one of them.
+return: list of names and the times where their swipe badges within one hour. 
+if there are multiple intervals that satisfy the condition, return any one of them.
 name1: time1, time2, time3...
 name2: time1, time2, time3, time4, time5...
 example:
@@ -1141,7 +1160,8 @@ function timeDifference(a, b) {
 }
 开会
 1. 是否有空余时间
-第一题：类似meeting rooms，输入是一个int[][] meetings, int start, int end, 每个数都是时间，13：00 =》 1300， 9：30 =》 18930， 看新的meeting 能不能安排到meetings
+第一题：类似meeting rooms，输入是一个int[][] meetings, int start, int end, 每个数都是时间，13：00 =》 1300， 9：30 =》 18930， 
+看新的meeting 能不能安排到meetings
 ex: {[1300, 1500], [930, 1200],[830, 845]}, 新的meeting[820, 830], return true; [1450, 1500] return false;
 
 function canSchedule(meetings, start, end) {
@@ -1282,7 +1302,8 @@ SparseVector.prototype.toString = function SparseVectorToString() {
 };
 2. 实现add，dot和cos
 Add these operations to your library: Addition, dot product, and cosine. Formulae for each are provided below; 
-we’re more interested in you writing the code than whether you’ve memorized the formula. For each operation, your code should throw an error if the two input vectors are not equal length.
+we’re more interested in you writing the code than whether you’ve memorized the formula. 
+For each operation, your code should throw an error if the two input vectors are not equal length.
 Sample input/output:
 //Note: This is pseudocode. Your actual syntax will vary by language.
 v1 = new vector(5)
