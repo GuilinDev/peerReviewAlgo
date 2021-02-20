@@ -85,14 +85,20 @@ Secondly, the growth of xx company is so impressive, it is not only an xx (onlin
 ### 1. Most/challenging proud porject (主要考察是一个meet expections的人还是exceed expections的人)
 
 **Situation**：About two years ago when I workd as a software engineer at Exxx, I started leading a project which is about network monitoring system. It requires me to build real-time monitoring tool for telecommunication network for both cloud-native and legacy systems and I need to implement all the new features on my own. I hadn’t done too much related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either.
+
 **Task**：The time is not unlimited, and I had to make sure the project could be delivered in time and under budget. 
+
 **Approach**：So I started to devote more time on the project, even my private time. I googled a lot of real world implementations related to kafka, like zookeeper connect, number of replications, suitable log retention time, and so on. When I came up with some ideas, I would discuss with my leader to make sure the plan is feasible. And then I learnt docker as quick as possible so that I can design and implement the service through container on time. 
+
 **Result**：Finally, all the new features have been implemented on time and we received positive feedbacks from the PM and customers, since the traffic throughtput was exceeded their excepections. So through this process, I learnt that it is so important to be curious and keep learning, the more I read and learn, the more problems I can solve. The feeling of ownership is really really important, the product is just like your own child. So “I don’t know how to do it” will never be the excuse.
 
 ### 2. How Do You Handle Conflict in the Workplace?
 **Situation**: A few months ago when I worked as a software engineer at Exxx, I was leading a team who had been tasked with solving monitoring plugin in some software. Another software team was working on a parallel program that was intended to eventually intertwine with our program. At one point, one of the senior members of the other team sent an email out accusing us of intentionally delaying their program so they could have extra time to finish the work by integrating our feature in new release before that agile sprint. 
+
 **Task**: I had to make sure the plugin should be published in time, otherwise our sprint would be postponed and rearanged. 
+
 **Approach**: Rather than send a retaliatory email out to him, and escalate the conflict further, instead I invited him to a meeting room. We talked about our two programs we were developing, and I had him walk me through his project and how it worked. I then showed him what we were doing and how the two programs would eventually overlap. During this process we realized that our work had set his team back, but that it was simply a result of the testing process we were doing. 
+
 **Result**: Once he realized it was an accident and in no way malicious, he relaxed, and we set about coming up with a schedule that would allow us to test our end without stalling out work on his end. We also inform our managers to let him know the problems and our solutions, this can make my manager life easier on high level scope in case in future he came across the similar situations among his team members.
 I realized that dealing with conflict is never easy but I would do is to make sure I tackle it head on quickly, it is the key to success. Now when I work on parallel programs, I try to make it a point to seek out the other teams' progress too, and discuss game plans before the releases.
 
