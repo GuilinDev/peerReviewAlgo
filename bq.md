@@ -82,7 +82,7 @@ Secondly, the growth of xx company is so impressive, it is not only an xx (onlin
 
 ## Diffcult BQ
 
-### 1. Most/challenging proud porject (主要考察是一个meet expections的人还是exceed expections的人)
+### 1. Most/challenging/proud porject, Biggest Accoumplishment (主要考察是一个meet expections的人还是exceed expections的人)
 
 **Situation**：About two years ago when I workd as a software engineer at Exxx, I started leading a project which is about network monitoring system. It requires me to build real-time monitoring tool for telecommunication network for both cloud-native and legacy systems and I need to implement all the new features on my own. I hadn’t done too much related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either.
 
