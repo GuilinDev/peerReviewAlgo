@@ -126,7 +126,7 @@ Risk depends on how we define it. What might be risky for me may be normal or co
 
 So before taking any risk, in life and at work, I consider the pros and cons, as well as the ramifications of my decision. That helps me determine if a risk is worth taking.
 
-# 14 Leadership Principals 
+# [Amazon 16 Leadership Principals](https://www.amazon.jobs/en/principles)
 * 练习使用STAR方法回答上述基于行为的访谈问题，并结合Amazon Leadership Principles中的示例。
 * 确保每个答案都有一个开始，中间和结尾。描述情况或问题，采取的措施以及结果。
 * 准备一些不同情况的简短描述，并准备更详细地回答后续问题。选择一些示例来突出独特技能。
@@ -429,3 +429,9 @@ Case 1: When I was building the network monitoring system, one of the important 
 **Action:** 
 
 **Result:** 
+
+### 15. Strive to be Earth's Best Employer
+Leaders work every day to create a safer, more productive, higher performing, more diverse, and more just work environment. They lead with empathy, have fun at work, and make it easy for others to have fun. Leaders ask themselves: Are my fellow employees growing? Are they empowered? Are they ready for what's next? Leaders have a vision for and commitment to their employees' personal success, whether that be at Amazon or elsewhere.
+
+### 16.Success and Scale Bring Broad Responsibility
+We started in a garage, but we're not there anymore. We are big, we impact the world, and we are far from perfect. We must be humble and thoughtful about even the secondary effects of our actions. Our local communities, planet, and future generations need us to be better every day. We must begin each day with a determination to make better, do better, and be better for our customers, our employees, our partners, and the world at large. And we must end every day knowing we can do even more tomorrow. Leaders create more than they consume and always leave things better than how they found them.
