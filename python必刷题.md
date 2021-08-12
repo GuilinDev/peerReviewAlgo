@@ -73,3 +73,32 @@ class Solution:
             stack.append(cur.left)
         return result
 ```
+## 429. N-ary Tree Level Order Traversal
+```python
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+"""
+
+class Solution:
+    def levelOrder(self, root: 'Node') -> List[List[int]]:
+        if not root:
+            return []
+        result, queue = [], [root]
+        while queue:
+            curLevel = []
+            curLevelChildren = []
+            for i in queue:
+                curLevel.append(i.val)
+                for j in i.children:
+                    if j:
+                        curLevelChildren.append(j)
+            
+            result.append(curLevel)
+            queue = curLevelChildren[:]
+        return result
+                
+```
