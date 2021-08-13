@@ -102,3 +102,45 @@ class Solution:
         return result
                 
 ```
+## 589. N-ary Tree Preorder Traversal
+Iterative
+```python
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+"""
+
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        result, stack = [], [root]
+        while stack:
+            cur = stack.pop()
+            if not cur:
+                continue
+            if cur.children: # null check
+                for i in cur.children[::-1]: #reversed(cur.children)
+                    stack.append(i)
+            if not cur.children:
+                result.append(cur.val)
+            else:
+                stack.append(Node(cur.val))
+        return result
+```
+
+Recursive
+```python
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        result = []
+        def helper(cur: 'Node'):
+            if not cur:
+                return
+            result.append(cur.val)
+            for i in cur.children:
+                helper(i)
+        helper(root)
+        return result
+```
