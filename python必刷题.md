@@ -144,3 +144,62 @@ class Solution:
         helper(root)
         return result
 ```
+## 590. N-ary Tree Postorder Traversal
+```python
+class Solution:
+    def postorder(self, root: 'Node') -> List[int]:
+        result, stack = [], [root]
+        while stack:
+            cur = stack.pop()
+            if not cur:
+                continue
+            if not cur.children:
+                result.append(cur.val)
+            else:
+                stack.append(Node(cur.val))
+            if cur.children:
+                for i in reversed(cur.children):
+                    stack.append(i)
+        return result
+```
+## 987. Vertical Order Traversal of a Binary Tree
+> 优先级： 列号从小到大 -> 同列的，行号从小到大（这时还没排序） -> 同列同行的，按照数字的大小来排序， 所以用三元组(col, row, val)来进行排序
+> 先遍历一遍形成每个节点的三元组，然后比较大小，可用Hashmap再排序，或使用优先队列
+> 也可以直接一次DFS的时候同时做三元组的映射
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
+        hashmap = dict() # node: [col, row, val]
+        def dfs(node: Optional[TreeNode]):
+            if not node:
+                return
+            col, row, val = hashmap[node]
+            if node.left:
+                hashmap[node.left] = [col - 1, row + 1, node.left.val]
+                dfs(node.left)
+            if node.right:
+                hashmap[node.right] = [col + 1, row + 1, node.right.val]
+                dfs(node.right)
+        
+        hashmap[root] = [0, 0, root.val]
+        dfs(root)
+        it = sorted(hashmap.values()) # lambda x:[x[0],x[1],x[2]]
+        l = len(hashmap)
+        pos = 0 # 同一列的所有元素的下一个位置
+        result = []
+        while pos < l:
+            oneColumn = []
+            idx = pos
+            while idx < l and it[idx][0] == it[pos][0]:
+                oneColumn.append(it[idx][2])
+                idx += 1
+            result.append(oneColumn)
+            pos = idx
+        return result
+```
