@@ -203,3 +203,39 @@ class Solution:
             pos = idx
         return result
 ```
+
+## 2. Add Two Numbers
+'''python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        if not l1:
+            return l2
+        elif not l2:
+            return l1
+        
+        carry = 0
+        dummy = ListNode(-1)
+        idx = dummy
+        
+        while l1 or l2:
+            tempSum = carry
+            if l1:
+                tempSum += l1.val
+                l1 = l1.next
+            if l2:
+                tempSum += l2.val
+                l2 = l2.next
+            idx.next = ListNode(tempSum % 10)
+            idx = idx.next
+            carry = tempSum // 10
+            
+        if carry == 1:
+            idx.next = ListNode(carry)
+        
+        return dummy.next
+```
