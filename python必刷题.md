@@ -239,3 +239,77 @@ class Solution:
         
         return dummy.next
 ```
+## 24. Swap Nodes in Pairs
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        dummy = ListNode(-1)
+        dummy.next = head
+        idx = dummy
+        
+        while idx.next and idx.next.next:
+            first = idx.next
+            second = idx.next.next
+            
+            first.next = second.next
+            idx.next = second
+            
+            # idx.next.next = first
+            second.next = first
+            
+            idx = idx.next.next
+            
+        return dummy.next
+            
+```
+
+```python
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        second = head.next
+        head.next = self.swapPairs(head.next.next)
+        second.next = head
+        
+        return second
+```
+
+## 206. Reverse Linked List
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        first, second = None, head
+        
+        while second:
+            temp = second.next
+            second.next = first
+            first = second
+            second = temp
+            
+        return first
+```
+```python
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        result = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return result
+```
