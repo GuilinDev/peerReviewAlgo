@@ -313,3 +313,17 @@ class Solution:
         head.next = None
         return result
 ```
+## 141. Linked List Cycle
+```python
+
+```
+
+## 23. Merge k Sorted Lists
+```python
+
+```
+
+## 147. Insertion Sort List
+```python
+
+```
