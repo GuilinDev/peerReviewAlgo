@@ -315,7 +315,24 @@ class Solution:
 ```
 ## 141. Linked List Cycle
 ```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        if not head or not head.next:
+            return False
+        slow = head
+        fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+        return False
 ```
 
 ## 23. Merge k Sorted Lists
@@ -325,5 +342,35 @@ class Solution:
 
 ## 147. Insertion Sort List
 ```python
-
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def insertionSortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        dummy = ListNode(-1)
+        dummy.next = head
+        
+        sortedRight = head
+        unsortedLeft = head.next
+        
+        while unsortedLeft:
+            insert = dummy 
+            while unsortedLeft.val > insert.next.val and insert != sortedRight:
+                insert = insert.next
+            if insert == sortedRight:
+                sortedRight = sortedRight.next
+                unsortedLeft = unsortedLeft.next
+            else:
+                sortedRight.next = sortedRight.next.next
+                temp = insert.next
+                insert.next = unsortedLeft
+                unsortedLeft.next = temp
+                
+                unsortedLeft = sortedRight.next              
+        
+        return dummy.next
 ```
