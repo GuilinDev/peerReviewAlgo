@@ -394,4 +394,47 @@ class Solution:
         return checkBST(root, float('-inf'), float('inf'))
 ```
 
-## 
+## 700. Search in a Binary Search Tree
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+        if not root or root.val == val:
+            return root
+        if val < root.val:
+            return self.searchBST(root.left, val)
+        else:
+            return self.searchBST(root.right, val)
+```
+
+## 230. Kth Smallest Element in a BST
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def kthSmallest(self, root: TreeNode, k: int) -> int:
+        self.k = k
+        self.result = None
+        def findK(node):
+            if not node:
+                return
+            findK(node.left)
+            self.k -= 1
+            if self.k == 0:
+                self.result = node.val
+                return
+            findK(node.right)
+        
+        findK(root)
+        
+        return self.result
+```
