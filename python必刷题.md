@@ -374,3 +374,24 @@ class Solution:
         
         return dummy.next
 ```
+
+## 98. Validate Binary Search Tree
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isValidBST(self, root: TreeNode) -> bool:
+        def checkBST(node, leftN, rightN) -> bool:
+            if not node:
+                return True
+            if node.val <= leftN or node.val >= rightN:
+                return False
+            return checkBST(node.left, leftN, node.val) and checkBST(node.right, node.val, rightN)
+        return checkBST(root, float('-inf'), float('inf'))
+```
+
+## 
