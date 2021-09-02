@@ -1,7 +1,7 @@
 # Sample
 ## General BQs
 ### Self Introduction
-Hi My name is XXX. I graduated from University of XX in 201X with a master degree in Information Technology. I am currently working at XX company and have been working there for two years as a Software Engineer. XXX is a system to enable telecommunication customers to securely connect their network data with XXX's data and analysis, so that they can gain valuable insights into their mobile wireless network's health, which can lead to higher subscribers engagement and greater revenue opportunities. Majorly I am responsible for conducting software development, architecture design and trouble shooting, particularly in technology stacks of big data and cloud native.
+Hi My name is XXX. I am currently working at XX company as a Software Engineer. At XXX my responsibilities are using my skills to develop big data platforms and build pipeline, grooming raw data from multi sources into business data. Currently I am reponsible to create a "smart" recruiting platform that provides detailed profile for business customers. Majorly I am responsible for conducting software development, architecture design and trouble shooting, particularly in technology stacks of big data and cloud native.
 
 Prior to this, I worked as a full time software engineer at multiple companies for 5 years where I had lots of experience in software development.
 
