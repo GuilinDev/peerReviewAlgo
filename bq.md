@@ -1,11 +1,11 @@
 # Sample
 ## General BQs
 ### Self Introduction
-Hi My name is XXX. I am currently working at XX company as a Software Engineer. Over here my responsibilities are using my skills to develop big data platforms, when raw data from multi sources come, I do grooming on these data and convert them in the pipelines. Thus, I am reponsible to create "smart" applications that create detailed person profiles for business customers. My daily work is conducting software development, architecture design and trouble shooting, particularly my technology stack includes big data and cloud native.
+Hi My name is XXX. I am currently working at XX company as a Software Engineer and have been working here for almost one year. Over here my responsibilities are using my skills to develop big data platform, this platform process raw data about people to generate profiles for business customers. Particualarly, I do grooming on these data and move these data among pipelines. And my daily work is conducting software development, architecture design and hotfix trouble shooting.
 
-Prior to this, I worked as a full time software engineer at multiple companies for more than 5 years where I had lots of experience in software development in full stack.
+Prior to this, I worked as a full time software engineer at multiple companies for more than 5 years where I gained lots of experience in software engineering.
 
-My future career goal is to dig deeply into cloud-based distributed applications, to build innovative, like B2B products that can help customers to solve their pain points.
+My future career goal is to dig deeply into distributed applications, to build innovative products that can help customers to solve their pain points.
 
 ### What is your greatest strength?
 > hard skills + soft/transferable skill + personal attributes/qualities
