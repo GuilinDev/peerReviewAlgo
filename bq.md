@@ -1,7 +1,7 @@
 # Sample
 ## General BQs
 ### Self Introduction
-Hi My name is XXX. I am currently working at XX company as a Software Engineer and have been working here for almost one year. Over here my responsibilities are using my skills to develop big data platform, the platform process raw data to generate personal profiles for business customers to find and understand their potential customers. Particualarly, I do grooming on those data and move those data among different pipelines. My daily work is conducting software development, architecture design and hotfix trouble shooting.
+Hi My name is XXX. I am currently working at XX company as a Software Engineer and have been working here for almost one year. Over here my responsibilities are using my skills to develop big data platform, the platform process raw data to generate personal profiles, those profiles can help business customers to find and understand their potential customers. Particualarly, I do grooming on those data and move those data among different pipelines. My daily work is conducting software development, architecture design and hotfix trouble shooting.
 
 Prior to this, I worked as a full time software engineer at multiple companies for more than 5 years where I gained lots of experience in software engineering.
 
