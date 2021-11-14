@@ -1021,8 +1021,122 @@ public static List<List<Integer>> meetingRooms2(int[][] intervals){
 }
 
 ```
+# 1. Find Rectangles
+```text
+Give a matrix of 1's and 0's. For example, matrix = [
+["1","1","1","1","1"],
+["1","1","0","0","1"],
+["1","1","0","0","1"],
+["1","1","1","1","1"]
+]
 
-# Find Rectangles
+Round 1: find the rectangle that is made of 0s, either return the start and end index OR height and length of the rectangle. There is only 1 rectangle in each matrix. I solved it by looping to find the first and last zero.
+
+Round 2: same problem but now the matrix may contains many rectangles. Return the start and end indexes of each rec in an array.
+
+matrix = [
+["0","1","1","1","1"],
+["1","1","0","0","1"],
+["0","1","0","0","1"],
+["0","1","1","1","1"],
+["1","0","1","1","1"]
+] => 4 rectangles in here . 0 by itself is also a rectangle, and vertical rectangle also counts.
+```
+
+1
+```java
+public int numIslands(char[][] grid) {
+	int count = 0;
+	for (int i = 0; i < grid.length; i++)
+		for (int j = 0; j < grid[0].length; j++) {
+			if (grid[i][j] == '1') {
+				List<Integer> landCol = Arrays.asList(0, 0); // store the land widht and height 
+				dfsFill(grid, i, j, landCol);
+				int height = landCol.get(0) - i + 1;
+				int width = landCol.get(1) - j + 1;
+				System.out.println("width " + width + " height " + height);
+				count++;
+			}
+		}
+	return count;
+}
+
+   private void dfsFill(char[][] grid, int i, int j, List<Integer> landCol) {
+
+	if (i >= 0 && j >= 0 && i < grid.length && j < grid[0].length && grid[i][j] == '1') {
+		int maxRow = Math.max(landCol.get(0), i);
+		int maxCol = Math.max(landCol.get(1), j);
+		landCol.set(0, maxRow);
+		landCol.set(1, maxCol);
+		grid[i][j] = '0';
+		dfsFill(grid, i, j + 1, landCol);
+		dfsFill(grid, i, j - 1, landCol);
+		dfsFill(grid, i + 1, j, landCol);
+		dfsFill(grid, i - 1, j, landCol);
+	}
+}
+```
+
+2. Try something like this for the second one, this would handle cases where you have overlapping rectangles too, though in my opinion that makes the problem even harder. The idea is we generate 'histograms' of columns of 0's in a separate matrix, which would give us the height. Then we run through a row and find a contiguous group of heights, we then use the length of the group and the height to find the rectangle. Make sure to set the 0's above you to -1 as you only want the biggest height per rectangle, not the intermediate ones. This would work for overlapping rectangles, in certain cases where you have overlapping rectangles like so:
+
+    0 0
+    0 0
+    1 0
+    1 0
+
+It should decompose the rectangles, into two separate 1 dimensional rectangles, which still would be satisfactory.
+```java
+class Solution{
+    
+    public List<String> findRectangles(int [][] matrix){
+        int [][] rectangleMat = new int[matrix.length][];
+        List<String> rectangles = new ArrayList<>();
+        for(int i=0;i<rectangleMat.length;i++){
+            rectangleMat[i] = new int[matrix[0].length];
+        }
+        for(int i=0;i<matrix[0].length;i++){
+            if(matrix[0][i] == 1){
+                    rectangleMat[0][i] = -1;
+                }
+        }
+        for(int i=1;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                if(matrix[i-1][j] == 0 && matrix[i][j] == 0){
+                    rectangleMat[i][j] = rectangleMat[i-1][j] + 1;
+                    rectangleMat[i-1][j] = -1;
+                }
+                else if(matrix[i][j] == 1){
+                    rectangleMat[i][j] = -1;
+                }
+            }
+        }
+        for(int i=rectangleMat.length-1;i>=0;i--){
+            int currGroup = rectangleMat[i][0];
+            int currGroupLen = 1;
+            for(int j=1;j<rectangleMat[0].length;j++){
+                if(rectangleMat[i][j] != currGroup){
+                    if(currGroup != -1){
+                        int height = currGroup + 1;
+                        int width = currGroupLen;
+                        rectangles.add(height+" "+width);
+                    }
+                    currGroup = rectangleMat[i][j];
+                    currGroupLen = 0;
+                }
+                currGroupLen++;
+            }
+            if(currGroup != -1){
+                int height = currGroup + 1;
+                int width = currGroupLen;
+                rectangles.add(height+" "+width);
+            }
+        }
+        return rectangles;
+    }
+}
+```
+
+# 2. Find Rectangles
 ````text
 Imagine we have an image. We'll represent this image as a simple 2D array where every pixel is a 1 or a 0.
 
