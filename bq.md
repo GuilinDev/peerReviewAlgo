@@ -1,11 +1,22 @@
 # Sample
 ## General BQs
-### Self Introduction
+### Self introduction
 Hi My name is XXX. I am currently working at XX company as a Software Engineer and have been working here for almost one year. Over here my responsibilities are using my skills to develop big data platform, the platform process raw data to generate personal profiles, those profiles can help business customers to find and understand their potential customers. Particualarly, I do grooming on those data and move those data among different pipelines. My daily work is conducting software development, architecture design and hotfix trouble shooting.
 
 Prior to this, I worked as a full time software engineer at multiple companies for more than 5 years where I gained lots of experience in software engineering.
 
 My future career goal is to dig deeply into distributed applications, to build innovative products that can help customers to solve their pain points.
+
+### Explain your current project
+#### Introduce the project title - purpose of the project/why useful/motivation to choose this as your project
+Example: The project focuses on providing an easy and reliable platform to recharge mobile of any telecommunication company through online withoug buying recharge cards
+#### explain the technologies and tools used -
+#### how was the work distributed in the team and what was your role -
+#### describe the project -
+#### overcome the chanllenges -
+#### conclude - 
+Example: 
+
 
 ### What is your greatest strength?
 > hard skills + soft/transferable skill + personal attributes/qualities
