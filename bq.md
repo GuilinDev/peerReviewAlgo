@@ -9,13 +9,13 @@ My future career goal is to dig deeply into distributed applications, to build i
 
 ### Explain your current project
 #### Introduce the project title - purpose of the project/why useful/motivation to choose this as your project
-Example: The project focuses on providing an easy and reliable platform to recharge mobile of any telecommunication company through online withoug buying recharge cards
-#### explain the technologies and tools used -
-#### how was the work distributed in the team and what was your role -
-#### describe the project -
-#### overcome the chanllenges -
-#### conclude - 
-Example: 
+The project focuses on providing an easy and reliable platform to recharge mobile of any telecommunication company through online withoug buying recharge cards
+#### explain the technologies and tools used 
+#### how was the work distributed in the team and what was your role 
+#### describe the project 
+#### overcome the chanllenges 
+#### conclude 
+Example: I have done quite a few projects in my engineering among the favorite that turned out to be very effective, reliable and very useful is ZI Recruiter. It's a comprehensive xx that could help business recruiters to efficiently connect potential candidates, which will give recruiters comprehensive understandings of candidates by their skills, nuggets, employment histories and LTL scores. We chose this project because previously our business recruiters randomly connect their candidates but they dodn't get responses in most cases, and it becomes an expensive affair for our customers. We have used Java as it is a high level programming language that has automatic memory management, user friendly data structures, portable across operating systems and its wide reach especially in middleware, made it suitable for our project. My role in this project was to build xx to make sure the ltl score is accurate and the whole project is under budget and collect feedbacks from recruiters. To start with YYYYY, using xxxx and to make it more affordable and reliable. We chose to zzz because it simple to use aaaa suitable for bbb in the cccc. The dddd can collect eeee anywhere from fffff which can be measured easily/The dddd can collect eeee anywhere from fffff which can be measured easily gggg and do the sasic hhhh with the help of iiii. The jjjj was also used so that we can use it to interface with kkkk and llll. Our project is a small effort to overcome the time consuming which occurs due to recruiters connect to potential candidates, this application can be extended easily when mmmm to help recruiters evacuate candidates with less time. With efforts of all the team members we were able to complate the project successfully within the time period that we have decided. This practical aplication gave us a lot of confidence in our abilities to take up bigger challenges and I strongly believe if I get the opportunity to start my career with ABCCompany it can provide me ample opportunities to work on.
 
 
 ### What is your greatest strength?
