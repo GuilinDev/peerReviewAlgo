@@ -15,15 +15,15 @@ The project focuses on providing an easy and reliable platform to recharge mobil
 #### 4. Describe the project 
 #### 5. Overcome the chanllenges 
 #### 6. Conclude 
-Example 1: I have done quite a few projects in my engineering among the favorite that turned out to be very effective, reliable and very useful is ZI Recruiter. It's a platform that could help business recruiters to efficiently connect potential candidates, which will give recruiters comprehensive understandings of candidates in 360 degrees. 
+Example 1: I have done quite a few projects in my engineering, among the favorite that turned out to be very effective, reliable and very useful is ZI Recruiter. It's a platform that could help business recruiters to efficiently connect potential candidates, which will give recruiters comprehensive understandings of candidates in 360 degrees. 
 
-We chose this project because previously our business recruiters contact candidates but don't get responses in most of the time, and it becomes an expensive affair. We have used Java and Kotlin as it is a high level programming language that has automatic memory management, portable across operating systems and its wide reach especially in middleware, made it suitable for our project. 
+I chose this project because previously our business recruiters contact candidates but don't get responses in most of the time, and it becomes an expensive affair. I have used Java and Kotlin as it is a high level programming language that has automatic memory management, portable across operating systems and its wide reach especially in middleware, made it suitable for our project. 
 
-My role in this project was to build match service for candidates' changing jobs possibility scores are accurate, and make sure the whole project is under budget. To start with matching service, using Kafka to make it as streaming processed. We chose to Kafka because it is widely and simple to retry when incremental process is failed in middleware. 
+My role in this project was to build match service for candidates' changing jobs possibility scores are accurate, and make sure the whole project is under budget. To start with matching service, using Kafka to make it as streaming processed. I chose to Kafka because it is widely and simple to retry when incremental process is failed in middleware. 
 
-The incremental messages solution of candidates are web crawled and created which can be measured and matched to right candidates. The GCP Dataflows and AWS Data Pipelines were also used so that we can batch process candidates for big Individuals in some cases. 
+The incremental messages solution of candidates are web crawled and created which can be measured and matched to right candidates. The GCP Dataflows and AWS Data Pipelines were also used so that can batch process candidates for big Individuals in some cases. 
 
-Our project is a small effort to overcome the time consuming which occurs due to recruiters connect to potential candidates, this application can be extended easily to help recruiters evacuate candidates with less time. With efforts of all the team members we were able to complete the project successfully within the time period that we have decided. This practical aplication gave us a lot of confidence in our abilities to take up bigger challenges and I strongly believe if I get the opportunity to start my career with "ABCCompany" where it can provide me ample opportunities to work on.
+This project is a small effort to overcome the time consuming which occurs due to recruiters connect to potential candidates, this application can be extended easily to help recruiters evacuate candidates with less time. With efforts of all the team members I was able to complete the project successfully within the time period that we have decided. This practical aplication gave me a lot of confidence in my abilities to take up bigger challenges, and I strongly believe if I get the opportunity to start my career with "ABCCompany" where it can provide me ample opportunities to work on.
 
 
 ### What is your greatest strength?
@@ -43,13 +43,15 @@ Our project is a small effort to overcome the time consuming which occurs due to
 
 ### Where do you see yourself in 5 years?
 > goals for the future, realistic and achievable
-* In five years, I'd like to be recognized as an expert of clouding computing in the xx area, and I know that's sth that I will have an opportunity to do here. I am also really excited about taking on more responsibilities and potentially even take the lead role on some projects.
+* In five years, I'd like to be recognized as an senior expert of IT professional in multiple areas to solve pain points for people  and make their lives easilier, and I know that's sth that I will have an opportunity to do here. Beside technology skills, I am also really excited about taking on more responsibilities and potentially even take the leading role on some projects.
 
 ### What makes you the best fit for this position?
 > focus on 专业技能
-* I have 8 years experiences in the xx, and I thihnk my experience is perfectly aligned with the requirements you asked for the job listing. I believe that my expertise in the xx area would make me the best candidate for this position.
+* I have extensive experiences in the multiple areas of big data and full stack, and I think my experience is perfectly aligned with the requirements you asked for the job listing. 
 > focus on soft skills
 I am a self motivated person who is willing to go above and beyond on any project. I know we are looking for a self-motivated software engineer with both skills and passion, and I am that person. My skill set would be a perfect match for that you are looking for.
+
+I believe that my expertise and characteristics would make me the best candidate for this position.
 
 ### Why do you want to leave your current job?
 > focus on the future
@@ -58,7 +60,7 @@ I am a self motivated person who is willing to go above and beyond on any projec
 ### What do you expect from your manager/supervisor?
 
 * The most important thing I want from my manager is constructive feedback so I know here I need to improve. 
-* I also expect my boss to give me support, guidance and encouragement as I want to continually grow and having a good manager will help me achieve my goal.
+* I also expect my boss to give me support, guidance and encouragement as I want to continually grow.
 
 ### How do you handle stress and pressure?
 > focus 面对stress and pressure能采取的有效措施
@@ -70,15 +72,16 @@ Because I know xx is a top internet xx company with a strong focus on xx (custom
 
 And there are a lot of talented people in xx creating amazing products to make people’s life easier. They are always showing strong ownership to their projects and they always want to make things perfect. Those spirits do touch me. 
 
-I remember when I just started to lead a network monitoring system, everything is new to me. And I’m so passionate about creating great services for the customers to save their precious time and money. 
+I remember when I just started a network monitoring system project, everything is new to me. I’m passionate about creating great services for the customers to save their precious time and money. 
 
-The customers of my project are telecommunication business customers. Those people need to monitor their own complex mobile netwrok systems. Our system make this process more convenient so that customers can watch the dashboard we provide, visually to see if there are unexceptional events. 
+The customers of my project are telecommunication business customers. Those people need to monitor their own complex mobile netwrok systems. The system make this process more convenient so that customers can watch the dashboard we provide, visually to see if there are unexceptional events. 
 
-We make our system to take care of all the monitoring stuff automatically. It will detect the delay/throughput/network errors/saturation events, evaluate metrics, report them and provide suggestions and solve them automatically. The s only need to do clicks on the website to make simple decisions based on the suggestions system provide for near real-time analysis and OLAP, so that they can focus more on their own things. 
+I make the system to take care of all the monitoring stuff automatically. It will detect the delay/throughput/network errors/saturation events, evaluate metrics, report them and provide suggestions and solve them automatically. The s only need to do clicks on the website to make simple decisions based on the suggestions system provide for near real-time analysis and OLAP, so that they can focus more on their own things. 
 
-That is really similar with LogicMonitor, Which also does a great job to help customers focus on their codes. It will take care of patching automatically for hosts. That’s really amazing for customer. 
+That is really similar with Splunk or Datadog, Which also does a great job to help customers focus on their codes. It will take care of patching automatically for hosts. That’s really amazing for customer. 
 
-So, we have similar spirits. That’s one big reason why I want to join xx.
+So, I have similar spirits with xx company. That’s one big reason why I want to join xx.
+
 Secondly, the growth of xx company is so impressive, it is not only an xx (online retail shop/search engine/social media network), it also has a wide range of products like xx1, xx2, xx3, xx4(Alexa, kindle, fire tablet and TV, Amazon web service, etc). There are so many fantastic technologies and products here. I will never feel boring if I am in xx. And I’ll be excited about all the amazing things around me everyday. I can learn a lot of new technologies here. Beside that, I can also work with great people here for solutions with full-stack point of view, by engaging requirements, front-end, back-end, storage and all the other stuff.
 
 
@@ -101,13 +104,13 @@ Secondly, the growth of xx company is so impressive, it is not only an xx (onlin
 
 ## Diffcult BQ
 
-### 1. Most/challenging/proud porject, Biggest Accoumplishment (主要考察是一个meet expections的人还是exceed expections的人)
+### 1. Most/challenging/unlike/proud porject, Biggest Accoumplishment (主要考察是一个meet expections的人还是exceed expections的人)
 
-**Situation**：About two years ago when I workd as a software engineer at Exxx, I started leading a project which is about network monitoring system. It requires me to build real-time monitoring tool for telecommunication network for both cloud-native and legacy systems and I need to implement all the new features on my own. I hadn’t done too much related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either.
+**Situation**：About two years ago when I workd as a software engineer at Exxx, I started a project which was about network monitoring system. It requires me to build real-time monitoring tool for telecommunication network for both cloud-native and legacy systems and I need to implement all the new features on my own. I hadn’t done too much related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either.
 
-**Task**：The time is not unlimited, and I had to make sure the project could be delivered in time and under budget. 
+**Task**：The time was limited, and I had to make sure the project could be delivered in time and under budget for new cloud native and legacy system (That's why I don't like the project because of the multi environments and responsibilities were not very clear - time to show ownership). 
 
-**Approach**：So I started to devote more time on the project, even my private time. I googled a lot of real world implementations related to kafka, like zookeeper connect, number of replications, suitable log retention time, and so on. When I came up with some ideas, I would discuss with my leader to make sure the plan is feasible. And then I learnt docker as quick as possible so that I can design and implement the service through container on time. 
+**Approach**：I started to devote more time on the project, even my private time. I googled a lot of real world implementations related to kafka, like zookeeper connect, number of replications, suitable log retention time, and so on. When I came up with some ideas, I would discuss with my leader to make sure the plan is feasible. And then I learnt docker as quick as possible so that I can design and implement the service through container on time. 
 
 **Result**：Finally, all the new features have been implemented on time and we received positive feedbacks from the PM and customers, since the traffic throughtput was exceeded their excepections. So through this process, I learnt that it is so important to be curious and keep learning, the more I read and learn, the more problems I can solve. The feeling of ownership is really really important, the product is just like your own child. So “I don’t know how to do it” will never be the excuse.
 
@@ -195,11 +198,15 @@ Restoring trust is about admitting you were wrong and, above all, listening. I h
 **Result:** 
 
 Case: 
-When I led the network monitoring project at the first time, it was very challenging to me. 
-Cause I have no idea how to build the authentication structure. In order to understand it better, I googled a lot of papers and learnt a lot of basic concepts about network authentication. Based on that, I started to work with customers to figure out what kind of problems that customers concerned the most. Cause some customers who are using our products are not professional network developers. I need to use their language to tell them the story. They just need to know when they need do the authentication to pull the data, they don’t care about how we do the authentication. All they need to do is just make easy decisions based on the suggestions we provide. The system will take care of all the other stuff. Like if they need cleaned communication device vendor configration data, the system will bubble up an authentication status alert to let the customers know, and also providing them the links to the detailed dashboards. They can choose the suggestions provided by system, like choosing the data schema and formats, and timestamp range.
-So, finally, after the delivery, we get positive feedbacks from customers. I am always trying my best to listen to the customers and provide the best experience for them.
+When I started the ZI Recruiter project at the first time, it was very challenging to me. 
 
-When I worked on the network monitoring project at xx, I was required to deploy Kafka streaming processing and create few rules for the authentication system. Our authentication system is based on various Kerberos realms, and the situations and requirements for each realms are definitely different. Since I was the person who was leading network monitoring project, I want my customers to always have the best experience. So I started to think about automate the authentication. After the agreement from my manager, I categorized the current rules and the future rules based on different scenarios and requirements. Then I wrote a bunch of shell scripts to do the automation. I also created the APIs for those authentication, so if the customer doesn’t want the rule to be enabled, they can just click on dashboard to turn it off. After delivery, we had strong positive feedbacks from customer.
+Cause I have no idea how to build the authentication structure. In order to understand it better, I googled a lot of papers and learnt a lot of basic concepts about network authentication. Based on that, I started to work with customers to figure out what kind of problems that customers concerned the most. Cause some customers who are using our products are not professional network developers. I need to use their language to tell them the story. They just need to know when they need do the authentication to pull the data, they don’t care about how we do the authentication. All they need to do is just make easy decisions based on the suggestions we provide. The system will take care of all the other stuff. Like if they need cleaned communication device vendor configration data, the system will bubble up an authentication status alert to let the customers know, and also providing them the links to the detailed dashboards. They can choose the suggestions provided by system, like choosing the data schema and formats, and timestamp range.
+
+So, finally, after the delivery, I get positive feedbacks from customers. I am always trying my best to listen to the customers and provide the best experience for them.
+
+When I worked on the network monitoring project at xx, I was required to deploy Kafka streaming processing and create few rules for the authentication system. The authentication system is based on various Kerberos realms, and the situations and requirements for each realms are definitely different. Since I was the person who was leading network monitoring project, I want my customers to always have the best experience. So I started to think about automate the authentication. After the agreement from my manager, I categorized the current rules and the future rules based on different scenarios and requirements. Then I wrote a bunch of shell scripts to do the automation. I also created the APIs for those authentication, so if the customer doesn’t want the rule to be enabled, they can just click on dashboard to turn it off. 
+
+After delivery, I had strong positive feedbacks from customer. What I learded is 
 
 ### 3. Invent and Simplify 创新简化 ***
 > Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by “not invented here." As we do new things, we accept that we may be misunderstood for long periods of time.
