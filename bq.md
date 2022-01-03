@@ -108,7 +108,7 @@ Secondly, the growth of xx company is so impressive, it is not only an xx (onlin
 
 **Situation**：About two years ago when I workd as a software engineer at Exxx, I started a project which was about network monitoring system. It requires me to build real-time monitoring tool for telecommunication network for both cloud-native and legacy systems and I need to implement all the new features on my own. I hadn’t done too much related to docker and kubernetes before. And It also requires me to build Kafka clusters for the service. I haven’t developed any Kafka before either.
 
-**Task**：The time was limited, and I had to make sure the project could be delivered in time and under budget for new cloud native and legacy system (That's why I don't like the project because of the multi environments and responsibilities were not very clear - time to show ownership). 
+**Task**：The time was limited, and I had to make sure the project could be delivered in time and under budget for new cloud native and legacy system (That's why I don't like the project because of the multi environments and responsibilities were not very clear - ***time to say why unlike/challenging***). 
 
 **Approach**：I started to devote more time on the project, even my private time. I googled a lot of real world implementations related to kafka, like zookeeper connect, number of replications, suitable log retention time, and so on. When I came up with some ideas, I would discuss with my leader to make sure the plan is feasible. And then I learnt docker as quick as possible so that I can design and implement the service through container on time. 
 
