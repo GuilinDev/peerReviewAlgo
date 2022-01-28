@@ -7,7 +7,7 @@ Prior to this, I worked as a full time software engineer at multiple companies f
 
 My future career goal is to dig deeply into distributed applications, to build innovative products that can help customers to solve their pain points.
 
-### Explain your current project
+### Explain your current/proud project
 #### 1. Introduce the project title - purpose of the project/why useful/motivation to choose this as your project
 The project focuses on providing an easy and reliable platform to recharge mobile of any telecommunication company through online withoug buying recharge cards
 #### 2. Explain the technologies and tools used 
@@ -262,6 +262,8 @@ Case:
 
 **Result:** 
 
+
+**Failed Project**
 When I was building the network monitoring system through Prometheus at Zxxxx, I was asked to create rules for monitoring all the processes and store time series data in the system. 
 
 I have my initial plan to track the unique value of process names based on different data sources including web crawlers and some together with some 3rd party sources. 
@@ -270,7 +272,7 @@ But I don’t quite understand the behavior of system metrics (Latency, Throught
 
 Actually we want to see is not only alerting, but also to analyze stored data online, especially when the events in the system are down, or nearly down. What we really care about is the OLAP. And devops team can make decisions based on those analysis. 
 
-So, I changed my design, instead of Prometheus, I used influxDB, which is more suitable for 3rd party data integration and online analysis. - ** Be right, a lot/ dive deeply/Invent and simplify**.
+So, I had to change my design, instead of Prometheus, I used influxDB, which is more suitable for 3rd party data integration and online analysis. - ** Be right, a lot/ dive deeply/Invent and simplify**.
 
 
 ### 5. Learn and Be Curious 好奇求知 ***
@@ -319,11 +321,15 @@ What I learned from my research was that there were two distinct personas who we
 
 Case:
 
-**Problem:** Few months ago, there was an intern assigned to my project. He was helping me build the Kafka and Kerberos authentication in network monitoring system. But I found that he gets lost about what we are doing and what he is going to do.
+**Problem:** Few months ago, there was an junior engineer assigned to my project. He was helping me build the Kafka and Kerberos authentication in zi recruiter project. But I found that he gets lost about what we are doing and what he is going to do.
 
 **Action:** So, I told him that it is not as complex as what he was thinking about. I explained the metrics monitoring concepts to him one by one and categorized the things what we were doing and what we are going to do. After he is getting comfortable of the whole environment and what I need him to do, I started to assign him the specific tasks. And he is doing pretty well. 
 
-**Result:** So when new additions comes to a new environment, getting lost is quite normal. We'd better to have patience to make then get comfortable of the while environment. Otherwise the efficiency will be affected. And that will also help them get used to the working environment quickly and increase his enthusiasm and devote more to the work.
+**Result:** So when new additions comes to a new environment, getting lost is quite normal. 
+
+For me, I would like to further develop my **leadership/mentoring skills** by actively mentoring others. It is important to not only help others around I learn, but to also help them develop their skills and achieve their objectives.
+
+We'd better to have patience to make then get comfortable of the while environment. Otherwise the efficiency will be affected like above. And that will also help them get used to the working environment quickly and increase his enthusiasm and devote more to the work.
 
 ### 7. Insist on the Highest Standards 最高标准
 > Leaders have relentlessly high standards — many people may think these standards are unreasonably high. Leaders are continually raising the bar and drive their teams to deliver high quality products, services, and processes. Leaders ensure that defects do not get sent down the line and that problems are fixed so they stay fixed.
@@ -354,7 +360,7 @@ I didn’t know if the customer would still agree to the sale after knowing the 
 
 I owned up to my mistake and asked for help, admitting that I’m not sure if it’s better to lose the sale than give such a steep discount. My supervisor helped me explain the mistake to the customer, and allowed me to use his manager’s discount. I still closed the sale and learned a valuable lesson in re-checking prices, as well as trusting my supervisor.
 
-Case 1: When I was building the network monitoring system, one of the important features is to generate authentication rules automatically. But I found that if the Kafka indices are in a large scale, or we meet some edge cases,  the efficiency of the process will be very low. Cause we are generating a lot of duplicate rules from ClickHouse. So I built the L1 cache to story the previous status, and also make the main cache as one node in L1 cache layer, if there are new indexes, then the system will create corresponding new rules for them. Otherwise it will only update them or do nothing. Also if there are old rules that we do not need anymore, we will remove them. And I also created links for those rules, so that we can decrease IO throughput. It turned out that the efficiency was improved a lot.
+Case 2: When I was building the network monitoring system, one of the important features is to generate authentication rules automatically. But I found that if the Kafka indices are in a large scale, or we meet some edge cases,  the efficiency of the process will be very low. Cause we are generating a lot of duplicate rules from ClickHouse. So I built the L1 cache to story the previous status, and also make the main cache as one node in L1 cache layer, if there are new indexes, then the system will create corresponding new rules for them. Otherwise it will only update them or do nothing. Also if there are old rules that we do not need anymore, we will remove them. And I also created links for those rules, so that we can decrease IO throughput. It turned out that the efficiency was improved a lot.
 
 ### 8. Think Big 远见卓识
 > Thinking small is a self-fulfilling prophecy. Leaders create and communicate a bold direction that inspires results. They think differently and look around corners for ways to serve customers.
