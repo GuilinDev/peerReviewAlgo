@@ -17,13 +17,17 @@ The project focuses on providing an easy and reliable platform to recharge mobil
 #### 6. Conclude 
 Example 1: I have done quite a few projects in my engineering, among the favorite that turned out to be very effective, reliable and very useful is ZI Recruiter. It's a platform that could help business recruiters to efficiently connect potential candidates, which will give recruiters comprehensive understandings of candidates in 360 degrees. 
 
-I chose this project because previously our business recruiters contact candidates but don't get responses in most of the time, and it becomes an expensive affair. I have used Java and Kotlin as it is a high level programming language that has automatic memory management, portable across operating systems and its wide reach especially in middleware, made it suitable for our project. 
+I chose this project because previously our business recruiters contact candidates but don't get responses in most of the time, and it becomes an expensive affair. 
 
-My role in this project was to build match service for candidates' changing jobs possibility scores are accurate, and make sure the whole project is under budget. To start with matching service, using Kafka to make it as streaming processed. I chose to Kafka because it is widely and simple to retry when incremental process is failed in middleware. 
+My role in this project was to build changing job possibility scores for potential candidates and make sure they are accurate. 
 
-The incremental messages solution of candidates are web crawled and created which can be measured and matched to right candidates. The GCP Dataflows and AWS Data Pipelines were also used so that can batch process candidates for big Individuals in some cases. 
+(I have used Java and Kotlin as it is a high level programming language that has automatic memory management, portable across operating systems and its wide reach especially in middleware, made it suitable for our project.  make sure the whole project is under budget. To start with matching service, using Kafka to make it as streaming processed. I chose to Kafka because it is widely and simple to retry when incremental process is failed in middleware. The incremental messages solution of candidates are web crawled and created which can be measured and matched to right candidates. The GCP Dataflows and AWS Data Pipelines were also used so that can batch process candidates for big Individuals in some cases.) java + kotlin + kafka + gcp + aws
 
-This project is a small effort to overcome the time consuming which occurs due to recruiters connect to potential candidates, this application can be extended easily to help recruiters evacuate candidates with less time. With efforts of all the team members I was able to complete the project successfully within the time period that we have decided. This practical aplication gave me a lot of confidence in my abilities to take up bigger challenges, and I strongly believe if I get the opportunity to start my career with "ABCCompany" where it can provide me ample opportunities to work on.
+This project is a small effort to overcome the time consuming which occurs due to recruiters connect to potential candidates, this application can be extended easily to help recruiters evacuate candidates for more aspects with less time. 
+
+With efforts of all the team members I was able to complete the project successfully within the time period that we have decided. As a result, this project meets the goal of reducing business recruiters' time by 30%, actually 34%, and very positive feedbacks from customers. It also bring 7 figure revenue for company.
+
+This practical aplication gave me a lot of confidence in my abilities to take up bigger challenges, and I strongly believe if I get the opportunity to start my career with "ABCCompany" where it can provide me ample opportunities to work on.
 
 
 ### What is your greatest strength?
@@ -66,6 +70,11 @@ I believe that my expertise and characteristics would make me the best candidate
 > focus 面对stress and pressure能采取的有效措施
 * Prioritizing my work so I have a clear idea of what needs to be done when, and this has helped my effectively manage pressure on the job.
 * I make a list to rank that is most important, and then I work through that list step by step, getting each task done in a timely manner.
+
+### Skill to grow in next 6 months?
+1) I would like to further develop my **leadership/mentoring skills** by actively mentoring others. It is important to not only help others around I learn, but to also help them develop their skills and achieve their objectives. I believe this will help me become a much more effective senior engineer in the future and create a more positive and productive environment for my work team.
+2) I also would like to strengthen my **presentation skills** when I present to large audiences. I find I often speak a little too fast, especially when I begin my presentation, so I would like to improve my voice control and delivery.
+3) Although I am often required to help people negotiate solutions to conflicts especially on project based work I would like to develop my **mediation skills** which would help people reach their own conclusions rather than having me take such an active role in conflict resolution
 
 ### Why XX company?
 Because I know xx is a top internet xx company with a strong focus on xx (customer experience/cutting edge clouding management technologies). 
@@ -114,20 +123,30 @@ Secondly, the growth of xx company is so impressive, it is not only an xx (onlin
 
 **Result**：Finally, all the new features have been implemented on time and we received positive feedbacks from the PM and customers, since the traffic throughtput was exceeded their excepections. So through this process, I learnt that it is so important to be curious and keep learning, the more I read and learn, the more problems I can solve. The feeling of ownership is really really important, the product is just like your own child. So “I don’t know how to do it” will never be the excuse.
 
+### 1.1 Mistake in a project
+**Situation**: In my early career when I was working as a junior Software Engineer,
+
+**Task**: When the project was done. I had a presentation to do for key customers, but I got overconfident and didn’t plan my time well. 
+
+**Approach**：So, I didn’t prepare for it properly. The presentation turned out to be a fiasco/disaster. The overflow weren’t good to talked. The audiences asked questions that I wasn’t prepared to answer. My mistake made my manager look bad too because he had appointed me for this presentation. 
+
+**Result**：The lessons I learned is that I need to dig deeply into every aspect that I am reponsible for, and thereafter I prepared and practiced every time to simplify the process for customers understanding.
+
 ### 2. How Do You Handle Conflict in the Workplace?
-**Situation**: A few months ago when I worked as a software engineer at Exxx, I was leading a team who had been tasked with solving monitoring plugin in some software. Another software team was working on a parallel program that was intended to eventually intertwine with our program. At one point, one of the senior members of the other team sent an email out accusing us of intentionally delaying their program so they could have extra time to finish the work by integrating our feature in new release before that agile sprint. 
+**Situation**: A few months ago when I worked as a software engineer at Zxxx, I was leading a team who had been tasked with solving matching service n in my Recruiter project. Another software team was working on a parallel program that was intended to eventually intertwine with our program. At one point, one of the senior members of the other team sent an email out accusing us of delaying their work so they could have to take extra time to finish the work by integrating our feature in new release before that agile sprint. 
 
-**Task**: I had to make sure the plugin should be published in time, otherwise our sprint would be postponed and rearanged. 
+**Task**: I had to make sure the release should be published in time, otherwise our sprint would be postponed and rearanged. 
 
-**Approach**: Rather than send a retaliatory email out to him, and escalate the conflict further, instead I invited him to a meeting room. We talked about our two programs we were developing, and I had him walk me through his project and how it worked. I then showed him what we were doing and how the two programs would eventually overlap. During this process we realized that our work had set his team back, but that it was simply a result of the testing process we were doing. 
+**Approach**: Rather than send a retaliatory email out to him, and escalate the conflict further, instead I invited him to a online meeting room. We talked about our two branches we were developing, and I had him walk me through his project and how it worked. I then showed him what we were doing and how the two programs would eventually overlap. During this process we realized that our work had set his team's back, but that it was simply a result of the testing process for backword compatibility. 
 
-**Result**: Once he realized it was an accident and in no way malicious, he relaxed, and we set about coming up with a schedule that would allow us to test our end without stalling out work on his end. We also inform our managers to let him know the problems and our solutions, this can make my manager life easier on high level scope in case in future he came across the similar situations among his team members.
-I realized that dealing with conflict is never easy but I would do is to make sure I tackle it head on quickly, it is the key to success. Now when I work on parallel programs, I try to make it a point to seek out the other teams' progress too, and discuss game plans before the releases.
+**Result**: Once he realized it was just an accident and in no way malicious, he relaxed, and we set about coming up with a schedule that would allow us to test our end without stalling out work on his end. We also inform our managers to let her know the problems and our solutions, this can make my manager life easier on high level scope in case in future he came across the similar situations among his team members.
+I realized that dealing with conflict is never easy but I would do is to make sure I tackle it head on quickly, it is the key to success. Now when I work on parallel projects, I try to make it a point to seek out the other teams' progress too, and discuss game plans before the releases.
 
 
 ## Couldn’t finish tasks before deadline
 
 I remember last time I was building one plugin in the network monitoring system, my original schedule is one week, but my manager suddenly sent me an email said that he needs to show a demo to a customer two days later. One core feature of the demo is the authentication and notification function. So I was asked to realize the function before two days deadline. If I still follow the original schedule, I definitely can not finish that. My original schedule is to let the notification function generate rules automatically based on dynamic data. But I can not finish that in such a short time. So I figured out another temporary solution with my manager, is to make it a hard coding notification temporarily, to preset all the parameters and processes. If you run it, it will behave like generating rules automatically, so for the demo, the customer will have exactly the same experience. And I can also finish that before deadline. After that, I can make it real automation.
+
 If I couldn’t finish tasks before deadline, I will discuss with my colleagues, to discuss whether we have some buffer time, at the same time trying to figure out a way that can improve the efficiency and If necessary, I will work overtime to keep working on the task, at least to mocking the core features. After all, finishing the task with high quality as soon as possible is what we want. I’ll never sacrifice the user/customer experience or the quality of the product because of that. User/Customer experience is always the most important. I must make sure that the product I am gonna deliver is qualified. I can sacrifice my own time to try to finish the tasks. If I still can not finish the tasks, I will communicate with customers and related people, to tell them why and earn their trust. At the same time, we will try our best to finish the tasks as soon as possible.
 
 
@@ -243,8 +262,15 @@ Case:
 
 **Result:** 
 
-When I was building the network monitoring system through Kafka and Kerberos, I was asked to create rules for monitoring all the processes in the system. I have my initial plan to track the unique value of process names based on different sensors. 
-But I don’t quite understand the behavior of system metrics (Delays, Throughtput, Errors, Satuations), so I discussed with my leader, and she disagreed with plan. Actually we want to see the alert when the events in the system are down, or nearly down. What we really care about is the count of processes. We want to alert when there is a significant drop in process numbers. So, after that I changed my design and everyone is happy.
+When I was building the network monitoring system through Prometheus at Zxxxx, I was asked to create rules for monitoring all the processes and store time series data in the system. 
+
+I have my initial plan to track the unique value of process names based on different data sources including web crawlers and some together with some 3rd party sources. 
+
+But I don’t quite understand the behavior of system metrics (Latency, Throughtput, Errors, Satuations), so I discussed with my leader, and she disagreed with plan. 
+
+Actually we want to see is not only alerting, but also to analyze stored data online, especially when the events in the system are down, or nearly down. What we really care about is the OLAP. And devops team can make decisions based on those analysis. 
+
+So, I changed my design, instead of Prometheus, I used influxDB, which is more suitable for 3rd party data integration and online analysis. - ** Be right, a lot/ dive deeply/Invent and simplify**.
 
 
 ### 5. Learn and Be Curious 好奇求知 ***
