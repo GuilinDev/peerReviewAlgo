@@ -62,7 +62,9 @@ public String[] reorderLogFiles(String[] logs) {
 // 973. K Closest Points to Origin
 class Solution {
    public int[][] kClosest(int[][] points, int K) {
-    PriorityQueue<int[]> pq = new PriorityQueue<int[]>((p1, p2) -> p2[0] * p2[0] + p2[1] * p2[1] - p1[0] * p1[0] - p1[1] * p1[1]);
+    PriorityQueue<int[]> pq = 
+             new PriorityQueue<int[]>((p1, p2) -> 
+                p2[0] * p2[0] + p2[1] * p2[1] - p1[0] * p1[0] - p1[1] * p1[1]);
     // 直角三角形求第三边 求最小的K个 要用大顶堆 所以是P2 - P1
        for (int[] p : points) {
         pq.offer(p);
@@ -79,6 +81,7 @@ class Solution {
 }
  
 // 23. Merge k Sorted Lists
+
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {    
        // if(lists == null || lists.length == 0) return null;
@@ -101,6 +104,38 @@ class Solution {
         return head.next;
     }
 }
+
+// 347 Top K Frequent Elements
+//Input: nums = [1,1,1,2,2,3], k = 2
+//Output: [1,2]
+
+//Given an integer array nums and an integer k, return the k most frequent elements. 
+//You may return the answer in any order.
+//Input: nums = [1,1,1,2,2,3], k = 2
+// Output: [1,2]
+
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int num: nums){
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        PriorityQueue<Map.Entry<Integer,Integer>> pq = 
+        new PriorityQueue<>((a, b) -> a.getValue() - b.getValue());
+        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+            pq.offer(entry);
+            if(pq.size() > k){
+                pq.poll();
+            }
+        }
+        int[] res = new int[k];
+        for(int i = 0; i < res.length; i ++){
+            res[i] = pq.poll().getKey();
+        }
+        return res;
+    }
+}
+
 
 
 

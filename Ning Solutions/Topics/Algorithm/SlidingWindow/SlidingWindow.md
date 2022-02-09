@@ -30,7 +30,7 @@ class Solution {
         HashMap<Character, Integer> need = new HashMap<>();
         
         for (char t1 : t.toCharArray()) {
-            need.put(t1, need.getOrDefault(t1,0) + 1);
+            need.put(t1, need.getOrDefault(t1,0) + 1); 
         }
         int left = 0; int right = 0; int valid = 0;
         int start = 0; int len = Integer.MAX_VALUE; // use one minRight to record

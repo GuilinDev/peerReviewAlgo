@@ -15,7 +15,7 @@ public class Trie {
         for (int i = 0; i < words.length; i ++) {
             int n = words[i] - 'a';
             if(curr.next[n] == null) {
-                curr.next[n] = new Trie();
+                curr.next[n] = new Trie(); // not new Trie[26];
             }
             curr = curr.next[n];
         }
@@ -83,6 +83,9 @@ public class forceSearch{
             return -1;
     }
 }
+
+
+
 
 
 

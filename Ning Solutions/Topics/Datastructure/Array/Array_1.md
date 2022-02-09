@@ -12,7 +12,8 @@ class Solution {
         }
         return new int[0];        
     }
-// not recommend sort in two sum because it is aslking for index. after sort, index will missing.
+// not recommend sort in two sum because it is aslking for index. after sort,
+// index will missing.
 //we need to copy to another copy to keep order.
 // int[] nums2 = Arrays.copyOf(nums, nums.length);
 
@@ -34,7 +35,11 @@ class Solution {
 
 
 //3:Remove Duplicates from Sorted Array    
-
+//Input: nums = [0,0,1,1,1,2,2,3,3,4]
+//Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+//Explanation: Your function should return k = 5,
+ //with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+//It does not matter what you leave beyond the returned k (hence they are underscores).
     public int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         int total = 1;
@@ -63,6 +68,11 @@ class Solution {
 
 
 // 5 Merge Sorted Array
+//Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+//Output: [1,2,2,3,5,6]
+//Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+//The result of the merge is [1,2,2,3,5,6] 
+//with the underlined elements coming from nums1.
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         if (nums1 == null || nums2 == null ) return;
@@ -71,7 +81,8 @@ class Solution {
         int index2 = n - 1;
         while (index1 >= 0 && index2 >= 0) { // not using for in the lastIndex
             if (nums1[index1] > nums2[index2]) {
-                nums1[lastIndex --] = nums1[index1 --]; // don't confused for nums1 and nums2.
+                nums1[lastIndex --] = nums1[index1 --]; 
+               // don't confused for nums1 and nums2.
             } else {
                 nums1[lastIndex --] = nums2[index2--];
             }

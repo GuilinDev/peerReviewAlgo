@@ -236,29 +236,35 @@ class Solution {
 }
 
 // 	5 Longest Palindromic Substring    
-class Solution {
-    private int lo, maxLen;
-    public String longestPalindrome(String s) {
-        int len = s.length();
-        if (len < 2)
-            return s;
-        for (int i = 0; i < len - 1; i++) {
-            extendPalindrome(s, i, i);  //assume odd length, try to extend Palindrome as possible
-            extendPalindrome(s, i, i + 1); //assume even length.
-        }
-        return s.substring(lo, lo + maxLen);
-    }
+// Input: s = "babad"
+//Output: "bab"
+//Explanation: "aba" is also a valid answer.
+//Input: s = "cbbd"
+//Output: "bb"
 
-    private void extendPalindrome(String s, int left, int right) {//字符串和两个指针
-        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-            left--;
-            right++;
-        }
-        //注意上面while循环是在左右不等才停止的，当前的maxLen是成员变量，需要维持奇偶中大的一个（较小的不进循环）
-        if (maxLen < right - left - 1) {
-            lo = left + 1;//回文子字符串的下标
-            maxLen = right - left - 1;//回文子字符串的上标
-        }
+class Solution {
+   public String longestPalindrome(String s) {
+    String res = "";
+    for (int i = 0; i < s.length(); i++) {
+        // 以 s[i] 为中心的最长回文子串
+        String s1 = palindrome(s, i, i);
+        // 以 s[i] 和 s[i+1] 为中心的最长回文子串
+        String s2 = palindrome(s, i, i + 1);
+        // res = longest(res, s1, s2)
+        res = res.length() > s1.length() ? res : s1;
+        res = res.length() > s2.length() ? res : s2;
+    }
+    return res;
+}
+    String palindrome(String s, int l, int r) {
+    // 防止索引越界
+    while (l >= 0 && r < s.length()
+            && s.charAt(l) == s.charAt(r)) {
+        // 向两边展开
+        l--; r++;
+    }
+    // 返回以 s[l] 和 s[r] 为中心的最长回文串
+    return s.substring(l + 1, r);
     }
 }
 
