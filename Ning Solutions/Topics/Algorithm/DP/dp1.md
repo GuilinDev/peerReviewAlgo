@@ -42,6 +42,22 @@ class Solution {
     }
 }
 
+//Climbing Stairs
+class Solution {
+    public int climbStairs(int n) {
+        int[] memo = new int[n + 1];// need N + 1;
+        return helper(n, memo);
+    }
+    
+    public int helper(int n, int[] memo){
+        if(n == 1 || n == 2) return n;
+        if(memo[n] != 0) return memo[n];
+        memo[n] = helper(n - 1, memo) + helper(n - 2, memo); // need save first
+        return memo[n];
+    } 
+    
+}
+
 // 72. Edit Distance
 class Solution {
     public int minDistance(String word1, String word2) {
