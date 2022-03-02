@@ -6,10 +6,37 @@ R - Describe the outcome of your actions or your learnings
 
 ### Self Introduction
 
-Hi My name is ..., I worked in AA for around 8 years. I am currently under department of revenue management
-and work for the airline pricing related product.I am responsible for software development, architecture design and 
-trouble shooting. particulary in big data. The main technology I am using is Java and big data framework called apache 
-spark.
+Hi My name is ..., I worked in AA for more than 9 years. I am currently working for revenue management optimizer platform
+ Those products can help our system to define best price for each flight dynamically.  
+ I am responsible for software development, architecture design and testing and dubuging. 
+My future career goal is to dig deeply into distributed applications, to build products that can help customers to solve their pain points
+Explain your current/proud project
+
+1. Introduce the project title - purpose of the project/why useful/motivation to choose this as your project
+
+
+2. Explain the technologies and tools used
+
+3. How was the work distributed in the team and what was your role
+
+4. Describe the project
+
+5. Overcome the chanllenges
+
+6. Conclude
+
+I have done quite a few projects in my engineering, among the favorite that turned out to be very effective, reliable and very useful is called Mercury, It is platform that could help internal business users define better basic price/ fare for each markets and cabin.
+My role in this project was to build constructed fare which help people who flight from small city through big city can get better price. And more willing to pay it.
+We have used java and scala in the same project and use spark as main frame work on IBM cloud. It is offline batch processing. System get different airline’s data from ATPCO and we need join them heavily. 
+We are able to completed project successfully. This project which replaced old platform which need pay google 1.2 million usd every year. It also provided new dailly report and better query performance under certain condition.
+This practical aplication gave me a lot of confidence in my abilities to take up bigger challenges, and I strongly believe if I get the opportunity to start my career with "ABCCompany" where it can provide me ample opportunities to work on.
+
+My current project is processing future flight level data up to 365 days(around 2.1 million flights). 
+It need pre calculate each seat under every possible combination. (up to 3 cabins). and also save data for next day's calculation. 
+Even input data and output data is not big. But calculation in some steps are huge. It need around 1000 * 200 * 40* 50 calculation. We use java (spring)+ kafka + XAP(In memory DB). We use java because it is good JVM and it is GC. Kafka because it able to enable these decoupled applications to communicate with each other.  
+XAP because it is not relied on schema and easy to make change to your object. And also read fast. It also has replica to make sure not losing data.
+
+
 
 ### What is your greatest strength?
 > hard skills + soft/transferable skill + personal attributes/qualities
