@@ -1,7 +1,7 @@
 # Sample
 ## General BQs
 ### Self introduction
-Hi My name is XXX. I am currently working at XX company as a Senior Software Engineer. Over here my responsibilities are using my skills to develop big data platform, the platform process raw data from monitoring to generate statuses for external customers, those status pages can help business customers in 360 degress their to understand the workday products that they have bought. Particualarly, I do creating the platform and refining on those data for customers, also architecture design and hotfix trouble shooting.
+Hi My name is XXX. I am currently working at XX company as a Senior Software Engineer. Over here my responsibilities are using my skills to develop big data platform, the platform process raw data from monitoring to generate statuses for external customers, those status can help business customers in 360 degress their to understand the workday products that they have bought. Particualarly, I do creating the platform and refining on those data for customers, also architecture design and hotfix trouble shooting.
 
 Prior to this, I worked as a full time software engineer at multiple companies for more than 5 years where I gained lots of experience in software engineering.
 
