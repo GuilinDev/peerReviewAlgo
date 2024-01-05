@@ -2,6 +2,7 @@
 - [✗] I don't know!
 - [✓] I can't remember off the top of my head, but I'll check and find out for you.
   
+---
 
 - [✗] Is that ok?
 - [✓] Is that what you had in mind?
