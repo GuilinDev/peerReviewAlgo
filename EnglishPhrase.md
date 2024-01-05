@@ -1,4 +1,6 @@
-#### How to speak euphemistically to you teammates!
+### How to speak euphemistically to you teammates
+
+
 - [✗] I don't know!
 - [✓] I can't remember off the top of my head, but I'll check and find out for you.
 ---
